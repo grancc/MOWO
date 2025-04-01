@@ -5,11 +5,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Демка v1</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    
-    <link type="text/css" href="{%static 'css/v1.css' %}" rel="stylesheet" />
+    <title>Демка v3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+    <link type="text/css" href="{%static 'css/v3.css' %}" rel="stylesheet" />
     <link type="text/css" href="{%static 'css/aos.css' %}" rel="stylesheet" />
     <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}" />
 
@@ -23,6 +26,12 @@
         font-family: 'Hauora Bold';
         src: local('Hauora Bold'), local('Hauora-Bold'),
             url('/static/fonts/Hauora-Bold.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Akshar';
+        src: local('Akshar'), local('Akshar'),
+            url('/static/fonts/Akshar-Light.ttf') format('truetype');
     }
 
 
@@ -49,10 +58,17 @@
     }
 
     .custom-container {
-        max-width: 1700px;
-        margin: 0 auto;
+        max-width: 1162px;
         width: 95%;
+        margin-left: auto;
+        margin-right: 60px;
     }
+
+    a {
+        color: rgba(255, 255, 255, 1);
+        text-decoration: none;
+    }
+
 
     .custom-container-right {
         margin-left: calc(((100vw - 1680px) / 2) - 8px);
@@ -76,11 +92,11 @@
         top: 0;
     }
 
-    .gap-100{
+    .gap-100 {
         gap: 100px;
     }
 
-    footer::after{
+    footer::after {
         content: "";
         position: absolute;
         width: 100%;
@@ -88,20 +104,20 @@
         top: 0;
         left: 0;
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
+            linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
     }
 
-    footer{
+    footer {
         font-size: 24px;
     }
 
-    .footer-text{
+    .footer-text {
         max-width: 1700px;
         left: calc(((100vw - 1680px) / 2) - 8px);
         z-index: 2;
     }
 
-    .video-mask{
+    .video-mask {
         -webkit-mask-image: url(/static/img/mask.svg);
         -webkit-mask-position: center center;
         -webkit-mask-repeat: no-repeat;
@@ -116,35 +132,39 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
 
     .footer-mask {
         z-index: 3;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
 
+    .margin-400 {
+        margin-bottom: 400px;
+    }
 </style>
 
-<body style="background-color: black;">
-    <header class="position-absolute pb-4 w-100 top-0" style="background-color: transparent; z-index: 10000;">
-        <div class="custom-container d-flex justify-content-between ">
+<body style="background-color: black; ">
+    <header class="position-fixed pb-4" style="background-color: transparent; z-index: 10000;">
+        <div class="d-flex justify-content-between flex-column" style="height: 95vh; max-width: 290px;">
             <div class="logo">
                 <img src="{%static 'img/logo.svg' %}" alt="">
             </div>
-            <div class="d-flex header-links justify-content-between">
-                <div class="d-flex flex-column gap-4 align-items-start">
-                    <a href="#" class="hover-this"><span>Бюро</span></a>
-                    <a href="#" class="hover-this"><span>Работы</span></a>
-                </div>
+            <div class="d-flex header-links flex-column gap-4 align-items-start">
+                <a href="#" class="hover-this"><span>Бюро</span></a>
+                <a href="#" class="hover-this"><span>Работы</span></a>
 
-                <div class="d-flex flex-column gap-4 align-items-start">
-                    <a href="#" class="hover-this"><span>Блог</span></a>
-                    <a href="#" class="hover-this"><span>Контакты</span></a>
-                </div>
+                <a href="#" class="hover-this"><span>Блог</span></a>
+                <a href="#" class="hover-this"><span>Контакты</span></a>
 
                 <div class="d-flex flex-column align-items-start header-contact-links gap-3">
                     <a href="#" class="hover-this"><span>+7 123 456 78 90</span></a>
                     <div class="d-flex gap-4 hover-this contacts-header">
-                        <a href="" >Ru</a>
+                        <a href="">Ru</a>
                         <p class="mb-0">|</p>
                         <a href="">Tg</a>
-                        <a href="" >In</a>
+                        <a href="">In</a>
                         <a href="">YouTube</a>
                     </div>
                 </div>
@@ -153,50 +173,125 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
         </div>
 
     </header>
+
     <div class="promo-video">
         <video autoplay="" loop="" muted="" playsinline="" class="ma_video">
             <source src="https://devision.company/video/video3.mp4" type="video/mp4">
         </video>
     </div>
-    <div class="position-relative" style="height: 100vh;">
-        <div class="promo-text fadeText">
-            Создаём архитектуру, которая соединяет искусство, маркетинг, экономику и инженерию
-        </div>
-    </div>
-
-    <div data-aos="fade-up" data-aos-duration="1000">
-        <div class="custom-container-right">
-            <div class="services__swiper swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide position-relative services-slide">
-                        <img src="{%static 'img/1.png'%}" alt="1">
-                        <div class="position-absolute services-slide__text fadeText">
-                            <h4>Исследование территории</h4>
-                            <p class="mb-0">Проводим комплексное исследование локации, выявляя её потенциал и ограничения</p>
+    <div class="margin-400"></div>
+    <div>
+        <div class="custom-container">
+            <div class="promo-text">
+                Создаём архитектуру, которая соединяет искусство, маркетинг, экономику и инженерию для максимальной
+                эффективности
+            </div>
+            <div class="services-items">
+                <div class="position-relative services-item">
+                    <img src="{%static 'img/1.png'%}" alt="1">
+                    <div class="position-absolute services-item__text">
+                        <div class="d-flex justify-content-end">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                                <path d="M46.6819 27.4581L21.5794 52.5607L17.4546 48.4359L42.5571 23.3333H20.432V17.5H52.5152V49.5833H46.6819V27.4581Z" fill="white"/>
+                            </svg>
                         </div>
-                    </div>
-                    <div class="swiper-slide position-relative services-slide">
-                        <img src="{%static 'img/2.png'%}" alt="1">
-                        <div class="position-absolute services-slide__text fadeText">
-                            <h4>Архитектура и инженерия</h4>
-                            <p class="mb-0">Создаём архитектуру, где эстетика, функциональность и экономическая эффективность работают в балансе.</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide position-relative services-slide">
-                        <img src="{%static 'img/3.png'%}" alt="1">
-                        <div class="position-absolute services-slide__text fadeText">
-                            <h4>Исследование территории</h4>
-                            <p class="mb-0">Проводим комплексное исследование локации, выявляя её потенциал и ограничения</p>
-                        </div>
+                        <h4>Исследование <br>территории</h4>
+                        <p class="mb-0">Проводим комплексное исследование локации, выявляя её потенциал и ограничения</p>
                     </div>
                 </div>
+                <div class="position-relative services-item">
+                    <img src="{%static 'img/2.png'%}" alt="1">
+                    <div class="position-absolute services-item__text">
+                        <div class="d-flex justify-content-end">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                                <path d="M46.6819 27.4581L21.5794 52.5607L17.4546 48.4359L42.5571 23.3333H20.432V17.5H52.5152V49.5833H46.6819V27.4581Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <h4>Архитектура и <br> инженерия</h4>
+                        <p class="mb-0">Создаём архитектуру, где эстетика, функциональность и экономическая
+                            эффективность работают в балансе.</p>
+                    </div>
+                </div>
+                <div class="position-relative services-item">
+                    <img src="{%static 'img/3.png'%}" alt="1">
+                    <div class="position-absolute services-item__text">
+                        <div class="d-flex justify-content-end">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                                <path d="M46.6819 27.4581L21.5794 52.5607L17.4546 48.4359L42.5571 23.3333H20.432V17.5H52.5152V49.5833H46.6819V27.4581Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <h4>Цифровая модель <br> (BIM)</h4>
+                        <p class="mb-0">создаём цифровой двойник вашего существующего или будущего объекта, обеспечивая полную прозрачность на всех этапах.</p>
+                    </div>
+                
+                </div>
+                <div class="position-relative services-item">
+                    <img src="{%static 'img/6.png'%}" alt="1">
+                    <div class="position-absolute services-item__text">
+                        <div class="d-flex justify-content-end">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                                <path d="M46.6819 27.4581L21.5794 52.5607L17.4546 48.4359L42.5571 23.3333H20.432V17.5H52.5152V49.5833H46.6819V27.4581Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <h4>Маркетинг и  <br>брендинг</h4>
+                        <p class="mb-0">Формируем уникальный образ проекта, который привлекает внимание и усиливает его конкурентные преимущества.</p>
+                    </div>
+                </div>
+                <div class="position-relative services-item">
+                    <img src="{%static 'img/5.png'%}" alt="1">
+                    <div class="position-absolute services-item__text">
+                        <div class="d-flex justify-content-end">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                                <path d="M46.6819 27.4581L21.5794 52.5607L17.4546 48.4359L42.5571 23.3333H20.432V17.5H52.5152V49.5833H46.6819V27.4581Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <h4>Благоустройство</h4>
+                        <p class="mb-0">Создаём комфортную и продуманную среду, которая повышает привлекательность проекта и формирует точку притяжения.</p>
+                    </div>
+                </div>
+                <div class="position-relative services-item">
+                    <img src="{%static 'img/4.png'%}" alt="1">
+                    <div class="position-absolute services-item__text">
+                        <div class="d-flex justify-content-end">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                                <path d="M46.6819 27.4581L21.5794 52.5607L17.4546 48.4359L42.5571 23.3333H20.432V17.5H52.5152V49.5833H46.6819V27.4581Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <h4>Дизайн интерьера</h4>
+                        <p class="mb-0">Создаём интерьерные решения, которые усиливают ценность объекта и делают его привлекательным для целевой аудитории.</p>
+                    </div>
+                </div>
+                <div class="position-relative services-item">
+                    <img src="{%static 'img/7.png'%}" alt="1">
+                    <div class="position-absolute services-item__text">
+                        <div class="d-flex justify-content-end">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                                <path d="M46.6819 27.4581L21.5794 52.5607L17.4546 48.4359L42.5571 23.3333H20.432V17.5H52.5152V49.5833H46.6819V27.4581Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <h4>Визуализация</h4>
+                        <p class="mb-0">Создаём реалистичные визуализации, которые не просто передают облик проекта, а усиливают его маркетинговую ценность.</p>
+                    </div>
+                </div>
+                <div class="position-relative services-item">
+                    <img src="{%static 'img/8.png'%}" alt="1">
+                    <div class="position-absolute services-item__text">
+                        <div class="d-flex justify-content-end">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                                <path d="M46.6819 27.4581L21.5794 52.5607L17.4546 48.4359L42.5571 23.3333H20.432V17.5H52.5152V49.5833H46.6819V27.4581Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <h4>Сопровождение <br>строительств</h4>
+                        <p class="mb-0">Контролируем соответствие строительства проектным решениям, обеспечивая реализацию задуманной архитектурной идеи.</p>
+                    </div>
+                </div>
+                
             </div>
-        </div>
     </div>
     <div class="margin-400"></div>
     <div data-aos="fade-up" data-aos-duration="1000">
-        <div class="custom-container">
-            <h2 class="fadeText">mowo - мультидисциплинарное бюро с экспертностью в жилой и коммерческой недвижимости</h2>
+        <div class="custom-container fadeText">
+            <h2 style="margin-bottom: 80px;">mowo - мультидисциплинарное бюро с экспертностью в жилой и коммерческой недвижимости.</h2>
             <div class="d-grid numbers-items fadeText">
                 <div class="numbers-item">
                     <div class="number-num">
@@ -243,70 +338,98 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
     </div>
     <div class="margin-400"></div>
     <div data-aos="fade-up" data-aos-duration="1000">
-        <div class="custom-container fadeText">
-            <h2 style="margin-bottom: 50px;">Наши работы</h2>
-            <div class="d-flex gap-4 our-work-sides">
-                <div class="our-work-left w-100">
-                    <div class="our-work-title pt-0" data-image="{%static 'img/1.png'%}">
-                        <span>01. </span> Проект 1
+        <div class="custom-container ">
+            <div class="d-flex justify-content-between fadeText">
+                <h2 style="margin-bottom: 50px;">Наши работы</h2>
+                <a href="" class="our-work-links">Все работы -></a>
+            </div>
+            <div class="services-items">
+                <div class="position-relative services-item">
+                    <img src="{%static 'img/2.png'%}" alt="1">
+                    <div class="position-absolute services-item__text">
+                        <div class="d-flex justify-content-end">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                                <path d="M46.6819 27.4581L21.5794 52.5607L17.4546 48.4359L42.5571 23.3333H20.432V17.5H52.5152V49.5833H46.6819V27.4581Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <h4>Исследование <br>территории</h4>
+                        <p class="mb-0">Проводим комплексное исследование локации, выявляя её потенциал и ограничения</p>
                     </div>
-                    <div class="our-work-title" data-image="{%static 'img/2.png'%}">
-                        <span>02.</span> Проект 2
-                    </div>
-                    <div class="our-work-title" data-image="{%static 'img/3.png'%}">
-                        <span>03.</span> Проект 3
-                    </div>
-                    <div class="our-work-title" data-image="{%static 'img/4.png'%}">
-                        <span>04.</span> Проект 4
-                    </div>
-                    <div class="our-work-title" data-image="{%static 'img/5.png'%}">
-                        <span>05.</span> Проект 5
-                    </div>
-                    <a href="">Все работы -></a>
                 </div>
-                <div class="our-work-right">
-                    <div class="image" id="current-image">
-                        <img src="{%static 'img/1.png'%}" alt="Project Image">
-                      </div>
-                      <div class="image" id="next-image">
-                        <img src="{%static 'img/1.png'%}" alt="Project Image">
-                      </div>
+                <div class="position-relative services-item">
+                    <img src="{%static 'img/4.png'%}" alt="1">
+                    <div class="position-absolute services-item__text">
+                        <div class="d-flex justify-content-end">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                                <path d="M46.6819 27.4581L21.5794 52.5607L17.4546 48.4359L42.5571 23.3333H20.432V17.5H52.5152V49.5833H46.6819V27.4581Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <h4>Архитектура и <br> инженерия</h4>
+                        <p class="mb-0">Создаём архитектуру, где эстетика, функциональность и экономическая
+                            эффективность работают в балансе.</p>
+                    </div>
+                </div>
+                <div class="position-relative services-item">
+                    <img src="{%static 'img/3.png'%}" alt="1">
+                    <div class="position-absolute services-item__text">
+                        <div class="d-flex justify-content-end">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                                <path d="M46.6819 27.4581L21.5794 52.5607L17.4546 48.4359L42.5571 23.3333H20.432V17.5H52.5152V49.5833H46.6819V27.4581Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <h4>Цифровая модель <br> (BIM)</h4>
+                        <p class="mb-0">создаём цифровой двойник вашего существующего или будущего объекта, обеспечивая полную прозрачность на всех этапах.</p>
+                    </div>
+                
+                </div>
+                <div class="position-relative services-item">
+                    <img src="{%static 'img/5.png'%}" alt="1">
+                    <div class="position-absolute services-item__text">
+                        <div class="d-flex justify-content-end">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                                <path d="M46.6819 27.4581L21.5794 52.5607L17.4546 48.4359L42.5571 23.3333H20.432V17.5H52.5152V49.5833H46.6819V27.4581Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <h4>Маркетинг и  <br>брендинг</h4>
+                        <p class="mb-0">Формируем уникальный образ проекта, который привлекает внимание и усиливает его конкурентные преимущества.</p>
                     </div>
                 </div>
             </div>
-            
         </div>
+
+    </div>
     </div>
     <div class="margin-400"></div>
     <div data-aos="fade-up" data-aos-duration="1000">
         <div class="custom-container">
-            <div class="d-flex feedback-form gap-100 justify-content-between">
-                <div class="feedback-form-text fadeText">
-                    <h2>Превратим идею в архитектуру</h2>
-                    <p class="mb-0">Индивидуальный подход к каждому проекту и гарантированное качество исполнения. Заполните форму, и мы подготовим персональное предложение.</p>
-                </div>
-                <div class="feedback-form-form">
-                    <form class="w-100">
-                        <div class="d-flex gap-3 mb-3">
-                            <input type="text" placeholder="Имя">
-                            <input type="text" placeholder="Номер телефона">
+            <div class="feedback-form-text fadeText">
+                <h2>Превратим идею в <br> архитектуру</h2>
+                <p class="h2-desc">Индивидуальный подход к каждому проекту и гарантированное качество исполнения.
+                    Заполните форму, и мы подготовим персональное предложение.</p>
+            </div>
+            <div class="feedback-form-form">
+                <form class="w-100">
+                    <div class="d-flex gap-3 mb-3">
+                        <input type="text" placeholder="Имя">
+                        <input type="text" placeholder="Номер телефона">
+                    </div>
+                    <div class="d-flex gap-3 mb-3">
+                        <input type="text" placeholder="Электронная почта">
+                        <input type="text" placeholder="Компания">
+                    </div>
+                    <textarea name="" id="" placeholder="Комментарий" class="mb-3"></textarea>
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex align-items-center form-check">
+                            <input class="form-check-input" type="checkbox" id="check-modal" name="check"
+                                value="yes">
+                            <label class="m-0 ms-2"> Даю согласие на обработку <a href="">персональных
+                                    данных</a></label>
                         </div>
-                        <div class="d-flex gap-3 mb-3">
-                            <input type="text" placeholder="Электронная почта">
-                            <input type="text" placeholder="Компания">
-                        </div>
-                        <textarea name="" id="" placeholder="Комментарий" class="mb-3"></textarea>
-                        <div class="d-flex justify-content-between">
-                            <div class="d-flex align-items-center form-check">
-                                <input class="form-check-input" type="checkbox" id="check-modal" name="check" value="yes">
-                                <label class="m-0 ms-2"> Даю согласие на обработку <a href="">персональных данных</a></label>
-                            </div>
-                            <button class="btn">
-                                Оставить заявку
-                            </button>
-                        </div>
-                    </form>
-                </div>
+                        <button class="btn">
+                            Оставить заявку
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -314,7 +437,9 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
     <div data-aos="fade-up" data-aos-duration="1000">
         <div class="custom-container">
             <h2 style="margin-bottom: 50px;" class="fadeText">Наша команда</h2>
-            <p class="our-command-desc fadeText">Каждый проект — это результат совместного творчества архитекторов, урбанистов, дизайнеров и инженеров. Именно такой командный подход позволяет нам создавать по-настоящему выдающиеся решения, где функциональность встречается с искусством.</p>
+            <p class="h2-desc fadeText" style="margin-bottom: 40px;">Каждый проект — это результат совместного творчества архитекторов,
+                урбанистов, дизайнеров и инженеров. Именно такой командный подход позволяет нам создавать по-настоящему
+                выдающиеся решения, где функциональность встречается с искусством.</p>
             <div class="employee__swiper swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide employee-slide">
@@ -350,28 +475,33 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
     <div data-aos="fade-up" data-aos-duration="1000">
         <div class="custom-container">
             <div class="technologies">
-                <h2 style="margin-bottom: 100px;" class="fadeText">Технологии, которые делают наш продукт точным эффективным и коммерчески успешным</h2>
+                <h2 style="margin-bottom: 100px;" class="fadeText">Технологии, которые делают наш продукт точным
+                    эффективным и коммерчески успешным</h2>
                 <div class="technologies-items d-flex">
                     <div class="technologies-item">
                         <img src="{%static 'img/texn1.png'%}" alt="">
                         <p class="technologies-title fadeText">BIM</p>
-                        <p class="technologies-desc fadeText">Применяем BIM-проектирование, чтобы создавать коммерчески эффективные объекты с точными расчётами и минимизированными рисками.</p>
+                        <p class="technologies-desc fadeText">Применяем BIM-проектирование, чтобы создавать коммерчески
+                            эффективные объекты с точными расчётами и минимизированными рисками.</p>
                     </div>
                     <div class="technologies-item">
                         <img src="{%static 'img/texn2.png'%}" alt="">
                         <p class="technologies-title fadeText">GIS Analysis</p>
-                        <p class="technologies-desc fadeText">Используем GIS-аналитику, чтобы глубже понимать территорию и разрабатывать коммерчески успешные проекты.</p>
+                        <p class="technologies-desc fadeText">Используем GIS-аналитику, чтобы глубже понимать территорию
+                            и разрабатывать коммерчески успешные проекты.</p>
                     </div>
                     <div class="technologies-item">
                         <img src="{%static 'img/texn3.png'%}" alt="">
                         <p class="technologies-title fadeText">Algoritmic design</p>
-                        <p class="technologies-desc fadeText">Применяем алгоритмическое проектирование, чтобы находить оптимальные формы, планировки 
+                        <p class="technologies-desc fadeText">Применяем алгоритмическое проектирование, чтобы находить
+                            оптимальные формы, планировки
                             и конструктивные решения с учётом множества параметров.</p>
                     </div>
                     <div class="technologies-item">
                         <img src="{%static 'img/texn2.png'%}" alt="">
                         <p class="technologies-title fadeText">AI design</p>
-                        <p class="technologies-desc fadeText">Применяем нейросети, чтобы анализировать данные, прогнозировать спрос и находить оптимальные архитектурные решения.</p>
+                        <p class="technologies-desc fadeText">Применяем нейросети, чтобы анализировать данные,
+                            прогнозировать спрос и находить оптимальные архитектурные решения.</p>
                     </div>
                 </div>
             </div>
@@ -380,83 +510,94 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
     <div class="margin-400"></div>
     <div data-aos="fade-up" data-aos-duration="1000">
         <div class="custom-container">
-            <div class="d-flex feedback-form gap-100 justify-content-between">
-                <div class="feedback-form-text">
-                    <h2 class="fadeText">Превратим идею в архитектуру</h2>
-                    <p class="mb-0 fadeText">Индивидуальный подход к каждому проекту и гарантированное качество исполнения. Заполните форму, и мы подготовим персональное предложение.</p>
-                </div>
-                <div class="feedback-form-form">
-                    <form class="w-100">
-                        <div class="d-flex gap-3 mb-3">
-                            <input type="text" placeholder="Имя">
-                            <input type="text" placeholder="Номер телефона">
+            <div class="feedback-form-text fadeText">
+                <h2>Превратим идею в <br> архитектуру</h2>
+                <p class="h2-desc">Индивидуальный подход к каждому проекту и гарантированное качество исполнения.
+                    Заполните форму, и мы подготовим персональное предложение.</p>
+            </div>
+            <div class="feedback-form-form">
+                <form class="w-100">
+                    <div class="d-flex gap-3 mb-3">
+                        <input type="text" placeholder="Имя">
+                        <input type="text" placeholder="Номер телефона">
+                    </div>
+                    <div class="d-flex gap-3 mb-3">
+                        <input type="text" placeholder="Электронная почта">
+                        <input type="text" placeholder="Компания">
+                    </div>
+                    <textarea name="" id="" placeholder="Комментарий" class="mb-3"></textarea>
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex align-items-center form-check">
+                            <input class="form-check-input" type="checkbox" id="check-modal" name="check"
+                                value="yes">
+                            <label class="m-0 ms-2"> Даю согласие на обработку <a href="">персональных
+                                    данных</a></label>
                         </div>
-                        <div class="d-flex gap-3 mb-3">
-                            <input type="text" placeholder="Электронная почта">
-                            <input type="text" placeholder="Компания">
-                        </div>
-                        <textarea name="" id="" placeholder="Комментарий" class="mb-3"></textarea>
-                        <div class="d-flex justify-content-between">
-                            <div class="d-flex align-items-center form-check">
-                                <input class="form-check-input" type="checkbox" id="check-modal" name="check" value="yes">
-                                <label class="m-0 ms-2"> Даю согласие на обработку <a href="">персональных данных</a></label>
-                            </div>
-                            <button class="btn">
-                                Оставить заявку
-                            </button>
-                        </div>
-                    </form>
-                </div>
+                        <button class="btn">
+                            Оставить заявку
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
     <div class="margin-400"></div>
     <footer class="position-relative">
-       <img src="{%static 'img/footer.png'%}" alt="" class="w-100">
-       <div class="footer-mask position-absolute top-0">
-        <video autoplay="" loop="" muted="" playsinline="" class="video-mask">
-            <source src="https://devision.company/video/video3.mp4" type="video/mp4">
-        </video>
-       </div>
-       
-       <div class="position-absolute w-100 footer-text" style="bottom: 50px;">
-        <div class="d-flex justify-content-between">
-            <p>© 2025 mowo™ </p>
-            <div class="footer-links gap-4 d-flex">
-                <a href="" class="d-block">Бюро</a>
-                <a href="" class="d-block">Работы</a>
-                <a href="" class="d-block">Блог</a>
-                <a href="" class="d-block">Контакты</a>
-            </div>
-            <div class="d-flex gap-3">
-                <a href="">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
-                        <path d="M14 28.5C21.732 28.5 28 22.232 28 14.5C28 6.76801 21.732 0.5 14 0.5C6.26801 0.5 0 6.76801 0 14.5C0 22.232 6.26801 28.5 14 28.5Z" fill="white" fill-opacity="0.3"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5654 13.7702C11.9477 12.2884 14.2031 11.3115 15.3316 10.8395C18.5536 9.49191 19.2231 9.25781 19.6595 9.25008C19.7555 9.24838 19.9701 9.2723 20.1091 9.38572C20.2265 9.48149 20.2588 9.61087 20.2742 9.70167C20.2897 9.79247 20.3089 9.99932 20.2936 10.1609C20.119 12.0057 19.3635 16.4825 18.9791 18.5487C18.8165 19.423 18.4963 19.7161 18.1862 19.7448C17.5125 19.8071 17.0009 19.2971 16.3483 18.8669C15.3271 18.1938 14.7503 17.7748 13.7591 17.118C12.6136 16.3589 13.3561 15.9417 14.009 15.2599C14.1798 15.0815 17.1484 12.3663 17.2059 12.12C17.2131 12.0892 17.2197 11.9744 17.1519 11.9137C17.084 11.8531 16.9839 11.8738 16.9117 11.8903C16.8092 11.9137 15.178 12.9979 12.0178 15.143C11.5547 15.4627 11.1353 15.6185 10.7596 15.6103C10.3453 15.6013 9.54844 15.3748 8.95605 15.1812C8.22946 14.9437 7.65199 14.8181 7.70227 14.4147C7.72846 14.2047 8.01617 13.9898 8.5654 13.7702Z" fill="white"/>
-                    </svg>
-                </a>
-                <a href="">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7 3.30078C3.13401 3.30078 0 6.43479 0 10.3008V18.7008C0 22.5668 3.13401 25.7008 7 25.7008H21C24.866 25.7008 28 22.5668 28 18.7008V10.3008C28 6.43479 24.866 3.30078 21 3.30078H7Z" fill="white" fill-opacity="0.3"/>
-                        <path d="M18.1992 14.5008L11.1992 18.7008V10.3008L18.1992 14.5008Z" fill="white"/>
-                    </svg>
-                </a>
-                <a href="">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
-                        <g clip-path="url(#clip0_222_1084)">
-                        <path d="M14.0358 0.5H13.972C6.25765 0.5 0.00390625 6.75374 0.00390625 14.4681V14.5319C0.00390625 22.2463 6.25765 28.5 13.972 28.5H14.0358C21.7502 28.5 28.0039 22.2463 28.0039 14.5319V14.4681C28.0039 6.75374 21.7502 0.5 14.0358 0.5Z" fill="white" fill-opacity="0.3"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6747 8.51953H11.0315C9.1962 8.51953 7.70312 10.0126 7.70312 11.8479V17.9255C7.70312 19.7608 9.1962 21.2539 11.0315 21.2539H17.6747C19.5101 21.2539 21.0031 19.7608 21.0031 17.9255V11.8479C21.0031 10.0126 19.5101 8.51953 17.6747 8.51953ZM8.87728 11.8479C8.87728 10.6602 9.84382 9.69368 11.0315 9.69368H17.6747C18.8624 9.69368 19.829 10.6602 19.829 11.8479V17.9255C19.829 19.1132 18.8624 20.0797 17.6747 20.0797H11.0315C9.84382 20.0797 8.87728 19.1132 8.87728 17.9255V11.8479ZM14.3538 17.981C16.0605 17.981 17.4497 16.5925 17.4497 14.885C17.4497 13.1776 16.0612 11.7891 14.3538 11.7891C12.6463 11.7891 11.2578 13.1776 11.2578 14.885C11.2578 16.5925 12.6463 17.981 14.3538 17.981ZM14.3538 12.964C15.4136 12.964 16.2756 13.826 16.2756 14.8858C16.2756 15.9456 15.4136 16.8076 14.3538 16.8076C13.294 16.8076 12.432 15.9456 12.432 14.8858C12.432 13.826 13.294 12.964 14.3538 12.964ZM18.5702 11.4553C18.5702 11.9156 18.1957 12.2894 17.7363 12.2894C17.2761 12.2894 16.9023 11.9156 16.9023 11.4553C16.9023 10.9949 17.2761 10.6211 17.7363 10.6211C18.1965 10.6211 18.5702 10.9949 18.5702 11.4553Z" fill="white"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_222_1084">
-                        <rect width="28" height="28" fill="white" transform="translate(0 0.5)"/>
-                        </clipPath>
-                        </defs>
-                    </svg>
-                </a>
+        <img src="{%static 'img/footer.png'%}" alt="" class="w-100">
+        <div class="footer-mask position-absolute top-0">
+            <video autoplay="" loop="" muted="" playsinline="" class="video-mask">
+                <source src="https://devision.company/video/video3.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="position-absolute w-100 footer-text" style="bottom: 50px;">
+            <div class="d-flex justify-content-between">
+                <p>© 2025 mowo™ </p>
+                <div class="footer-links gap-4 d-flex">
+                    <a href="" class="d-block">Бюро</a>
+                    <a href="" class="d-block">Работы</a>
+                    <a href="" class="d-block">Блог</a>
+                    <a href="" class="d-block">Контакты</a>
+                </div>
+                <div class="d-flex gap-3">
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
+                            <path
+                                d="M14 28.5C21.732 28.5 28 22.232 28 14.5C28 6.76801 21.732 0.5 14 0.5C6.26801 0.5 0 6.76801 0 14.5C0 22.232 6.26801 28.5 14 28.5Z"
+                                fill="white" fill-opacity="0.3" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M8.5654 13.7702C11.9477 12.2884 14.2031 11.3115 15.3316 10.8395C18.5536 9.49191 19.2231 9.25781 19.6595 9.25008C19.7555 9.24838 19.9701 9.2723 20.1091 9.38572C20.2265 9.48149 20.2588 9.61087 20.2742 9.70167C20.2897 9.79247 20.3089 9.99932 20.2936 10.1609C20.119 12.0057 19.3635 16.4825 18.9791 18.5487C18.8165 19.423 18.4963 19.7161 18.1862 19.7448C17.5125 19.8071 17.0009 19.2971 16.3483 18.8669C15.3271 18.1938 14.7503 17.7748 13.7591 17.118C12.6136 16.3589 13.3561 15.9417 14.009 15.2599C14.1798 15.0815 17.1484 12.3663 17.2059 12.12C17.2131 12.0892 17.2197 11.9744 17.1519 11.9137C17.084 11.8531 16.9839 11.8738 16.9117 11.8903C16.8092 11.9137 15.178 12.9979 12.0178 15.143C11.5547 15.4627 11.1353 15.6185 10.7596 15.6103C10.3453 15.6013 9.54844 15.3748 8.95605 15.1812C8.22946 14.9437 7.65199 14.8181 7.70227 14.4147C7.72846 14.2047 8.01617 13.9898 8.5654 13.7702Z"
+                                fill="white" />
+                        </svg>
+                    </a>
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M7 3.30078C3.13401 3.30078 0 6.43479 0 10.3008V18.7008C0 22.5668 3.13401 25.7008 7 25.7008H21C24.866 25.7008 28 22.5668 28 18.7008V10.3008C28 6.43479 24.866 3.30078 21 3.30078H7Z"
+                                fill="white" fill-opacity="0.3" />
+                            <path d="M18.1992 14.5008L11.1992 18.7008V10.3008L18.1992 14.5008Z" fill="white" />
+                        </svg>
+                    </a>
+                    <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
+                            <g clip-path="url(#clip0_222_1084)">
+                                <path
+                                    d="M14.0358 0.5H13.972C6.25765 0.5 0.00390625 6.75374 0.00390625 14.4681V14.5319C0.00390625 22.2463 6.25765 28.5 13.972 28.5H14.0358C21.7502 28.5 28.0039 22.2463 28.0039 14.5319V14.4681C28.0039 6.75374 21.7502 0.5 14.0358 0.5Z"
+                                    fill="white" fill-opacity="0.3" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M17.6747 8.51953H11.0315C9.1962 8.51953 7.70312 10.0126 7.70312 11.8479V17.9255C7.70312 19.7608 9.1962 21.2539 11.0315 21.2539H17.6747C19.5101 21.2539 21.0031 19.7608 21.0031 17.9255V11.8479C21.0031 10.0126 19.5101 8.51953 17.6747 8.51953ZM8.87728 11.8479C8.87728 10.6602 9.84382 9.69368 11.0315 9.69368H17.6747C18.8624 9.69368 19.829 10.6602 19.829 11.8479V17.9255C19.829 19.1132 18.8624 20.0797 17.6747 20.0797H11.0315C9.84382 20.0797 8.87728 19.1132 8.87728 17.9255V11.8479ZM14.3538 17.981C16.0605 17.981 17.4497 16.5925 17.4497 14.885C17.4497 13.1776 16.0612 11.7891 14.3538 11.7891C12.6463 11.7891 11.2578 13.1776 11.2578 14.885C11.2578 16.5925 12.6463 17.981 14.3538 17.981ZM14.3538 12.964C15.4136 12.964 16.2756 13.826 16.2756 14.8858C16.2756 15.9456 15.4136 16.8076 14.3538 16.8076C13.294 16.8076 12.432 15.9456 12.432 14.8858C12.432 13.826 13.294 12.964 14.3538 12.964ZM18.5702 11.4553C18.5702 11.9156 18.1957 12.2894 17.7363 12.2894C17.2761 12.2894 16.9023 11.9156 16.9023 11.4553C16.9023 10.9949 17.2761 10.6211 17.7363 10.6211C18.1965 10.6211 18.5702 10.9949 18.5702 11.4553Z"
+                                    fill="white" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_222_1084">
+                                    <rect width="28" height="28" fill="white" transform="translate(0 0.5)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
-       </div>
     </footer>
 </body>
 <script src="{%static 'js/v1/header-link-animation.js' %}"></script>
@@ -465,20 +606,19 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
 <script src="{%static 'js/v1/swiper-sliders.js' %}"></script>
 <script type="text/javascript" src="{%static 'js/aos.js' %}"></script>
 <script src="{%static 'js/numbercount.js' %}"></script>
-<script src="{%static 'js/swipe-image.js' %}"></script>
 <script src="{%static 'js/fade-out.js' %}"></script>
 <script>
     ScrollTrigger.batch(".fadeText", {
-        onEnter: (batch) => gsap.to(batch, { 
-            opacity: 0, 
-            filter: "blur(10px)", 
-            stagger: 0.1, 
+        onEnter: (batch) => gsap.to(batch, {
+            opacity: 0,
+            filter: "blur(10px)",
+            stagger: 0.1,
             delay: 0.5 // Задержка перед началом анимации
         }),
-        onLeaveBack: (batch) => gsap.to(batch, { 
-            opacity: 1, 
-            filter: "blur(0px)", 
-            stagger: 0.1, 
+        onLeaveBack: (batch) => gsap.to(batch, {
+            opacity: 1,
+            filter: "blur(0px)",
+            stagger: 0.1,
         }),
         start: "top center",
         end: "bottom top",
