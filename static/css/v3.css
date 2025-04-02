@@ -48,6 +48,7 @@ header {
     line-height: 70px;
     letter-spacing: -1%;
     margin-bottom: 50px;
+    position: relative;
 }
 
 .header-contact-links {

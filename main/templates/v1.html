@@ -136,11 +136,13 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
 </style>
 
 <body style="background-color: black;">
-    <header class="position-absolute pb-4 w-100 top-0" style="background-color: transparent; z-index: 10000;">
+    <header class="position-fixed pb-4 w-100 top-0" style="background-color: transparent; z-index: 10000;">
         <div class="custom-container d-flex justify-content-between ">
-            <div class="logo">
-                <img src="{%static 'img/logo.svg' %}" alt="">
-            </div>
+            <a href="/">
+                <div class="logo">
+                    <img src="{%static 'img/logo.svg' %}" alt="">
+                </div>
+            </a>
             <div class="d-flex header-links justify-content-between">
                 <div class="d-flex flex-column gap-4 align-items-start">
                     <a href="#" class="hover-this"><span>Бюро</span></a>
@@ -168,9 +170,10 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
 
     </header>
     <div class="promo-video">
-        <video autoplay="" loop="" muted="" playsinline="" class="ma_video">
-            <source src="https://devision.company/video/video3.mp4" type="video/mp4">
-        </video>
+        <img src="{%static 'img/123.gif'%}" alt="" class="ma_video">
+        <!-- <video autoplay="" loop="" muted="" playsinline="" class="ma_video">
+            <source src="{%static 'img/123.gif'%}" type="video/mp4">
+        </video> -->
     </div>
     <div class="position-relative" style="height: 100vh;">
         <div class="promo-text fadeText">
@@ -483,21 +486,20 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
 
 <script>
     ScrollTrigger.batch(".fadeText", {
-        onEnter: (batch) => gsap.to(batch, { 
-            opacity: 0, 
-            filter: "blur(10px)", 
-            stagger: 0.1, 
-            delay: 0.5 // Задержка перед началом анимации
-        }),
-        onLeaveBack: (batch) => gsap.to(batch, { 
-            opacity: 1, 
-            filter: "blur(0px)", 
-            stagger: 0.1, 
-        }),
-        start: "top center",
-        end: "bottom top",
-        scrub: true
-    });
+    onEnter: (batch) => gsap.to(batch, { 
+        opacity: 0, 
+        filter: "blur(10px)", 
+        stagger: 0.1, 
+    }),
+    onLeaveBack: (batch) => gsap.to(batch, { 
+        opacity: 1, 
+        filter: "blur(0px)", 
+        stagger: 0.1, 
+    }),
+    start: "top+=300 center", // Начало анимации будет на 100px ниже верхней границы экрана
+    end: "bottom top",
+    scrub: true
+});
 </script>
 <script>
 

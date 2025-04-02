@@ -148,9 +148,12 @@
 <body style="background-color: black; ">
     <header class="position-fixed pb-4" style="background-color: transparent; z-index: 10000;">
         <div class="d-flex justify-content-between flex-column" style="height: 95vh; max-width: 290px;">
-            <div class="logo">
-                <img src="{%static 'img/logo.svg' %}" alt="">
-            </div>
+            <a href="/">
+                <div class="logo">
+                    <img src="{%static 'img/logo.svg' %}" alt="">
+                </div>
+            </a>
+            
             <div class="d-flex header-links flex-column gap-4 align-items-start">
                 <a href="#" class="hover-this"><span>Бюро</span></a>
                 <a href="#" class="hover-this"><span>Работы</span></a>
@@ -175,9 +178,10 @@
     </header>
 
     <div class="promo-video">
-        <video autoplay="" loop="" muted="" playsinline="" class="ma_video">
+        <img src="{%static 'img/123.gif'%}" alt="" class="ma_video">
+        <!-- <video autoplay="" loop="" muted="" playsinline="" class="ma_video">
             <source src="https://devision.company/video/video3.mp4" type="video/mp4">
-        </video>
+        </video> -->
     </div>
     <div class="margin-400"></div>
     <div>
@@ -290,8 +294,8 @@
     </div>
     <div class="margin-400"></div>
     <div data-aos="fade-up" data-aos-duration="1000">
-        <div class="custom-container fadeText">
-            <h2 style="margin-bottom: 80px;">mowo - мультидисциплинарное бюро с экспертностью в жилой и коммерческой недвижимости.</h2>
+        <div class="custom-container ">
+            <h2 style="margin-bottom: 80px;" class="fadeText">mowo - мультидисциплинарное бюро с экспертностью в жилой и коммерческой недвижимости.</h2>
             <div class="d-grid numbers-items fadeText">
                 <div class="numbers-item">
                     <div class="number-num">
@@ -337,7 +341,7 @@
         </div>
     </div>
     <div class="margin-400"></div>
-    <div data-aos="fade-up" data-aos-duration="1000">
+    <div data-aos="fade-up" data-aos-duration="500">
         <div class="custom-container ">
             <div class="d-flex justify-content-between fadeText">
                 <h2 style="margin-bottom: 50px;">Наши работы</h2>
@@ -613,14 +617,13 @@
             opacity: 0,
             filter: "blur(10px)",
             stagger: 0.1,
-            delay: 0.5 // Задержка перед началом анимации
         }),
         onLeaveBack: (batch) => gsap.to(batch, {
             opacity: 1,
             filter: "blur(0px)",
             stagger: 0.1,
         }),
-        start: "top center",
+        start: "top+=200 center",
         end: "bottom top",
         scrub: true
     });
