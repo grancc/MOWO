@@ -1,0 +1,487 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Демка v4</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    
+    <link type="text/css" href="{%static 'css/v4.css' %}" rel="stylesheet" />
+    <link type="text/css" href="{%static 'css/aos.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.typekit.net/lsf5xpv.css">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/base.css'%}" />
+
+    <link rel="shortcut icon" href="data:," />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+
+</head>
+<style>
+    @font-face {
+        font-family: 'Hauora Bold';
+        src: local('Hauora Bold'), local('Hauora-Bold'),
+            url('/static/fonts/Hauora-Bold.ttf') format('truetype');
+    }
+
+
+    @font-face {
+        font-family: 'Hauora Medium';
+        src: local('Hauora Medium'), local('Hauora-Medium'),
+            url('/static/fonts/Hauora-Medium.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Hauora Regular';
+        src: local('Hauora Regular'), local('Hauora-Regular'),
+            url('/static/fonts/Hauora-Regular.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Hauora';
+        src: local('Hauora Light'), local('Hauora-Light'),
+            url('/static/fonts/Hauora-Light.ttf') format('truetype');
+    }
+
+    body {
+        color: rgba(255, 255, 255, 1);
+        font-family: 'Hauora' !important;
+    }
+
+    a {
+        color: rgba(255, 255, 255, 1);
+        text-decoration: none;
+    }
+
+    .custom-container {
+        max-width: 1700px;
+        margin: 0 auto;
+        width: 95%;
+    }
+
+    .custom-container-right {
+        margin-left: calc(((100vw - 1680px) / 2) - 8px);
+    }
+
+    .header-links {
+        font-family: Hauora;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 100%;
+        letter-spacing: -1%;
+        text-align: center;
+
+    }
+
+    .ma_video {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        position: fixed;
+        top: 0;
+    }
+
+    .gap-100{
+        gap: 100px;
+    }
+
+    footer::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
+    }
+
+    footer{
+        font-size: 24px;
+    }
+
+    .footer-text{
+        max-width: 1700px;
+        left: calc(((100vw - 1680px) / 2) - 8px);
+        z-index: 2;
+    }
+
+    .video-mask{
+        -webkit-mask-image: url(/static/img/mask.svg);
+        -webkit-mask-position: center center;
+        -webkit-mask-repeat: no-repeat;
+        mask-image: url(/static/img/mask.svg);
+        mask-position: center center;
+        mask-repeat: no-repeat;
+        mask-size: unset;
+        max-height: 330px;
+        width: 1700px;
+        object-fit: cover;
+    }
+
+    .footer-mask {
+        z-index: 3;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .margin-400 {
+        margin-bottom: 400px;
+    }
+
+    .mini-container{
+        max-width: 1000px;
+        margin: 0 auto;
+        width: 95%;
+    }
+
+
+</style>
+
+<body style="background-color: black;">
+    <div class="position-absolute top-0  header-top w-100">
+        <div class="d-flex justify-content-between custom-container">
+            <p class="mb-0">with love</p>
+            <div class="d-flex gap-4">
+                <a href="">Wa</a>
+                <a href="" >Tg</a>
+            </div>
+            <div class="d-flex gap-4">
+                <a href=""><span>+7 123 456 78 90</span></a>
+                <a href="" ><span>mowo@world.com</span></a>
+            </div>
+            <div class="d-flex gap-4">
+                <a href=""><span>Владивосток, Россия</span></a>
+                <a href="" ><span>Бали, Индонезия</span></a>
+            </div>
+        </div>
+
+    </div>
+    <header class="position-fixed pb-4 w-100 top-0" style="background-color: transparent; z-index: 10000;">
+        <div class="custom-container d-flex justify-content-between header-links">
+            <a href="/" style="color: #FF0000;">MOWO</a>
+            <a href="/" class="item-top">ОФИС</a>
+            <a href="/" class="item-top">БЛОГ</a>
+            <a href="/" class="item-top">РАБОТЫ</a>
+        </div>
+
+    </header>
+    <div class="promo-video">
+        <!-- <img src="{%static 'img/123.gif'%}" alt="" class="ma_video"> -->
+    </div>
+    <div class="position-relative" style="height: 100vh;">
+        <div class="promo-text fadeText">
+            <p class="mb-0">
+                Создаём архитектуру, которая соединяет искусство, маркетинг, экономику и инженерию для максимальной эффективности застройки
+            </p>
+            
+        </div>
+    </div>
+
+    <div data-aos="fade-up" data-aos-duration="1000">
+        <div>
+            <div class="content content--sticky content--half bg-1" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({%static 'img/4.png'%});">
+                <h2 class="content__title">Архитектура и инженерия</h2>
+                <p class="content__text">Создаём архитектуру, где эстетика, функциональность и экономическая эффективность работают в балансе.</p>
+            </div>
+            <div class="content content--sticky content--half bg-1" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({%static 'img/5.png'%});">
+                <h2 class="content__title">Исследование территории</h2>
+                <p class="content__text">Проводим комплексное исследование локации, выявляя её потенциал и ограничения</p>
+            </div>
+        </div>
+    </div>
+    <div class="margin-400"></div>
+    <div data-aos="fade-up" data-aos-duration="1000">
+        <div class="mini-container numbers-block">
+            <h2 class="fadeText">mowo - мультидисциплинарное бюро с экспертностью в жилой и коммерческой недвижимости</h2>
+            <div class="d-grid numbers-items fadeText">
+                <div class="numbers-item">
+                    <div class="number-num">
+                        <span data-val="10">
+                            10
+                        </span>+
+                    </div>
+                    <p class="number-desc mb-0">Лет на рынке</p>
+                </div>
+                <div class="numbers-item">
+                    <div class="number-num">
+                        <span data-val="50">
+                            50
+                        </span>+
+                    </div>
+                    <p class="number-desc mb-0">Человек в команде</p>
+                </div>
+                <div class="numbers-item">
+                    <div class="number-num">
+                        <span data-val="120">
+                            120
+                        </span>+
+                    </div>
+                    <p class="number-desc mb-0">выполненных проектов</p>
+                </div>
+                <div class="numbers-item">
+                    <div class="number-num">
+                        <span data-val="6">
+                            6
+                        </span>+
+                    </div>
+                    <p class="number-desc mb-0">городов</p>
+                </div>
+                <div class="numbers-item">
+                    <div class="number-num">
+                        <span data-val="120">
+                            250
+                        </span>тыс.+
+                    </div>
+                    <p class="number-desc mb-0">построенной недвижимости</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="margin-400"></div>
+    <div data-aos="fade-up" data-aos-duration="1000">
+        <div>
+            <div class="content content-bottom content--sticky content--half bg-1" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({%static 'img/2.png'%});">
+                <h2 class="content__title">Архитектура и инженерия</h2>
+                <p class="content__text">Создаём архитектуру, где эстетика, функциональность и экономическая эффективность работают в балансе.</p>
+            </div>
+            <div class="content content-bottom content--sticky content--half bg-1" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({%static 'img/1.png'%});">
+                <h2 class="content__title">Исследование территории</h2>
+                <p class="content__text">Проводим комплексное исследование локации, выявляя её потенциал и ограничения</p>
+            </div>
+        </div>
+    </div>
+    <div class="margin-400"></div>
+    <div data-aos="fade-up" data-aos-duration="1000">
+        <div class="mini-container">
+            <div class="feedback-form">
+                <div class="feedback-form-text fadeText">
+                    <h2>Превратим идею в архитектуру</h2>
+                    <p>Индивидуальный подход к каждому проекту и гарантированное качество исполнения. Заполните форму, и мы подготовим персональное предложение.</p>
+                </div>
+                <div class="feedback-form-form">
+                    <form class="w-100">
+                        <div class="d-flex gap-3 mb-3">
+                            <input type="text" placeholder="Имя">
+                            <input type="text" placeholder="Номер телефона">
+                        </div>
+                        <div class="d-flex gap-3 mb-3">
+                            <input type="text" placeholder="Электронная почта">
+                            <input type="text" placeholder="Компания">
+                        </div>
+                        <textarea name="" id="" placeholder="Комментарий" class="mb-3"></textarea>
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex align-items-center form-check">
+                                <input class="form-check-input" type="checkbox" id="check-modal" name="check" value="yes">
+                                <label class="m-0 ms-2"> Даю согласие на обработку <a href="" style="color: rgba(255, 255, 255, 0.5);">персональных данных</a></label>
+                            </div>
+                            <button class="btn d-flex align-items-center">
+                                Оставить заявку <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                                        <path d="M2.00014 13.5006L2 11.5007H18.1719L14.2222 7.55093L15.6364 6.13672L22.0004 12.5007L15.6364 18.8647L14.2222 17.4504L18.172 13.5007L2.00014 13.5006Z" fill="white"/>
+                                        </svg>
+                                </span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="margin-400"></div>
+    <div data-aos="fade-up" data-aos-duration="1000">
+        <div class="mini-container">
+            <h2 style="margin-bottom: 32px;" class="fadeText">Наша команда</h2>
+            <p class="our-command-desc fadeText">Каждый проект — это результат совместного творчества архитекторов, урбанистов, дизайнеров и инженеров. Именно такой командный подход позволяет нам создавать по-настоящему выдающиеся решения, где функциональность встречается с искусством.</p>
+                <div class="employee-items">
+                    <div class="employee-slide">
+                        <img src="{%static 'img/empl1.png'%}" alt="">
+                        <p class="empl-name">Кривенко Антон</p>
+                        <p class="empl-desc">CEO</p>
+                    </div>
+                    <div class="employee-slide">
+                        <img src="{%static 'img/empl2.png'%}" alt="">
+                        <p class="empl-name">Анна Трофимова</p>
+                        <p class="empl-desc">Руководитель отдела Аналитики</p>
+                    </div>
+                    <div class="employee-slide">
+                        <img src="{%static 'img/empl3.png'%}" alt="">
+                        <p class="empl-name">Алексей Сапрыкин</p>
+                        <p class="empl-desc">Руководитель отдела Архитектуры и Инженерии</p>
+                    </div>
+                    <div class="employee-slide">
+                        <img src="{%static 'img/empl2.png'%}" alt="">
+                        <p class="empl-name">Анна Трофимова</p>
+                        <p class="empl-desc">Руководитель отдела Аналитики</p>
+                    </div>
+                    <div class="employee-slide">
+                        <img src="{%static 'img/empl3.png'%}" alt="">
+                        <p class="empl-name">Алексей Сапрыкин</p>
+                        <p class="empl-desc">Руководитель отдела Архитектуры и Инженерии</p>
+                    </div>
+                    <div class="employee-slide">
+                        <img src="{%static 'img/empl1.png'%}" alt="">
+                        <p class="empl-name">Кривенко Антон</p>
+                        <p class="empl-desc">CEO</p>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="margin-400"></div>
+    <div data-aos="fade-up" data-aos-duration="1000">
+        <div class="mini-container">
+            <h2 class="fadeText">Технологии, которые делают наш продукт точным эффективным и коммерчески успешным</h2>
+        </div>
+    </div>
+    <div data-aos="fade-up" data-aos-duration="1000">
+        <div>
+            <div class="content content--sticky content--half bg-1" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({%static 'img/7.png'%});">
+                <h2 class="content__title">GIS Analysis</h2>
+                <p class="content__text">Используем GIS-аналитику, чтобы глубже понимать территорию и разрабатывать коммерчески успешные проекты.</p>
+            </div>
+            <div class="content content--sticky content--half bg-1" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({%static 'img/3.png'%});">
+                <h2 class="content__title">BIM</h2>
+                <p class="content__text">Применяем BIM-проектирование, чтобы создавать коммерчески эффективные объекты с точными расчётами и минимизированными рисками.</p>
+            </div>
+        </div>
+    </div>
+    <div class="margin-400"></div>
+    <div data-aos="fade-up" data-aos-duration="1000">
+        <div class="mini-container">
+            <div class="feedback-form">
+                <div class="feedback-form-text fadeText">
+                    <h2>Превратим идею в архитектуру</h2>
+                    <p>Индивидуальный подход к каждому проекту и гарантированное качество исполнения. Заполните форму, и мы подготовим персональное предложение.</p>
+                </div>
+                <div class="feedback-form-form">
+                    <form class="w-100">
+                        <div class="d-flex gap-3 mb-3">
+                            <input type="text" placeholder="Имя">
+                            <input type="text" placeholder="Номер телефона">
+                        </div>
+                        <div class="d-flex gap-3 mb-3">
+                            <input type="text" placeholder="Электронная почта">
+                            <input type="text" placeholder="Компания">
+                        </div>
+                        <textarea name="" id="" placeholder="Комментарий" class="mb-3"></textarea>
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex align-items-center form-check">
+                                <input class="form-check-input" type="checkbox" id="check-modal" name="check" value="yes">
+                                <label class="m-0 ms-2"> Даю согласие на обработку <a href="" style="color: rgba(255, 255, 255, 0.5);">персональных данных</a></label>
+                            </div>
+                            <button class="btn d-flex align-items-center">
+                                Оставить заявку <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                                        <path d="M2.00014 13.5006L2 11.5007H18.1719L14.2222 7.55093L15.6364 6.13672L22.0004 12.5007L15.6364 18.8647L14.2222 17.4504L18.172 13.5007L2.00014 13.5006Z" fill="white"/>
+                                        </svg>
+                                </span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="margin-400"></div>
+    <footer class="position-relative">
+       <img src="{%static 'img/footer.png'%}" alt="" class="w-100">
+       <div class="footer-mask position-absolute top-0">
+        <video autoplay="" loop="" muted="" playsinline="" class="video-mask">
+            <source src="https://devision.company/video/video3.mp4" type="video/mp4">
+        </video>
+       </div>
+       
+       <div class="position-absolute w-100 footer-text" style="bottom: 50px;">
+        <div class="d-flex justify-content-between">
+            <p>© 2025 mowo™ </p>
+            <div class="footer-links gap-4 d-flex">
+                <a href="" class="d-block">Бюро</a>
+                <a href="" class="d-block">Работы</a>
+                <a href="" class="d-block">Блог</a>
+                <a href="" class="d-block">Контакты</a>
+            </div>
+            <div class="d-flex gap-3">
+                <a href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
+                        <path d="M14 28.5C21.732 28.5 28 22.232 28 14.5C28 6.76801 21.732 0.5 14 0.5C6.26801 0.5 0 6.76801 0 14.5C0 22.232 6.26801 28.5 14 28.5Z" fill="white" fill-opacity="0.3"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5654 13.7702C11.9477 12.2884 14.2031 11.3115 15.3316 10.8395C18.5536 9.49191 19.2231 9.25781 19.6595 9.25008C19.7555 9.24838 19.9701 9.2723 20.1091 9.38572C20.2265 9.48149 20.2588 9.61087 20.2742 9.70167C20.2897 9.79247 20.3089 9.99932 20.2936 10.1609C20.119 12.0057 19.3635 16.4825 18.9791 18.5487C18.8165 19.423 18.4963 19.7161 18.1862 19.7448C17.5125 19.8071 17.0009 19.2971 16.3483 18.8669C15.3271 18.1938 14.7503 17.7748 13.7591 17.118C12.6136 16.3589 13.3561 15.9417 14.009 15.2599C14.1798 15.0815 17.1484 12.3663 17.2059 12.12C17.2131 12.0892 17.2197 11.9744 17.1519 11.9137C17.084 11.8531 16.9839 11.8738 16.9117 11.8903C16.8092 11.9137 15.178 12.9979 12.0178 15.143C11.5547 15.4627 11.1353 15.6185 10.7596 15.6103C10.3453 15.6013 9.54844 15.3748 8.95605 15.1812C8.22946 14.9437 7.65199 14.8181 7.70227 14.4147C7.72846 14.2047 8.01617 13.9898 8.5654 13.7702Z" fill="white"/>
+                    </svg>
+                </a>
+                <a href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7 3.30078C3.13401 3.30078 0 6.43479 0 10.3008V18.7008C0 22.5668 3.13401 25.7008 7 25.7008H21C24.866 25.7008 28 22.5668 28 18.7008V10.3008C28 6.43479 24.866 3.30078 21 3.30078H7Z" fill="white" fill-opacity="0.3"/>
+                        <path d="M18.1992 14.5008L11.1992 18.7008V10.3008L18.1992 14.5008Z" fill="white"/>
+                    </svg>
+                </a>
+                <a href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
+                        <g clip-path="url(#clip0_222_1084)">
+                        <path d="M14.0358 0.5H13.972C6.25765 0.5 0.00390625 6.75374 0.00390625 14.4681V14.5319C0.00390625 22.2463 6.25765 28.5 13.972 28.5H14.0358C21.7502 28.5 28.0039 22.2463 28.0039 14.5319V14.4681C28.0039 6.75374 21.7502 0.5 14.0358 0.5Z" fill="white" fill-opacity="0.3"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6747 8.51953H11.0315C9.1962 8.51953 7.70312 10.0126 7.70312 11.8479V17.9255C7.70312 19.7608 9.1962 21.2539 11.0315 21.2539H17.6747C19.5101 21.2539 21.0031 19.7608 21.0031 17.9255V11.8479C21.0031 10.0126 19.5101 8.51953 17.6747 8.51953ZM8.87728 11.8479C8.87728 10.6602 9.84382 9.69368 11.0315 9.69368H17.6747C18.8624 9.69368 19.829 10.6602 19.829 11.8479V17.9255C19.829 19.1132 18.8624 20.0797 17.6747 20.0797H11.0315C9.84382 20.0797 8.87728 19.1132 8.87728 17.9255V11.8479ZM14.3538 17.981C16.0605 17.981 17.4497 16.5925 17.4497 14.885C17.4497 13.1776 16.0612 11.7891 14.3538 11.7891C12.6463 11.7891 11.2578 13.1776 11.2578 14.885C11.2578 16.5925 12.6463 17.981 14.3538 17.981ZM14.3538 12.964C15.4136 12.964 16.2756 13.826 16.2756 14.8858C16.2756 15.9456 15.4136 16.8076 14.3538 16.8076C13.294 16.8076 12.432 15.9456 12.432 14.8858C12.432 13.826 13.294 12.964 14.3538 12.964ZM18.5702 11.4553C18.5702 11.9156 18.1957 12.2894 17.7363 12.2894C17.2761 12.2894 16.9023 11.9156 16.9023 11.4553C16.9023 10.9949 17.2761 10.6211 17.7363 10.6211C18.1965 10.6211 18.5702 10.9949 18.5702 11.4553Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_222_1084">
+                        <rect width="28" height="28" fill="white" transform="translate(0 0.5)"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+            </div>
+        </div>
+       </div>
+    </footer>
+</body>
+<script src="{%static 'js/jquery.js'%}"></script>
+<script src="{%static 'js/v4.js'%}"></script>
+<script type="text/javascript" src="{%static 'js/aos.js' %}"></script>
+<script src="{%static 'js/numbercount.js' %}"></script>
+<script src="{%static 'js/v4/gsap.min.js'%}"></script>
+<script src="{%static 'js/v4/ScrollTrigger.min.js'%}"></script>
+<script src="{%static 'js/v4/imagesloaded.pkgd.min.js'%}"></script>
+<script  type="module" src="{%static 'js/v4/index.js'%}"></script>
+
+<!-- <script src="{%static 'js/v4/utils.js'%}"></script> -->
+
+
+<script>
+    ScrollTrigger.batch(".fadeText", {
+    onEnter: (batch) => gsap.to(batch, { 
+        opacity: 0, 
+        filter: "blur(10px)", 
+        stagger: 0.1, 
+    }),
+    onLeaveBack: (batch) => gsap.to(batch, { 
+        opacity: 1, 
+        filter: "blur(0px)", 
+        stagger: 0.1, 
+    }),
+    start: "top+=300 center", 
+    end: "bottom top",
+    scrub: true
+});
+</script>
+<script>
+
+    AOS.init();
+
+    const scrollBlock = document.querySelector('.ma_video');
+
+    window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY;
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const brightness = 1 - Math.min(scrollPosition / maxScroll, 1);
+
+        // Изменение фона блока в зависимости от прокрутки
+        scrollBlock.style = `filter: brightness(${brightness});`;
+    });
+
+</script>
+
+
+</html>

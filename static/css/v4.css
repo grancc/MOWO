@@ -1,0 +1,178 @@
+.header-top {
+    padding-top: 17px;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.header-top a {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+header {
+    padding-top: 102px;
+}
+
+.promo-text {
+    font-family: Hauora;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 100px;
+    letter-spacing: -1%;
+    position: absolute;
+    z-index: 10;
+    bottom: 20%;
+    width: 100%;
+}
+
+.promo-text p {
+    margin: 0 auto;
+    max-width: 976px;
+}
+
+.header-links a {
+    font-size: 112px;
+    font-weight: 800;
+    font-family: 'Hauora Bold';
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 70px;
+    letter-spacing: -1%;
+}
+
+.numbers-items {
+    margin-top: 52px;
+}
+
+.numbers-items {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px 200px;
+    margin-top: 100px;
+}
+
+.number-num {
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 70px;
+}
+
+.number-desc {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+}
+
+.numbers-item {
+    padding-left: 24px;
+    border-left: 1px solid rgba(255, 255, 255, 1);
+}
+
+.feedback-form-text p {
+    margin-top: 32px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: -1%;
+    margin-bottom: 60px;
+}
+
+.feedback-form-form input,
+.feedback-form-form textarea {
+    backdrop-filter: blur(24px);
+    padding: 24px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 24px;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 24px;
+    border: 1px solid rgba(255, 255, 255, 1)
+}
+
+.feedback-form-form .btn {
+    color: rgba(255, 255, 255, 1);
+    padding: 12px 24px;
+    gap: 16px;
+    border-radius: 100px;
+    border-width: 1px;
+    border: 1px solid rgba(255, 255, 255, 1);
+    font-family: Hauora;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: -1%;
+}
+
+.feedback-form-form .form-check-input {
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    margin-left: -20px;
+}
+
+.our-command-desc {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: -1%;
+    margin-bottom: 80px;
+}
+
+.employee-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px 20px;
+}
+
+.empl-desc {
+    color: rgba(255, 255, 255, 0.55);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: -2%;
+}
+
+.content__title {
+    font-family: Hauora;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 70px;
+    letter-spacing: -2%;
+    text-align: center;
+    max-width: 700px;
+}
+
+.content__text {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: -2%;
+    text-align: center;
+}
+
+.content--sticky{
+    background-repeat: repeat !important;
+    background-size: cover !important;
+}
+
+.content-bottom{
+    justify-content: end !important;
+    align-items: baseline !important;
+    padding: 80px !important;
+    text-align: start !important;
+}
+
+.content-bottom .content__title {
+    max-width: 740px;
+    text-align: start !important;
+}
+
+
+
+.content-bottom .content__text {
+    max-width: 740px;
+    text-align: start !important;
+}
