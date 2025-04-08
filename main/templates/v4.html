@@ -173,7 +173,9 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
 
     </header>
     <div class="promo-video">
-        <img src="{%static 'img/123.gif'%}" alt="" class="ma_video">
+        <video autoplay="" loop="" muted="" playsinline="" class="ma_video">
+            <source src="{%static 'img/video.mp4'%}" type="video/mp4">
+        </video>
     </div>
     <div class="position-relative" style="height: 100vh;">
         <div class="promo-text fadeText">
@@ -393,8 +395,10 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
     <footer class="position-relative">
        <img src="{%static 'img/footer.png'%}" alt="" class="w-100">
        <div class="footer-mask position-absolute top-0">
-        <img src="{%static 'img/123.gif'%}" alt="" class="video-mask">
-       </div>
+            <video autoplay="" loop="" muted="" playsinline="" class="video-mask">
+                <source src="{%static 'img/video.mp4'%}" type="video/mp4">
+            </video>
+        </div>
        
        <div class="position-absolute w-100 footer-text" style="bottom: 50px;">
         <div class="d-flex justify-content-between">
