@@ -14,17 +14,28 @@ header {
 }
 
 .promo-text {
-    font-family: Hauora;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 60px;
-    line-height: 100px;
-    letter-spacing: -1%;
+    line-height: 70px;
+    letter-spacing: -1%;    
     position: absolute;
     z-index: 10;
     bottom: 20%;
     width: 100%;
 }
+/* Скрываем блок по умолчанию */
+.hide-on-load {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.5s ease, visibility 0s 1s;
+}
 
+/* Блок становится видимым при прокрутке */
+.show-on-scroll {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1.5s ease;
+}
 .promo-text p {
     margin: 0 auto;
     max-width: 976px;

@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			return;        
 		
 		if (st > lastScrollTop){       
-			$('header .item-top').css('transform', 'translateY(-132px)');
+			$('header .item-top').css('transform', 'translateY(-100px)');
             $('header .item-top').css('transition', 'transform 0.5s ease-in-out');
 		} 
 		else {    
