@@ -20,7 +20,7 @@ header {
     letter-spacing: -1%;    
     position: absolute;
     z-index: 10;
-    bottom: 20%;
+    bottom: -350px;
     width: 100%;
 }
 /* Скрываем блок по умолчанию */

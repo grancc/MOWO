@@ -181,7 +181,7 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
         </video>
     </div>
 
-    <div class="hide-on-load">
+    <div data-aos="fade-up" data-aos-duration="1000">
         <div class="position-relative" style="height: 100vh;">
             <div class="promo-text fadeText">
                 <p class="mb-0">
@@ -192,7 +192,7 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
     </div>
 
 
-    <div data-aos="fade-up" data-aos-duration="1000">
+    <div data-aos="fade-up" data-aos-duration="1000" style="margin-top: 550px;">
         <div>
             <div class="content content--sticky content--half bg-1" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({%static 'img/4.png'%});">
                 <h2 class="content__title">Архитектура и инженерия</h2>
@@ -488,17 +488,6 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
 
         // Изменение фона блока в зависимости от прокрутки
         scrollBlock.style = `filter: brightness(${brightness});`;
-
-        const promoBlock = document.querySelector('.hide-on-load');
-        const blockPosition = promoBlock.getBoundingClientRect().top;
-
-        // Если блок находится в пределах экрана, показываем его
-        if (blockPosition < window.innerHeight * 0.9) {
-            promoBlock.classList.add('show-on-scroll');
-        } else if (window.scrollY === 0) {
-            // Если прокрутили обратно до самого верха страницы, скрываем блок
-            promoBlock.classList.remove('show-on-scroll');
-        }
     });
 
 </script>
