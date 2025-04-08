@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		if(Math.abs(lastScrollTop - st) <= delta)            
 			return;        
 		
-		if (st > lastScrollTop && st > navbarHeight){       
+		if (st > lastScrollTop){       
 			$('header .item-top').css('transform', 'translateY(-132px)');
             $('header .item-top').css('transition', 'transform 0.5s ease-in-out');
 		} 
