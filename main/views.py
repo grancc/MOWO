@@ -13,3 +13,6 @@ def demoV3(request):
 
 def demoV4(request):
     return render(request, "v4.html")
+
+def demoV4_2(request):
+    return render(request, "v4_2.html")

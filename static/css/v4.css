@@ -5,6 +5,10 @@
     padding-bottom: 50px;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 .header-top a {
     color: rgba(255, 255, 255, 0.8);
 }

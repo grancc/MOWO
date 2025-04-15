@@ -493,6 +493,20 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
 <!-- <script src="{%static 'js/v4/utils.js'%}"></script> -->
 
 <script>
+let scrollSpeed = 0.5; // Множитель скорости прокрутки (чем меньше, тем медленнее)
+
+let scrollPosition = window.scrollY; 
+
+
+window.addEventListener('wheel', (e) => {
+  e.preventDefault();
+
+  scrollPosition += e.deltaY * scrollSpeed;
+
+  window.scrollTo(0, scrollPosition);
+}, { passive: false });
+</script>
+<script>
     ScrollTrigger.batch(".fadeText", {
     onEnter: (batch) => gsap.to(batch, { 
         opacity: 0, 
