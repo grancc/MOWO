@@ -224,9 +224,9 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
     </div>
     <div class="margin-400"></div>
     <div data-aos="fade-up" data-aos-duration="1000">
-        <div class="mini-container numbers-block">
-            <h2 class="fadeText">mowo - мультидисциплинарное бюро с экспертностью в жилой и коммерческой недвижимости</h2>
-            <div class="d-grid numbers-items fadeText">
+        <div class="mini-container numbers-block fadeTextBlock">
+            <h2 class="fc_ttl">mowo - мультидисциплинарное бюро с экспертностью в жилой и коммерческой недвижимости</h2>
+            <div class="d-grid numbers-items block-scroll">
                 <div class="numbers-item">
                     <div class="number-num">
                         <span data-val="10">
@@ -294,12 +294,12 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
     <div class="margin-400"></div>
     <div data-aos="fade-up" data-aos-duration="1000">
         <div class="mini-container">
-            <div class="feedback-form">
-                <div class="feedback-form-text fadeText">
+            <div class="feedback-form fadeTextBlock">
+                <div class="feedback-form-text fc_ttl">
                     <h2>Превратим идею в архитектуру</h2>
                     <p>Индивидуальный подход к каждому проекту и гарантированное качество исполнения. Заполните форму, и мы подготовим персональное предложение.</p>
                 </div>
-                <div class="feedback-form-form">
+                <div class="feedback-form-form block-scroll">
                     <form class="w-100">
                         <div class="d-flex gap-3 mb-3">
                             <input type="text" placeholder="Имя">
@@ -330,10 +330,13 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
     </div>
     <div class="margin-400"></div>
     <div data-aos="fade-up" data-aos-duration="1000">
-        <div class="mini-container">
-            <h2 style="margin-bottom: 32px;" class="fadeText">Наша команда</h2>
-            <p class="our-command-desc fadeText">Каждый проект — это результат совместного творчества архитекторов, урбанистов, дизайнеров и инженеров. Именно такой командный подход позволяет нам создавать по-настоящему выдающиеся решения, где функциональность встречается с искусством.</p>
-                <div class="employee-items">
+        <div class="mini-container fadeTextBlock">
+            <div class="fc_ttl">
+                <h2 style="margin-bottom: 32px;">Наша команда</h2>
+                <p class="our-command-desc">Каждый проект — это результат совместного творчества архитекторов, урбанистов, дизайнеров и инженеров. Именно такой командный подход позволяет нам создавать по-настоящему выдающиеся решения, где функциональность встречается с искусством.</p>
+            </div>
+            
+                <div class="employee-items block-scroll">
                     <div class="employee-slide">
                         <img src="{%static 'img/empl1.png'%}" alt="">
                         <p class="empl-name">Кривенко Антон</p>
@@ -397,12 +400,12 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
     <div class="margin-400"></div>
     <div data-aos="fade-up" data-aos-duration="1000">
         <div class="mini-container">
-            <div class="feedback-form">
-                <div class="feedback-form-text fadeText">
+            <div class="feedback-form fadeTextBlock">
+                <div class="feedback-form-text fc_ttl">
                     <h2>Превратим идею в архитектуру</h2>
                     <p>Индивидуальный подход к каждому проекту и гарантированное качество исполнения. Заполните форму, и мы подготовим персональное предложение.</p>
                 </div>
-                <div class="feedback-form-form">
+                <div class="feedback-form-form block-scroll">
                     <form class="w-100">
                         <div class="d-flex gap-3 mb-3">
                             <input type="text" placeholder="Имя">
@@ -491,7 +494,49 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
 <script  type="module" src="{%static 'js/v4/index.js'%}"></script>
 
 <!-- <script src="{%static 'js/v4/utils.js'%}"></script> -->
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+  
+    document.addEventListener('DOMContentLoaded', () => {
+        const containers = document.querySelectorAll('.fadeTextBlock');
+        containers.forEach(container => {
+            const fcTtl = container.querySelector('.fc_ttl');
+            const pinSpacer = container.querySelector('.block-scroll');
+        
+            // Анимация для блока fc_ttl
+            gsap.to(fcTtl, {
+                scrollTrigger: {
+                trigger: fcTtl,              
+                start: "top top+=400",             
+                end: () => `+=${pinSpacer.offsetHeight - 350}`,
+                scrub: true,                   
+                
+                },
+                y: () => `${pinSpacer.offsetHeight - 350}`, 
+                ease: "none"                 
+            });
 
+            // Анимация для fadeText
+            ScrollTrigger.batch(".fadeTextBlock", {
+                onEnter: (batch) => gsap.to(batch, { 
+                    opacity: 0, 
+                    filter: "blur(10px)", 
+                    stagger: 0.1, 
+                    duration: 1.5,
+            }),
+                onLeaveBack: (batch) => gsap.to(batch, { 
+                    opacity: 1, 
+                    filter: "blur(0px)", 
+                    stagger: 0.1, 
+                    duration: 1.5,
+            }),
+                start: () => `+=${fcTtl.offsetHeight + 300}`,   
+                end: "bottom top",          
+                scrub: true,               
+            });
+        });
+    });
+</script>
 <script>
     ScrollTrigger.batch(".fadeText", {
     onEnter: (batch) => gsap.to(batch, { 
