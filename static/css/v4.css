@@ -2,16 +2,43 @@
     padding-top: 17px;
     font-size: 24px;
     color: rgba(255, 255, 255, 0.8);
-    z-index: 10;
+    padding-bottom: 50px;
 }
 
 .header-top a {
     color: rgba(255, 255, 255, 0.8);
 }
 
-header {
-    padding-top: 102px;
+.hover-this {
+    transition: all 0.3s ease;
 }
+
+.hover-this span {
+    display: inline-block;
+    font-family: 'Russo One', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    font-size: 36px;
+    text-transform: uppercase;
+    pointer-event: none;
+    transition: transform 0.1s linear;
+}
+
+.cursor {
+    pointer-events: none;
+    position: fixed;
+    padding: 0.3rem;
+    background-color: #fff;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    transition: transform 0.3s ease;
+}
+
+
+.cursor.active {
+    transform: translate(-50%, -50%) scale(8);
+}
+
 
 .promo-text {
     font-weight: 500;
@@ -41,7 +68,7 @@ header {
     max-width: 976px;
 }
 
-.header-links a {
+.header-links a span{
     font-size: 112px;
     font-weight: 800;
     font-family: 'Hauora Bold';
@@ -62,6 +89,7 @@ h2 {
     grid-template-columns: repeat(3, 1fr);
     gap: 60px 200px;
     margin-top: 100px;
+
 }
 
 .number-num {

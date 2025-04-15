@@ -132,7 +132,7 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
     }
 
     .margin-400 {
-        margin-bottom: 400px;
+        margin-bottom: 800px;
     }
 
     .mini-container{
@@ -145,34 +145,36 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
 </style>
 
 <body style="background-color: black;">
-    <div class="position-absolute top-0  header-top w-100">
-        <div class="d-flex justify-content-between custom-container">
-            <div class="d-flex">
-                <p class="mb-0">with love</p>
-                <div class="d-flex gap-4" style="margin-left: 180px;">
-                    <a href="">Wa</a>
-                    <a href="" >Tg</a>
+    
+    <header class="position-fixed pb-4 w-100 top-0" style="background-color: transparent; z-index: 10000;">
+        <div class="header-top w-100">
+            <div class="d-flex justify-content-between custom-container">
+                <div class="d-flex">
+                    <p class="mb-0" style="margin-left: 5px;">with love</p>
+                    <div class="d-flex gap-4" style="margin-left: 180px;">
+                        <a href="">Wa</a>
+                        <a href="" >Tg</a>
+                    </div>
+                </div>
+    
+                <div class="d-flex gap-4" style="margin-left: -15px;">
+                    <a href="" style="margin-right: 15px;"><span>+7 123 456 78 90</span></a>
+                    <a href="" style="margin-left: 55px; margin-right: -65px;"><span>mowo@world.com</span></a>
+                </div>
+                <div class="d-flex gap-4">
+                    <a href=""><span>Владивосток, Россия</span></a>
+                    <a href="" ><span>Бали, Индонезия</span></a>
                 </div>
             </div>
-
-            <div class="d-flex gap-4">
-                <a href=""><span>+7 123 456 78 90</span></a>
-                <a href="" style="margin-left: 75px; margin-right: -65px;"><span>mowo@world.com</span></a>
-            </div>
-            <div class="d-flex gap-4">
-                <a href=""><span>Владивосток, Россия</span></a>
-                <a href="" ><span>Бали, Индонезия</span></a>
-            </div>
+    
         </div>
-
-    </div>
-    <header class="position-fixed pb-4 w-100 top-0" style="background-color: transparent; z-index: 10000;">
         <div class="custom-container d-flex justify-content-between header-links">
-            <a href="/" style="color: #FF0000;">MOWO</a>
-            <a href="/" class="item-top">ОФИС</a>
-            <a href="/" class="item-top">БЛОГ</a>
-            <a href="/" class="item-top">РАБОТЫ</a>
+            <a href="/" class="hover-this"><span style="color: #FF0000;" >MOWO</span></a>
+            <a href="/" class="item-top hover-this"><span>ОФИС</span></a>
+            <a href="/" class="item-top hover-this"><span>БЛОГ</span></a>
+            <a href="/" class="item-top hover-this"><span>РАБОТЫ</span></a>
         </div>
+        <div class="cursor"></div>
 
     </header>
     <div class="promo-video">
@@ -192,8 +194,24 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
     </div>
 
 
-    <div data-aos="fade-up" data-aos-duration="1000" style="margin-top: 550px;">
+    <div data-aos="fade-up" data-aos-duration="1000" style="margin-top: 750px;">
         <div>
+            <div class="content content--sticky content--half bg-1" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({%static 'img/4.png'%});">
+                <h2 class="content__title">Архитектура и инженерия</h2>
+                <p class="content__text">Создаём архитектуру, где эстетика, функциональность и экономическая эффективность работают в балансе.</p>
+            </div>
+            <div class="content content--sticky content--half bg-1" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({%static 'img/5.png'%});">
+                <h2 class="content__title">Исследование территории</h2>
+                <p class="content__text">Проводим комплексное исследование локации, выявляя её потенциал и ограничения</p>
+            </div>
+            <div class="content content--sticky content--half bg-1" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({%static 'img/4.png'%});">
+                <h2 class="content__title">Архитектура и инженерия</h2>
+                <p class="content__text">Создаём архитектуру, где эстетика, функциональность и экономическая эффективность работают в балансе.</p>
+            </div>
+            <div class="content content--sticky content--half bg-1" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({%static 'img/5.png'%});">
+                <h2 class="content__title">Исследование территории</h2>
+                <p class="content__text">Проводим комплексное исследование локации, выявляя её потенциал и ограничения</p>
+            </div>
             <div class="content content--sticky content--half bg-1" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({%static 'img/4.png'%});">
                 <h2 class="content__title">Архитектура и инженерия</h2>
                 <p class="content__text">Создаём архитектуру, где эстетика, функциональность и экономическая эффективность работают в балансе.</p>
@@ -255,6 +273,14 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
     <div class="margin-400"></div>
     <div data-aos="fade-up" data-aos-duration="1000">
         <div>
+            <div class="content content-bottom content--sticky content--half bg-1" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({%static 'img/2.png'%});">
+                <h2 class="content__title">Архитектура и инженерия</h2>
+                <p class="content__text">Создаём архитектуру, где эстетика, функциональность и экономическая эффективность работают в балансе.</p>
+            </div>
+            <div class="content content-bottom content--sticky content--half bg-1" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({%static 'img/1.png'%});">
+                <h2 class="content__title">Исследование территории</h2>
+                <p class="content__text">Проводим комплексное исследование локации, выявляя её потенциал и ограничения</p>
+            </div>
             <div class="content content-bottom content--sticky content--half bg-1" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({%static 'img/2.png'%});">
                 <h2 class="content__title">Архитектура и инженерия</h2>
                 <p class="content__text">Создаём архитектуру, где эстетика, функциональность и экономическая эффективность работают в балансе.</p>
@@ -358,6 +384,14 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
                 <h2 class="content__title">BIM</h2>
                 <p class="content__text">Применяем BIM-проектирование, чтобы создавать коммерчески эффективные объекты с точными расчётами и минимизированными рисками.</p>
             </div>
+            <div class="content content--sticky content--half bg-1" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({%static 'img/7.png'%});">
+                <h2 class="content__title">GIS Analysis</h2>
+                <p class="content__text">Используем GIS-аналитику, чтобы глубже понимать территорию и разрабатывать коммерчески успешные проекты.</p>
+            </div>
+            <div class="content content--sticky content--half bg-1" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({%static 'img/3.png'%});">
+                <h2 class="content__title">BIM</h2>
+                <p class="content__text">Применяем BIM-проектирование, чтобы создавать коммерчески эффективные объекты с точными расчётами и минимизированными рисками.</p>
+            </div>
         </div>
     </div>
     <div class="margin-400"></div>
@@ -447,6 +481,7 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
     </footer>
 </body>
 <script src="{%static 'js/jquery.js'%}"></script>
+<script src="{%static 'js/v1/header-link-animation.js' %}"></script>
 <script src="{%static 'js/v4.js'%}"></script>
 <script type="text/javascript" src="{%static 'js/aos.js' %}"></script>
 <script src="{%static 'js/numbercount.js' %}"></script>
@@ -464,16 +499,19 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
         opacity: 0, 
         filter: "blur(10px)", 
         stagger: 0.1, 
+        duration: 1.5,
     }),
     onLeaveBack: (batch) => gsap.to(batch, { 
         opacity: 1, 
         filter: "blur(0px)", 
         stagger: 0.1, 
+        duration: 1.5,
     }),
-    start: "top+=300 center", 
+    start: "top+=200 center", 
     end: "bottom top",
     scrub: true
 });
+
 </script>
 <script>
 

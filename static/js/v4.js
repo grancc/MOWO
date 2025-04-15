@@ -26,10 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		
 		if (st > lastScrollTop){       
 			$('header .item-top').css('transform', 'translateY(-100px)');
+			$('header .header-top').css('transform', 'translateY(-100px)');
+			$('header .header-top').css('transition', 'transform 0.5s ease-in-out');
             $('header .item-top').css('transition', 'transform 0.5s ease-in-out');
 		} 
 		else {    
             $('header .item-top').css('transform', 'translateY(0)');   
+			$('header .header-top').css('transform', 'translateY(0)');   
 		}     
 		lastScrollTop = st;    
 	};	
