@@ -16,8 +16,8 @@
 
     <link rel="shortcut icon" href="data:," />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
 
 </head>
 <style>
@@ -178,7 +178,7 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
 
     </header>
     <div class="promo-video">
-        <video autoplay="" loop="" muted="" playsinline="" class="ma_video">
+        <video autoplay="" loop="" muted="" playsinline="" class="ma_video" preload="none">
             <source src="{%static 'img/video.mp4'%}" type="video/mp4">
         </video>
     </div>
@@ -225,7 +225,10 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
     <div class="margin-400"></div>
     <div data-aos="fade-up" data-aos-duration="1000">
         <div class="mini-container numbers-block fadeTextBlock">
-            <h2 class="fc_ttl">mowo - мультидисциплинарное бюро с экспертностью в жилой и коммерческой недвижимости</h2>
+            <div class="fc_ttl">   
+                <h2 >mowo - мультидисциплинарное бюро с экспертностью в жилой и коммерческой недвижимости</h2>
+            </div>
+            
             <div class="d-grid numbers-items block-scroll">
                 <div class="numbers-item">
                     <div class="number-num">
@@ -483,18 +486,68 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
        </div>
     </footer>
 </body>
-<script src="{%static 'js/jquery.js'%}"></script>
-<script src="{%static 'js/v1/header-link-animation.js' %}"></script>
-<script src="{%static 'js/v4.js'%}"></script>
+<script defer src="{%static 'js/jquery.js'%}"></script>
+<script defer src="{%static 'js/v1/header-link-animation.js' %}"></script>
+<script defer src="{%static 'js/v4.js'%}"></script>
 <script type="text/javascript" src="{%static 'js/aos.js' %}"></script>
 <script src="{%static 'js/numbercount.js' %}"></script>
 <script src="{%static 'js/v4/gsap.min.js'%}"></script>
 <script src="{%static 'js/v4/ScrollTrigger.min.js'%}"></script>
 <script src="{%static 'js/v4/imagesloaded.pkgd.min.js'%}"></script>
-<script  type="module" src="{%static 'js/v4/index.js'%}"></script>
+<script  defer type="module" src="{%static 'js/v4/index.js'%}"></script>
 
 <!-- <script src="{%static 'js/v4/utils.js'%}"></script> -->
 <script>
+    //document.addEventListener('DOMContentLoaded', () => {
+    //     const containers = document.querySelectorAll('.fadeTextBlock');
+    //     containers.forEach(container => {
+    //         const fcTtl = container.querySelector('.fc_ttl');
+    //         const pinSpacer = container.querySelector('.block-scroll');
+    //         const yOffset = pinSpacer.offsetHeight - 480;
+            
+    //         // Анимация для блока fc_ttl
+    //         ScrollTrigger.create({
+    //             trigger: container,
+    //             start: "top top+=400",
+    //             end: `+=${yOffset}`,
+    //             scrub: true,
+    //             markers:true,
+    //             onUpdate: (self) => {
+    //                 if (self.progress < 1 && self.progress > 0) {
+    //                     const rect = fcTtl.getBoundingClientRect();
+
+    //                     fcTtl.style.position = "sticky";
+    //                     fcTtl.style.top = "300px"; // положение от верхнего края окна
+    //                     fcTtl.style.width = `${rect.width}px`;
+    //                     fcTtl.style.zIndex = "999";
+    //                 } else {
+    //                     fcTtl.style.position = "";
+    //                     fcTtl.style.top = "200px"; 
+    //                     pinSpacer.paddingTop = 
+    //                 }
+    //             }
+    //         });
+
+    //         // Анимация для fadeText
+    //         ScrollTrigger.batch(".fadeTextBlock", {
+    //             onEnter: (batch) => gsap.to(batch, { 
+    //                 opacity: 0, 
+    //                 filter: "blur(10px)", 
+    //                 stagger: 0.1, 
+    //                 duration: 1.5,
+    //         }),
+    //             onLeaveBack: (batch) => gsap.to(batch, { 
+    //                 opacity: 1, 
+    //                 filter: "blur(0px)", 
+    //                 stagger: 0.1, 
+    //                 duration: 1.5,
+    //         }),
+    //             start: () => `+=${fcTtl.offsetHeight + 300}`,   
+    //             end: "bottom top",          
+    //             scrub: true,               
+    //         });
+    //     });
+    // });
     gsap.registerPlugin(ScrollTrigger);
   
     document.addEventListener('DOMContentLoaded', () => {
@@ -502,7 +555,8 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
         containers.forEach(container => {
             const fcTtl = container.querySelector('.fc_ttl');
             const pinSpacer = container.querySelector('.block-scroll');
-        
+            const yOffset = pinSpacer.offsetHeight - 480;
+            
             // Анимация для блока fc_ttl
             gsap.to(fcTtl, {
                 scrollTrigger: {
@@ -539,23 +593,20 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
 </script>
 <script>
     ScrollTrigger.batch(".fadeText", {
-    onEnter: (batch) => gsap.to(batch, { 
-        opacity: 0, 
-        filter: "blur(10px)", 
-        stagger: 0.1, 
-        duration: 1.5,
-    }),
-    onLeaveBack: (batch) => gsap.to(batch, { 
-        opacity: 1, 
-        filter: "blur(0px)", 
-        stagger: 0.1, 
-        duration: 1.5,
-    }),
-    start: "top+=200 center", 
-    end: "bottom top",
-    scrub: true
-});
-
+        onEnter: (batch) => gsap.to(batch, { 
+            opacity: 0, 
+            filter: "blur(10px)", 
+            stagger: 0.1, 
+            duration: 1.5,
+        }),
+        onLeaveBack: (batch) => gsap.to(batch, { 
+            opacity: 1, 
+            filter: "blur(0px)", 
+            stagger: 0.1, 
+            duration: 0.2,
+        }),
+        start: "top top+=400", 
+    });
 </script>
 <script>
 
