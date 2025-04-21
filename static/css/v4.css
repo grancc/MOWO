@@ -5,9 +5,6 @@
     padding-bottom: 50px;
 }
 
-html {
-    scroll-behavior: smooth;
-  }
 
 .header-top a {
     color: rgba(255, 255, 255, 0.8);
@@ -44,6 +41,17 @@ html {
     transform: translate(-50%, -50%) scale(8);
 }
 
+.fadeTextBlock, .fc_ttl {
+    transform: translateZ(0);
+    will-change: transform, opacity, filter;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+  }
+
+.fc_ttl {
+    position: absolute;
+    max-width: 1000px;
+}
 
 .promo-text {
     font-weight: 500;

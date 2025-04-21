@@ -532,15 +532,6 @@ window.addEventListener('wheel', (e) => {
 
     const scrollBlock = document.querySelector('.ma_video');
 
-    window.addEventListener('scroll', () => {
-        const scrollPosition = window.scrollY;
-        const maxScroll = document.documentElement.scrollHeight - window.innerHeight - 2000;
-        const brightness = 1 - Math.min(scrollPosition / maxScroll, 1);
-
-        // Изменение фона блока в зависимости от прокрутки
-        scrollBlock.style = `filter: brightness(${brightness});`;
-    });
-
 </script>
 
 
