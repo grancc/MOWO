@@ -1,0 +1,250 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Демка v4</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    
+    <link type="text/css" href="{%static 'css/v4.css' %}" rel="stylesheet" />
+    <link type="text/css" href="{%static 'css/aos.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.typekit.net/lsf5xpv.css">
+
+    <link rel="stylesheet" type="text/css" href="{%static 'css/base.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{%static 'css/article.css'%}" />
+    
+
+    <link rel="shortcut icon" href="data:," />
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+
+</head>
+
+<body style="background-color: black;">
+    
+    <header class="position-fixed pb-4 w-100 top-0" style="background-color: transparent; z-index: 10000;">
+        <div class="header-top w-100">
+            <div class="d-flex justify-content-between custom-container">
+                <div class="d-flex">
+                    <p class="mb-0" style="margin-left: 5px;">with love</p>
+                    <div class="d-flex gap-4" style="margin-left: 180px;">
+                        <a href="">Wa</a>
+                        <a href="" >Tg</a>
+                    </div>
+                </div>
+    
+                <div class="d-flex gap-4" style="margin-left: -15px;">
+                    <a href="" style="margin-right: 15px;"><span>+7 123 456 78 90</span></a>
+                    <a href="" style="margin-left: 55px; margin-right: -65px;"><span>mowo@world.com</span></a>
+                </div>
+                <div class="d-flex gap-4">
+                    <a href=""><span>Владивосток, Россия</span></a>
+                    <a href="" ><span>Бали, Индонезия</span></a>
+                </div>
+            </div>
+    
+        </div>
+        <div class="custom-container d-flex justify-content-between header-links">
+            <a href="/" class="item-top hover-this"><span>MOWO</span></a>
+            <a href="/" class="item-top hover-this"><span>ОФИС</span></a>
+            <a href="/blog/article/1" class="item-top hover-this"><span>БЛОГ</span></a>
+            <a href="/" class="item-top hover-this"><span>РАБОТЫ</span></a>
+        </div>
+        <div class="cursor"></div>
+
+    </header>
+    <section id="article-page">
+        <div class="bread d-flex mini-container">
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                <path d="M18.3319 9.66618L18.332 11.3328L4.85545 11.3328L8.14686 14.6242L6.96837 15.8027L1.66503 10.4994L6.96837 5.19609L8.14687 6.37468L4.85536 9.66609L18.3319 9.66618Z" fill="#9D9D9D"/>
+                </svg>
+            </span>
+            Все статьи
+        </div>
+        <div class="article-header mini-container">
+            <h1>Тренды бла­го­устрой­ства в 2025 году: ар­хи­тек­ту­ра дворовых про­странств, плей­ха­бов и об­ще­ствен­ных мест</h1>
+            <div class="date">
+                22.01.2025
+            </div>
+        </div>
+        <div class="text-center">
+            <img src="{%static 'img/temp.png'%}" alt="" class="big-img">
+        </div>
+        <p class="mini-container">Какие тренды в архитектуре дворовых пространств, плейхабов, общественных мест будут актуальны в 2025 году? Рассказываем о ключевых трендах!</p>
+        <p class="mini-container">
+            Эстетичная и комфортная среда повышает стоимость и ценность недвижимости. Архитекторы, создавая 
+            современные проекты, стремятся не просто попасть в ожидания покупателей объектов и жителей города, 
+            а превзойти их! Архитектура развивается, жители получают великолепные пространства, а девелоперы 
+            повышают стоимость сделки от 5 до 15%. Подробно о том, как повлиял на современные проекты и девелоперов 
+            тренд на благоустройство мы уже рассказывали в материале «Тренд на бла­го­устрой­ство: как двор уве­ли­чи­ва­ет
+            класс ЖК и сто­и­мость квартир». Сегодня же расскажем, какие тренды в благоустройстве перейдут с архитекторами 
+            и бюро в 2025 год.
+        </p>
+        <div class="slider swiper" style="overflow: unset;">
+            <div class="swiper-wrapper" style="overflow: hidden;">
+                <img src="{%static 'img/temp2.png'%}" alt="" class="swiper-slide">
+                <img src="{%static 'img/temp2.png'%}" alt="" class="swiper-slide">
+                <img src="{%static 'img/temp2.png'%}" alt="" class="swiper-slide">
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="siper-btns">
+                <div class="swiper-button-prev">
+                    <svg width="36" height="24" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M35.9451 10.2013L35.9453 13.7908L6.91883 13.7908L14.008 20.8801L11.4697 23.4185L0.0471621 11.9959L11.4697 0.573379L14.008 3.11187L6.91865 10.2011L35.9451 10.2013Z" fill="white"/>
+                    </svg>
+                </div>
+                <div class="swiper-button-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="24" viewBox="0 0 36 24" fill="none">
+                        <path d="M0.0549387 13.7987L0.0546875 10.2092H29.0812L21.992 3.11987L24.5303 0.581543L35.9528 12.0041L24.5303 23.4266L21.992 20.8881L29.0814 13.7989L0.0549387 13.7987Z" fill="white"/>
+                        </svg>
+                </div>
+            </div>
+        </div>
+        <p class="mini-container">
+            Геометризм используется не только как основной паттерн, но и как дополнение, отдельная функциональная зона: например, для покрытия детской площадки в виде игры «крестики-нолики».
+        </p>
+        <div class="gallery">
+            <div class="item w-100">
+                <img src="{%static 'img/temp3.png'%}" alt="" class="w-100">
+                <p>
+                    Геометризм используется не только как основной паттерн, но и как дополнение, 
+                    отдельная функциональная зона: например, для покрытия детской площадки в виде 
+                    игры «крестики-нолики».
+                </p>
+            </div>
+            <div class="item  w-100">
+                <img src="{%static 'img/temp4.png'%}" alt="" class="w-100">
+                <p>
+                    В ЖК «Гранатовом» южного города Дербент с высоты птичьего полета считывается 
+                    яркий графический элемент: путеводная нить, пролегающая через все пространство. 
+                    Она связывает все функциональные зоны двора воедино, формируя непрерывную связь.
+                </p>
+            </div>
+        </div>
+        <div class="mini-container">
+            <h2>Выйти из спячки: всесезонные проекты</h2>
+            <p >
+                Большая часть нашей страны имеет выраженную сезонность, поэтому проекты с «летней» 
+                функциональной программой неэффективны. Благоустройство «впадает в спячку» вместе с
+                 холодами и просыпается только весной. Сегодня же мы все чаще видим объекты, в которых 
+                 тщательно прорабатываются сценарии зимнего, весеннего и осеннего использования 
+                 пространства. Эта тенденция сохранит свою динамику и в будущем году.
+                Построить всесезонное благоустройство помогают ветрозащитные конструкции, комплексы для зимних игр
+                и разнообразные тепловые завесы.
+            </p>
+        </div>
+        <div class="mini-container" style="margin-top: 100px;">
+            <h2>Биоразнообразие: ценность природы</h2>
+            <p >
+                Увеличение площади твердых покрытий и сокращение зелени приводит к повышению 
+                температуры в городах по сравнению с сельской местностью — такое явление называют 
+                островом тепла. Среди преимуществ — охлаждение воздуха и поглощение атмосферных 
+                загрязнителей.
+                Разнообразная растительность не только улучшает образ объектов, но и является ключевым 
+                аспектом при выборе места для жизни современными покупателями. Проекты с ярким 
+                биоразнообразием ценятся и выигрывают у проектов с меньшим озеленением.
+                По данным аналитиков, на зеленые лаунж-зоны и ландшафтный дизайн девелоперы закладывают 
+                в бюджет 3-5% от всей сметы, а в высоком сегменте эта цифра доходит до 10%. Кроме 
+                поддержания экосистемы и улучшения образа объектов, растительность дает возможность 
+                горожанам быть ближе к природе.
+            </p>
+        </div>
+    </section>
+       
+    <footer class="position-relative">
+       <img src="{%static 'img/footer.png'%}" alt="" class="w-100">
+        <div class="mini-container ">
+            <div class="feedback-form position-absolute mx-auto mini-container" style="z-index: 5; bottom: 250px;">
+                <div class="feedback-form-text">
+                    <h2>Превратим идею в архитектуру</h2>
+                    <p>Индивидуальный подход к каждому проекту и гарантированное качество исполнения. Заполните форму, и мы подготовим персональное предложение.</p>
+                </div>
+                <div class="feedback-form-form">
+                    <form class="w-100">
+                        <div class="d-flex gap-3 mb-3">
+                            <input type="text" placeholder="Имя">
+                            <input type="text" placeholder="Номер телефона">
+                        </div>
+                        <div class="d-flex gap-3 mb-3">
+                            <input type="text" placeholder="Электронная почта">
+                            <input type="text" placeholder="Компания">
+                        </div>
+                        <textarea name="" id="" placeholder="Комментарий" class="mb-3"></textarea>
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex align-items-center form-check">
+                                <input class="form-check-input" type="checkbox" id="check-modal" name="check" value="yes" checked>
+                                <label class="m-0 ms-2"> Даю согласие на обработку <a href="" style="color: rgba(255, 255, 255, 0.5);">персональных данных</a></label>
+                            </div>
+                            <button class="btn d-flex align-items-center">
+                                Оставить заявку
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+       <div class="position-absolute w-100 footer-text" style="bottom: 50px;">
+        <div class="footer-top d-flex justify-content-between align-items-center">
+            <div class="d-flex justify-content-between  align-items-center gap-4" >
+                <img src="{%static 'img/footer-logo.svg'%}" alt="footer-logo">
+                <div class="footer-links gap-4 d-flex">
+                    <a href="" class="d-block">Бюро</a>
+                    <a href="" class="d-block">Работы</a>
+                    <a href="" class="d-block">Блог</a>
+                    <a href="" class="d-block">Контакты</a>
+                </div>
+                
+            </div>
+            <div class="d-flex gap-3  align-items-center">
+                <a href="">+7 123 456 78 90</a>
+                <a href=""> mowo@world.com</a>
+                <a href="">Wa</a>
+                <a href="">Tg</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="d-flex justify-content-between">
+                <div class="footer-links gap-3 d-flex">
+                    <p>© 2025 mowo™</p>
+                    <p>|</p>
+                    <p>with love</p>
+                </div>
+                <div class="footer-links gap-3 d-flex">
+                    <p>Владивосток, Россия</p>
+                    <p>|</p>
+                    <p>Бали, Индонезия</p>
+                </div>
+            </div>
+        </div>
+        
+       </div>
+    </footer>
+</body>
+<script defer src="{%static 'js/jquery.js'%}"></script>
+<script defer src="{%static 'js/v1/header-link-animation.js' %}"></script>
+<script src="{%static 'js/swiper.min.js'%}"></script>
+<script src="{%static 'js/v4.js'%}"></script>
+<script>
+    var __slider = new Swiper(".slider ", {
+        slidesPerView: 1,
+        infinity: false,
+        centeredSlides: false,
+        pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+        },
+        navigation: {
+            nextEl: ".slider .swiper-button-next",
+            prevEl: ".slider .swiper-button-prev",
+        },
+    });
+</script>
+
+
+</html>

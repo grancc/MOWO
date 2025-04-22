@@ -1,0 +1,107 @@
+#article-page {
+    font-family: 'Hauora Regular';
+    margin-top: 356px;
+}
+
+.bread {
+    color: #9D9D9D;
+    font-size: 24px;
+    gap: 8px;
+}
+
+#article-page h1 {
+    font-family: 'Hauora Medium';
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 70px;
+    margin-top: 34px;
+    margin-bottom: 32px;
+}
+
+#article-page .date {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    color: #9D9D9D;
+}
+
+.big-img {
+    width: 95%;
+    margin-top: 52px;
+    margin-bottom: 52px;
+}
+
+#article-page p {
+    margin-bottom: 32px;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+#article-page .slider {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(11px);
+    background: #0101017D;
+    border-radius: 100px;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after,
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+    display: none;
+}
+
+.swiper-button-next svg,
+.swiper-button-prev svg {
+    width: unset;
+    height: unset;
+}
+
+.slider {
+    margin-top: 52px !important;
+    margin-bottom: 52px !important;
+}
+
+.swiper-pagination {
+    bottom: -35px;
+    right: 0;
+    left: unset;
+    width: max-content;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.gallery {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    margin-bottom: 100px;
+}
+
+.gallery img {
+    width: calc(95% - 30px / 2);
+    height: 431px;
+    object-fit: cover;
+}
+
+.gallery .item p {
+    margin-top: 30px;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 100%;
+    margin-bottom: 16px;
+}
