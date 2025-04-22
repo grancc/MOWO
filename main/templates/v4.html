@@ -323,11 +323,7 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
                                     <label class="m-0 ms-2"> Даю согласие на обработку <a href="" style="color: rgba(255, 255, 255, 0.5);">персональных данных</a></label>
                                 </div>
                                 <button class="btn d-flex align-items-center">
-                                    Оставить заявку <span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-                                            <path d="M2.00014 13.5006L2 11.5007H18.1719L14.2222 7.55093L15.6364 6.13672L22.0004 12.5007L15.6364 18.8647L14.2222 17.4504L18.172 13.5007L2.00014 13.5006Z" fill="white"/>
-                                            </svg>
-                                    </span>
+                                    Оставить заявку
                                 </button>
                             </div>
                         </form>
@@ -408,16 +404,16 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
                 <p class="content__text">Применяем BIM-проектирование, чтобы создавать коммерчески эффективные объекты с точными расчётами и минимизированными рисками.</p>
             </div>
         </div>
-    </div>
-    <div class="margin-400"></div>
-    <div data-aos="fade-up" data-aos-duration="1000">
-        <div class="mini-container">
-            <div class="feedback-form fadeTextBlock">
-                <div class="feedback-form-text fc_ttl">
+    </div>      
+    <footer class="position-relative">
+       <img src="{%static 'img/footer.png'%}" alt="" class="w-100">
+        <div class="mini-container ">
+            <div class="feedback-form position-absolute top-0 mx-auto mini-container" style="z-index: 5;">
+                <div class="feedback-form-text">
                     <h2>Превратим идею в архитектуру</h2>
                     <p>Индивидуальный подход к каждому проекту и гарантированное качество исполнения. Заполните форму, и мы подготовим персональное предложение.</p>
                 </div>
-                <div class="feedback-form-form block-scroll">
+                <div class="feedback-form-form">
                     <form class="w-100">
                         <div class="d-flex gap-3 mb-3">
                             <input type="text" placeholder="Имя">
@@ -434,11 +430,7 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
                                 <label class="m-0 ms-2"> Даю согласие на обработку <a href="" style="color: rgba(255, 255, 255, 0.5);">персональных данных</a></label>
                             </div>
                             <button class="btn d-flex align-items-center">
-                                Оставить заявку <span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-                                        <path d="M2.00014 13.5006L2 11.5007H18.1719L14.2222 7.55093L15.6364 6.13672L22.0004 12.5007L15.6364 18.8647L14.2222 17.4504L18.172 13.5007L2.00014 13.5006Z" fill="white"/>
-                                        </svg>
-                                </span>
+                                Оставить заявку
                             </button>
                         </div>
                     </form>
@@ -446,52 +438,40 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
             </div>
         </div>
     </div>
-    <div class="margin-400"></div>
-    <footer class="position-relative">
-       <img src="{%static 'img/footer.png'%}" alt="" class="w-100">
-       <div class="footer-mask position-absolute top-0">
-            <video autoplay="" loop="" muted="" playsinline="" class="video-mask">
-                <source src="{%static 'img/video.mp4'%}" type="video/mp4">
-            </video>
-        </div>
-       
        <div class="position-absolute w-100 footer-text" style="bottom: 50px;">
-        <div class="d-flex justify-content-between">
-            <p>© 2025 mowo™ </p>
-            <div class="footer-links gap-4 d-flex">
-                <a href="" class="d-block">Бюро</a>
-                <a href="" class="d-block">Работы</a>
-                <a href="" class="d-block">Блог</a>
-                <a href="" class="d-block">Контакты</a>
+        <div class="footer-top d-flex justify-content-between align-items-center">
+            <div class="d-flex justify-content-between  align-items-center gap-4" >
+                <img src="{%static 'img/footer-logo.svg'%}" alt="footer-logo">
+                <div class="footer-links gap-4 d-flex">
+                    <a href="" class="d-block">Бюро</a>
+                    <a href="" class="d-block">Работы</a>
+                    <a href="" class="d-block">Блог</a>
+                    <a href="" class="d-block">Контакты</a>
+                </div>
+                
             </div>
-            <div class="d-flex gap-3">
-                <a href="">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
-                        <path d="M14 28.5C21.732 28.5 28 22.232 28 14.5C28 6.76801 21.732 0.5 14 0.5C6.26801 0.5 0 6.76801 0 14.5C0 22.232 6.26801 28.5 14 28.5Z" fill="white" fill-opacity="0.3"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5654 13.7702C11.9477 12.2884 14.2031 11.3115 15.3316 10.8395C18.5536 9.49191 19.2231 9.25781 19.6595 9.25008C19.7555 9.24838 19.9701 9.2723 20.1091 9.38572C20.2265 9.48149 20.2588 9.61087 20.2742 9.70167C20.2897 9.79247 20.3089 9.99932 20.2936 10.1609C20.119 12.0057 19.3635 16.4825 18.9791 18.5487C18.8165 19.423 18.4963 19.7161 18.1862 19.7448C17.5125 19.8071 17.0009 19.2971 16.3483 18.8669C15.3271 18.1938 14.7503 17.7748 13.7591 17.118C12.6136 16.3589 13.3561 15.9417 14.009 15.2599C14.1798 15.0815 17.1484 12.3663 17.2059 12.12C17.2131 12.0892 17.2197 11.9744 17.1519 11.9137C17.084 11.8531 16.9839 11.8738 16.9117 11.8903C16.8092 11.9137 15.178 12.9979 12.0178 15.143C11.5547 15.4627 11.1353 15.6185 10.7596 15.6103C10.3453 15.6013 9.54844 15.3748 8.95605 15.1812C8.22946 14.9437 7.65199 14.8181 7.70227 14.4147C7.72846 14.2047 8.01617 13.9898 8.5654 13.7702Z" fill="white"/>
-                    </svg>
-                </a>
-                <a href="">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7 3.30078C3.13401 3.30078 0 6.43479 0 10.3008V18.7008C0 22.5668 3.13401 25.7008 7 25.7008H21C24.866 25.7008 28 22.5668 28 18.7008V10.3008C28 6.43479 24.866 3.30078 21 3.30078H7Z" fill="white" fill-opacity="0.3"/>
-                        <path d="M18.1992 14.5008L11.1992 18.7008V10.3008L18.1992 14.5008Z" fill="white"/>
-                    </svg>
-                </a>
-                <a href="">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
-                        <g clip-path="url(#clip0_222_1084)">
-                        <path d="M14.0358 0.5H13.972C6.25765 0.5 0.00390625 6.75374 0.00390625 14.4681V14.5319C0.00390625 22.2463 6.25765 28.5 13.972 28.5H14.0358C21.7502 28.5 28.0039 22.2463 28.0039 14.5319V14.4681C28.0039 6.75374 21.7502 0.5 14.0358 0.5Z" fill="white" fill-opacity="0.3"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6747 8.51953H11.0315C9.1962 8.51953 7.70312 10.0126 7.70312 11.8479V17.9255C7.70312 19.7608 9.1962 21.2539 11.0315 21.2539H17.6747C19.5101 21.2539 21.0031 19.7608 21.0031 17.9255V11.8479C21.0031 10.0126 19.5101 8.51953 17.6747 8.51953ZM8.87728 11.8479C8.87728 10.6602 9.84382 9.69368 11.0315 9.69368H17.6747C18.8624 9.69368 19.829 10.6602 19.829 11.8479V17.9255C19.829 19.1132 18.8624 20.0797 17.6747 20.0797H11.0315C9.84382 20.0797 8.87728 19.1132 8.87728 17.9255V11.8479ZM14.3538 17.981C16.0605 17.981 17.4497 16.5925 17.4497 14.885C17.4497 13.1776 16.0612 11.7891 14.3538 11.7891C12.6463 11.7891 11.2578 13.1776 11.2578 14.885C11.2578 16.5925 12.6463 17.981 14.3538 17.981ZM14.3538 12.964C15.4136 12.964 16.2756 13.826 16.2756 14.8858C16.2756 15.9456 15.4136 16.8076 14.3538 16.8076C13.294 16.8076 12.432 15.9456 12.432 14.8858C12.432 13.826 13.294 12.964 14.3538 12.964ZM18.5702 11.4553C18.5702 11.9156 18.1957 12.2894 17.7363 12.2894C17.2761 12.2894 16.9023 11.9156 16.9023 11.4553C16.9023 10.9949 17.2761 10.6211 17.7363 10.6211C18.1965 10.6211 18.5702 10.9949 18.5702 11.4553Z" fill="white"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_222_1084">
-                        <rect width="28" height="28" fill="white" transform="translate(0 0.5)"/>
-                        </clipPath>
-                        </defs>
-                    </svg>
-                </a>
+            <div class="d-flex gap-3  align-items-center">
+                <a href="">+7 123 456 78 90</a>
+                <a href=""> mowo@world.com</a>
+                <a href="">Wa</a>
+                <a href="">Tg</a>
             </div>
         </div>
+        <div class="footer-bottom">
+            <div class="d-flex justify-content-between">
+                <div class="footer-links gap-3 d-flex">
+                    <p>© 2025 mowo™</p>
+                    <p>|</p>
+                    <p>with love</p>
+                </div>
+                <div class="footer-links gap-3 d-flex">
+                    <p>Владивосток, Россия</p>
+                    <p>|</p>
+                    <p>Бали, Индонезия</p>
+                </div>
+            </div>
+        </div>
+        
        </div>
     </footer>
 </body>
@@ -513,7 +493,7 @@ linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
             opacity: 0, 
             filter: "blur(10px)", 
             stagger: 0.1, 
-            duration: 1.5,
+            duration: 0.7,
         }),
         onLeaveBack: (batch) => gsap.to(batch, { 
             opacity: 1, 
