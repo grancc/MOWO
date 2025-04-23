@@ -115,7 +115,7 @@
     transition: top .5s cubic-bezier(.76, 0, .24, 1);
 }
 
-.style_modal__l0rpK {
+.style_modal {
     height: 100%;
     width: 100%;
     display: flex;
@@ -123,6 +123,6 @@
     justify-content: center;
 }
 
-.style_modal__l0rpK img {
+.style_modal img {
     height: auto;
 }
