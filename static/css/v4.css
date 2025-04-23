@@ -39,6 +39,11 @@ a {
     width: 95%;
 }
 
+.big-container{
+    width: 80%;
+    margin: 0 auto;
+}
+
 .custom-container-right {
     margin-left: calc(((100vw - 1680px) / 2) - 8px);
 }

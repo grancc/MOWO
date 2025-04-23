@@ -17,5 +17,14 @@ def demoV4(request):
 def demoV4_2(request):
     return render(request, "v4_2.html")
 
+
+def demoV4_3(request):
+    return render(request, "v4_3.html")
+
+
 def article(request, id):
     return render(request, "article.html")
+
+
+def portfolio(request):
+    return render(request, "portfolio.html")
