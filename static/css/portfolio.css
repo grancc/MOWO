@@ -124,5 +124,6 @@
 }
 
 .style_modal img {
-    height: auto;
+    height: 70%;
+    object-fit: cover;
 }
