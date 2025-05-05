@@ -4,6 +4,7 @@ services:
   backend:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
+    entrypoint: /entrypoint.sh
     restart: unless-stopped
     volumes:
       - ./media:/usr/src/app/media

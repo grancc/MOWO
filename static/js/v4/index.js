@@ -3,7 +3,7 @@ import { preloadImages } from '/static/js/v4/utils.js';
 // Выбираем DOM элементы
 const contentElements = [...document.querySelectorAll('.content--sticky')];
 const totalContentElements = contentElements.length;
-
+gsap.registerPlugin(ScrollToPlugin);
 // Инициализация плавного скролла с использованием GSAP
 const initSmoothScrolling = () => {
     // Плавный скролл с использованием GSAP
@@ -40,25 +40,7 @@ const scroll = () => {
             ease: 'none',
             yPercent: -100
         }, 0)
-        // Анимация изображения внутри контента
-        .fromTo(el.querySelector('.content__img'), {
-            yPercent: 20,
-            rotation: 40,
-            scale: 0.8,
-            filter: 'contrast(400%)'
-        }, {
-            ease: 'none',
-            yPercent: -100,
-            rotation: 0,
-            scale: 1,
-            filter: 'contrast(100%)',
-            scrollTrigger: {
-                trigger: el,
-                start: 'top bottom',
-                end: 'max',
-                scrub: true
-            }
-        }, 0);
+
     });
 };
 
