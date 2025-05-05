@@ -11,8 +11,8 @@
 	position: sticky;
 	top: 0;
 	--offset: 0px;
-	top: var(--offset);
-	height: calc(100vh - var(--offset));
+	top: 0;
+	height: 100vh;
 }
 
 .content--half {
