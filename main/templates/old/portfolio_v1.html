@@ -1,0 +1,259 @@
+{% extends 'base.html' %}
+{%load static%}
+
+{%block style%}
+    <link rel="stylesheet" type="text/css" href="{%static 'css/portfolio.css'%}" />
+{%endblock%}
+
+{%block content%} 
+    <section id="portfolio-page" class="big-container">
+        <h2>Топ 6 проектов</h2>
+        <div class="portfolio-top-items">
+            <div class="portfolio-top-item position-relative">
+                <img src="{%static 'img/2.webp'%}" alt="">
+                <div>Villa dall'Ava</div>
+            </div>
+            <div class="portfolio-top-item position-relative">
+                <img src="{%static 'img/4.webp'%}" alt="">
+                <div>Harajuku Quest</div>
+            </div>
+            <div class="portfolio-top-item position-relative">
+                <img src="{%static 'img/3.webp'%}" alt="">
+                <div>Off-White Flagship Store Miami</div>
+            </div>
+            <div class="portfolio-top-item position-relative">
+                <img src="{%static 'img/5.webp'%}" alt="">
+                <div>11th Street Bridge Park</div>
+            </div>
+            <div class="portfolio-top-item position-relative">
+                <img src="{%static 'img/9.webp'%}" alt="">
+                <div>Discovery Partners Institute Headquarters</div>
+            </div>
+            <div class="portfolio-top-item position-relative">
+                <img src="{%static 'img/10.webp'%}" alt="">
+                <div>Austrian House</div>
+            </div>
+        </div>
+        <div class="portfolio-filter d-flex justify-content-between">
+            <div class="d-flex gap-3">
+                <div class="filter-item position-relative">
+                    Направления: все
+                </div>
+                <div class="filter-item position-relative">
+                    География: все
+                </div>
+                <div class="filter-item position-relative">
+                    Статус: все
+                </div>
+            </div>
+            <div>
+                <div class="filter-item position-relative">
+                    Сначала новые
+                </div>
+            </div>
+        </div>
+        <div class="modal-container" id="modalContainer" style="transform:translateX(-50%) translateY(-50%) scale(0) translateZ(0)">
+            <div class="modal-slider" id="modalSlider">
+                    <div class="style_modal" style="background-color:#000000"><img alt="image" loading="lazy"
+                            width="300" height="0" decoding="async" data-nimg="1" style="color:transparent"
+                            src="{%static 'img/2.webp'%}">
+                    </div>
+                    <div class="style_modal" style="background-color:#8C8C8C"><img alt="image" loading="lazy"
+                            width="300" height="0" decoding="async" data-nimg="1" style="color:transparent"
+                            src="{%static 'img/3.webp'%}">
+                    </div>
+                    <div class="style_modal" style="background-color:#EFE8D3"><img alt="image" loading="lazy"
+                            width="300" height="0" decoding="async" data-nimg="1" style="color:transparent"
+                            src="{%static 'img/4.webp'%}">
+                    </div>
+                    <div class="style_modal" style="background-color:#706D63"><img alt="image" loading="lazy"
+                            width="300" height="0" decoding="async" data-nimg="1" style="color:transparent"
+                            src="{%static 'img/5.webp'%}">
+                    </div>
+                    <div class="style_modal" style="background-color:#d30000"><img alt="image" loading="lazy"
+                        width="300" height="0" decoding="async" data-nimg="1" style="color:transparent"
+                        src="{%static 'img/6.webp'%}">
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-items">
+            <div class="portfolio-item d-flex gap-4 align-items-center">
+                <span>01.</span>
+                <div>
+                    <div class="item-name">
+                        Wollert Neighbourhood Centre
+                    </div>
+                    <div class="item-desc d-flex gap-2">
+                        <span>Архитектура</span>
+                        <span>|</span>
+                        <span>Сдан</span>
+                        <span>|</span>
+                        <span>Россия, г. Владивосток</span>
+                        <span>|</span>
+                        <span>3 600m²</span>
+                        <span>|</span>
+                        <span>2004г.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item d-flex gap-4 align-items-center">
+                <span>02.</span>
+                <div>
+                    <div class="item-name">
+                        Yibin Essence Layers
+                    </div>
+                    <div class="item-desc d-flex gap-2">
+                        <span>Архитектура</span>
+                        <span>|</span>
+                        <span>Сдан</span>
+                        <span>|</span>
+                        <span>Россия, г. Владивосток</span>
+                        <span>|</span>
+                        <span>3 600m²</span>
+                        <span>|</span>
+                        <span>2004г.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item d-flex gap-4 align-items-center">
+                <span>03.</span>
+                <div>
+                    <div class="item-name">
+                        Louis Vuitton at World Expo 2025 Osaka
+                    </div>
+                    <div class="item-desc d-flex gap-2">
+                        <span>Архитектура</span>
+                        <span>|</span>
+                        <span>Сдан</span>
+                        <span>|</span>
+                        <span>Россия, г. Владивосток</span>
+                        <span>|</span>
+                        <span>3 600m²</span>
+                        <span>|</span>
+                        <span>2004г.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item d-flex gap-4 align-items-center">
+                <span>04.</span>
+                <div>
+                    <div class="item-name">
+                        Metropolitan Village
+                    </div>
+                    <div class="item-desc d-flex gap-2">
+                        <span>Архитектура</span>
+                        <span>|</span>
+                        <span>Сдан</span>
+                        <span>|</span>
+                        <span>Россия, г. Владивосток</span>
+                        <span>|</span>
+                        <span>3 600m²</span>
+                        <span>|</span>
+                        <span>2004г.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item d-flex gap-4 align-items-center">
+                <span>05.</span>
+                <div>
+                    <div class="item-name">
+                        LOEWE Crafted World
+                    </div>
+                    <div class="item-desc d-flex gap-2">
+                        <span>Архитектура</span>
+                        <span>|</span>
+                        <span>Сдан</span>
+                        <span>|</span>
+                        <span>Россия, г. Владивосток</span>
+                        <span>|</span>
+                        <span>3 600m²</span>
+                        <span>|</span>
+                        <span>2004г.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="show-more w-100 d-flex justify-content-center">
+            <button class="btn">Показать ещё</button>
+        </div>
+    </section>
+
+{%endblock%}
+
+{%block script%}
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const modalContainer = document.getElementById('modalContainer');
+        const modalSlider = document.getElementById('modalSlider');
+        const cursor = document.getElementById('cursor');
+        const projects = document.querySelectorAll('.portfolio-item');
+
+        let active = false;
+
+        // Расчет координат при движении курсора
+        const xMoveContainer = gsap.quickTo(modalContainer, 'left', { duration: 0.8, ease: 'power3' });
+        const yMoveContainer = gsap.quickTo(modalContainer, 'top', { duration: 0.8, ease: 'power3' });
+
+        const xMoveCursor = gsap.quickTo(cursor, 'left', { duration: 0.5, ease: 'power3' });
+        const yMoveCursor = gsap.quickTo(cursor, 'top', { duration: 0.5, ease: 'power3' });
+
+
+        window.addEventListener('mousemove', (e) => {
+            if (!active) return; 
+            const { pageX, pageY } = e;
+            
+            xMoveContainer(pageX);
+            yMoveContainer(pageY);
+
+            xMoveCursor(pageX);
+            yMoveCursor(pageY);
+        });
+        
+        //При наведении на портфолио итемы меняем картинку
+        projects.forEach((item, index) => {
+            item.addEventListener('mouseenter', () => {
+                updateModalSlider(index);
+            });
+
+            item.addEventListener('mouseleave', () => {
+
+                updateModalSlider(index);
+
+            });
+        });
+
+
+        // При наведении на родительский блок убираем/показываем модальное окно
+        document.querySelector('.portfolio-items').addEventListener('mouseleave', () => {
+            toggleModal()
+        });
+
+        document.querySelector('.portfolio-items').addEventListener('mouseenter', () => {
+            toggleModal()
+        });
+
+
+        // Изменение фото
+        function updateModalSlider(index) {
+            modalSlider.style.top = `${index * -100}%`;
+        }
+
+        // Скрытие/показ модального окна
+        function toggleModal() {
+            active = !active;
+
+            if (active) {
+                modalContainer.style.transition = "all 0.4s ease";
+                modalContainer.style.opacity = 1;
+                modalContainer.style.transform = "translate(-50%, -50%) scale(1)";
+                cursor.style.opacity = 1;
+            } else {
+                modalContainer.style.opacity = 0;
+                modalContainer.style.transform = "translate(-50%, -50%) scale(0)";
+                cursor.style.opacity = 0;
+            }
+        }
+    });
+
+</script>
+{%endblock%}
