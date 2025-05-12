@@ -28,3 +28,7 @@ def article(request, id):
 
 def portfolio(request):
     return render(request, "portfolio.html")
+
+
+def office(request):
+    return render(request, "office.html")
