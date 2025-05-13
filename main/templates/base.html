@@ -16,7 +16,6 @@
     <link type="text/css" href="{%static 'css/aos.css' %}" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.typekit.net/lsf5xpv.css">
 
-    <link rel="stylesheet" type="text/css" href="{%static 'css/base.css'%}" />
     <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}" />
 
 
@@ -54,10 +53,10 @@
         </div>
         <div class="custom-container d-flex justify-content-between header-links">
             
-            <a href="/v4" class="item-top hover-this"><span {%if request.path == '/v4'%} style="color: #FF0000;" {%endif%}>MOWO</span></a>
-            <a href="/office" class="item-top hover-this"><span {%if request.path == '/office'%} style="color: #FF0000;" {%endif%}>ОФИС</span></a>
-            <a href="/blog/article/1" class="item-top hover-this"><span {%if request.path == '/blog'%} style="color: #FF0000;" {%endif%}>БЛОГ</span></a>
-            <a href="/portfolio" class="hover-this"><span {%if request.path == '/portfolio'%} style="color: #FF0000;" {%endif%}>РАБОТЫ</span></a>
+            <a href="/v4" class="{%if request.path != '/v4'%} item-top {%endif%} hover-this"><span {%if request.path == '/v4'%} style="color: #FF0000;" {%endif%}>MOWO</span></a>
+            <a href="/office" class="{%if request.path != '/office'%} item-top {%endif%} hover-this"><span {%if request.path == '/office'%} style="color: #FF0000;" {%endif%}>ОФИС</span></a>
+            <a href="/blog/article/1" class="{%if request.path != '/blog'%} item-top {%endif%} hover-this"><span {%if request.path == '/blog'%} style="color: #FF0000;" {%endif%}>БЛОГ</span></a>
+            <a href="/portfolio" class="{%if request.path != '/portfolio'%} item-top {%endif%} hover-this"><span {%if request.path == '/portfolio'%} style="color: #FF0000;" {%endif%}>РАБОТЫ</span></a>
         </div>
         <div class="cursor" id="cursor"></div>
 
@@ -140,7 +139,7 @@
     </footer>
 </body>
 <script defer src="{%static 'js/jquery.js'%}"></script>
-<script defer src="{%static 'js/v1/header-link-animation.js' %}"></script>
+<script defer src="{%static 'js/header-link-animation.js' %}"></script>
 <script src="{%static 'js/swiper.min.js'%}"></script>
 <script src="{%static 'js/base.js'%}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>

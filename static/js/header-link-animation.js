@@ -2,7 +2,7 @@
 
     const link = document.querySelectorAll('.header-links .hover-this');
     const cursor = document.querySelector('.cursor');
-    console.log(link)
+
     const animateit = function (e) {
           const span = this.querySelector('span');
           const { offsetX: x, offsetY: y } = e,
