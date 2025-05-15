@@ -3,23 +3,27 @@
 
 {%block style%}
     <link rel="stylesheet" type="text/css" href="{%static 'css/portfolio.css'%}" />
+    <link rel="stylesheet" type="text/css" href="{%static 'css/white-back.css'%}" />
 {%endblock%}
 
 {%block content%} 
     <section id="portfolio-page" class="big-container">
-        <h2>Главные проекты</h2>
+        <h2>главные проекты</h2>
         <div class="portfolio-items">
             <div class="portfolio-item position-relative d-flex">
-                <div class="portfolio-item-desc-left d-flex flex-column justify-content-between h-100 text-end">
-                    <div class="top-left">
-                        архитектура <br>
-                        и инженерия
-                    </div>
-                    <div class="bottom-left">
-                        Владивосток, Россия
+                <div class="position-relative">
+                    <img src="{%static 'img/portfolio/1.webp'%}" alt="">
+                    <div class="portfolio-item-desc-left d-flex flex-column justify-content-between h-100 top-0 left-0 text-end position-absolute">
+                        <div class="top-left">
+                            архитектура <br>
+                            и инженерия
+                        </div>
+                        <div class="bottom-left">
+                            Владивосток, Россия
+                        </div>
                     </div>
                 </div>
-                <img src="{%static 'img/2.webp'%}" alt="">
+                
                 <div class="portfolio-item-desc-right d-flex flex-column justify-content-between h-100 text-start">
                     <div class="top-left">
                         жилой комплекс Тихвинский
@@ -30,16 +34,19 @@
                 </div>
             </div>
             <div class="portfolio-item position-relative">
-                <div class="portfolio-item-desc-left d-flex flex-column justify-content-between h-100 text-end">
-                    <div class="top-left">
-                        архитектура <br>
-                        и инженерия
-                    </div>
-                    <div class="bottom-left">
-                        Дахла, Западная Сахара
+                <div class="position-relative">
+                    <img src="{%static 'img/portfolio/2.webp'%}" alt="">
+                    <div class="position-absolute top-0 portfolio-item-desc-left d-flex flex-column justify-content-between h-100 text-end">
+                        <div class="top-left">
+                            архитектура <br>
+                            и инженерия
+                        </div>
+                        <div class="bottom-left">
+                            Дахла, Западная Сахара
+                        </div>
                     </div>
                 </div>
-                <img src="{%static 'img/4.webp'%}" alt="">
+                
                 <div class="portfolio-item-desc-right d-flex flex-column justify-content-between h-100 text-start">
                     <div class="top-left">
                         университет Дахла
@@ -50,16 +57,20 @@
                 </div>
             </div>
             <div class="portfolio-item position-relative">
-                <div class="portfolio-item-desc-left d-flex flex-column justify-content-between h-100 text-end">
-                    <div class="top-left">
-                        архитектура <br>
-                        и инженерия
-                    </div>
-                    <div class="bottom-left">
-                        Владивосток, Россия
+                
+                <div class="position-relative">
+                    <img src="{%static 'img/portfolio/6.webp'%}" alt="">
+                        <div class="position-absolute top-0 portfolio-item-desc-left d-flex flex-column justify-content-between h-100 text-end">
+                        <div class="top-left">
+                            архитектура <br>
+                            и инженерия
+                        </div>
+                        <div class="bottom-left">
+                            Владивосток, Россия
+                        </div>
                     </div>
                 </div>
-                <img src="{%static 'img/3.webp'%}" alt="">
+                
                 <div class="portfolio-item-desc-right d-flex flex-column justify-content-between h-100 text-start">
                     <div class="top-left">
                        вилла Дефриз
@@ -70,16 +81,20 @@
                 </div>
             </div>
             <div class="portfolio-item position-relative">
-                <div class="portfolio-item-desc-left d-flex flex-column justify-content-between h-100 text-end">
-                    <div class="top-left">
-                        архитектура <br>
-                        и инженерия
-                    </div>
-                    <div class="bottom-left">
-                        Марракеш, Морроко
+                
+                <div class="position-relative">
+                    <img src="{%static 'img/portfolio/3.webp'%}" alt="">
+                    <div class="position-absolute top-0 portfolio-item-desc-left d-flex flex-column justify-content-between h-100 text-end">
+                        <div class="top-left">
+                            архитектура <br>
+                            и инженерия
+                        </div>
+                        <div class="bottom-left">
+                            Марракеш, Морроко
+                        </div>
                     </div>
                 </div>
-                <img src="{%static 'img/5.webp'%}" alt="">
+                
                 <div class="portfolio-item-desc-right d-flex flex-column justify-content-between h-100 text-start">
                     <div class="top-left">
                         университет Марракеш
@@ -90,15 +105,19 @@
                 </div>
             </div>
             <div class="portfolio-item position-relative">
-                <div class="portfolio-item-desc-left d-flex flex-column justify-content-between h-100 text-end">
-                    <div class="top-left">
-                        благоустройство
-                    </div>
-                    <div class="bottom-left">
-                        Владивосток, Россия
+
+                <div class="position-relative">
+                    <img src="{%static 'img/portfolio/5.webp'%}" alt="">
+                    <div class="position-absolute top-0 portfolio-item-desc-left d-flex flex-column justify-content-between h-100 text-end">
+                        <div class="top-left">
+                            благоустройство
+                        </div>
+                        <div class="bottom-left">
+                            Владивосток, Россия
+                        </div>
                     </div>
                 </div>
-                <img src="{%static 'img/9.webp'%}" alt="">
+                
                 <div class="portfolio-item-desc-right d-flex flex-column justify-content-between h-100 text-start">
                     <div class="top-left">
                         жилой комплекс Тихвинский
@@ -109,16 +128,20 @@
                 </div>
             </div>
             <div class="portfolio-item position-relative">
-                <div class="portfolio-item-desc-left d-flex flex-column justify-content-between h-100 text-end">
-                    <div class="top-left">
-                        архитектура <br>
-                        и инженерия
-                    </div>
-                    <div class="bottom-left">
-                        Бали, Индонезия
-                    </div>
+                
+                <div class="position-relative"> 
+                    <img src="{%static 'img/portfolio/4.webp'%}" alt="">
+                    <div class="position-absolute top-0 portfolio-item-desc-left d-flex flex-column justify-content-between h-100 text-end">
+                        <div class="top-left">
+                            архитектура <br>
+                            и инженерия
+                        </div>
+                        <div class="bottom-left">
+                            Бали, Индонезия
+                        </div>
                 </div>
-                <img src="{%static 'img/10.webp'%}" alt="">
+                </div>
+                
                 <div class="portfolio-item-desc-right d-flex flex-column justify-content-between h-100 text-start">
                     <div class="top-left">
                         комплекс апартаментов Елизиум
@@ -129,8 +152,8 @@
                 </div>
             </div>
         </div>
-        <h2>Все проекты</h2>
-        <table class="table">
+        <h2 class="text-center ms-0">все проекты</h2>
+        <table class="table table-portfolio-items">
             <thead>
                 <tr class="font-weight-bold">
                     <th scope="col" class="text-end">наименование</th>
@@ -143,7 +166,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <th class="text-end">ЖК Тихвинский</th>
+                    <td class="text-end">ЖК Тихвинский</td>
                     <td>квартирография</td>
                     <td>Владивосток, Россия</td>
                     <td class="text-end">реализован</td>
@@ -151,7 +174,7 @@
                     <td>2024</td>
                 </tr>
                 <tr>
-                    <th class="text-end">комплекс вилл Edem</th>
+                    <td class="text-end">комплекс вилл Edem</td>
                     <td>архитектура и инженерия</td>
                     <td>Бали, Индонезия</td>
                     <td class="text-end">комплекс вилл Едем</td>
@@ -159,7 +182,7 @@
                     <td>2024</td>
                 </tr>
                 <tr>
-                    <th class="text-end">ижс Прибрежная</th>
+                    <td class="text-end">ижс Прибрежная</td>
                     <td>архитектура и инженерия</td>
                     <td>Владивосток, Россия</td>
                     <td class="text-end">реализован</td>
@@ -167,15 +190,15 @@
                     <td>2017</td>
                 </tr>
                 <tr>
-                    <th class="text-end">Air Mall</th>
+                    <td class="text-end">Air Mall</td>
                     <td>архитектура и инженерия</td>
                     <td>Владивосток, Россия</td>
                     <td class="text-end">концепция</td>
                     <td>56 440 м<sup>2</sup></td>
                     <td>2018</td>
                 </tr>
-                <tr class="font-weight-bold">
-                    <th class="text-end">апартаменты Elysium</th>
+                <tr class="font-weight-bold table-portfolio-item">
+                    <td class="text-end">апартаменты Elysium</td>
                     <td>архитектура и инженерия</td>
                     <td>Бали, Индонезия</td>
                     <td class="text-end">реализация</td>
@@ -183,7 +206,7 @@
                     <td>2024</td>
                 </tr>
                 <tr>
-                    <th class="text-end">медцентр Plastec</th>
+                    <td class="text-end">медцентр Plastec</td>
                     <td>архитектура и инженерия</td>
                     <td>Владивосток, Россия</td>
                     <td class="text-end">реализация</td>
@@ -191,15 +214,15 @@
                     <td>2023</td>
                 </tr>
                 <tr>
-                    <th class="text-end">озеро Сердце Патрокла</th>
+                    <td class="text-end">озеро Сердце Патрокла</td>
                     <td>архитектура и инженерия</td>
                     <td>Владивосток, Россия</td>
                     <td class="text-end">концепция</td>
                     <td>2 506 м<sup>2</sup></td>
                     <td>2023</td>
                 </tr>
-                <tr class="font-weight-bold">
-                    <th class="text-end">ЖК Тихвинский</th>
+                <tr class="font-weight-bold table-portfolio-item">
+                    <td class="text-end">ЖК Тихвинский</td>
                     <td>архитектура и инженерия</td>
                     <td>Владивосток, Россия</td>
                     <td class="text-end">реализация</td>
@@ -207,15 +230,15 @@
                     <td>2022</td>
                 </tr>
                 <tr>
-                    <th class="text-end">жилой комплекс ТАММ</th>
+                    <td class="text-end">жилой комплекс ТАММ</td>
                     <td>цифровая модель</td>
                     <td>Владивосток, Россия</td>
                     <td class="text-end">реализован</td>
                     <td>23 770 м<sup>2</sup></td>
                     <td>2023</td>
                 </tr>
-                <tr class="font-weight-bold">
-                    <th class="text-end">университет Марракеш</th>
+                <tr class="font-weight-bold table-portfolio-item">
+                    <td class="text-end">университет Марракеш</td>
                     <td>архитектура и инженерия</td>
                     <td>Марракеш, Морокко</td>
                     <td class="text-end">концепция</td>
@@ -223,7 +246,7 @@
                     <td>2020</td>
                 </tr>
                 <tr>
-                    <th class="text-end">соцжилье Агадир</th>
+                    <td class="text-end">соцжилье Агадир</td>
                     <td>архитектура и инженерия</td>
                     <td>Агадир, Морроко</td>
                     <td class="text-end">реализация</td>
@@ -231,15 +254,15 @@
                     <td>2020</td>
                 </tr>
                 <tr>
-                    <th class="text-end">средняя школа 1600</th>
+                    <td class="text-end">средняя школа 1600</td>
                     <td>архитектура и инженерия</td>
                     <td>Москва, Россия</td>
                     <td class="text-end">реализация</td>
                     <td>23 833 м<sup>2</sup></td>
                     <td>2023</td>
                 </tr>
-                <tr class="font-weight-bold">
-                    <th class="text-end">ЖК Тихвинский</th>
+                <tr class="font-weight-bold table-portfolio-item">
+                    <td class="text-end">ЖК Тихвинский</td>
                     <td>благоустройство</td>
                     <td>Владивосток, Россия</td>
                     <td class="text-end">реализация</td>
@@ -248,85 +271,30 @@
                 </tr>
             </tbody>
         </table>
-
+        <div class="modal-container" id="modalContainer" style="transform:translateX(-50%) translateY(-50%) scale(0) translateZ(0)">
+            <div class="modal-slider" id="modalSlider">
+                    <div class="style_modal" style="background-color:#000000"><img alt="image" loading="lazy"
+                            width="300" height="0" decoding="async" data-nimg="1" style="color:transparent"
+                            src="{%static 'img/portfolio/1.webp'%}">
+                    </div>
+                    <div class="style_modal" style="background-color:#8C8C8C"><img alt="image" loading="lazy"
+                            width="300" height="0" decoding="async" data-nimg="1" style="color:transparent"
+                            src="{%static 'img/portfolio/5.webp'%}">
+                    </div>
+                    <div class="style_modal" style="background-color:#EFE8D3"><img alt="image" loading="lazy"
+                            width="300" height="0" decoding="async" data-nimg="1" style="color:transparent"
+                            src="{%static 'img/portfolio/3.webp'%}">
+                    </div>
+                    <div class="style_modal" style="background-color:#706D63"><img alt="image" loading="lazy"
+                            width="300" height="0" decoding="async" data-nimg="1" style="color:transparent"
+                            src="{%static 'img/portfolio/4.webp'%}">
+                    </div>
+            </div>
+        </div>
     </section>
 
 {%endblock%}
 
 {%block script%}
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const modalContainer = document.getElementById('modalContainer');
-        const modalSlider = document.getElementById('modalSlider');
-        const cursor = document.getElementById('cursor');
-        const projects = document.querySelectorAll('.portfolio-item');
-
-        let active = false;
-
-        // Расчет координат при движении курсора
-        const xMoveContainer = gsap.quickTo(modalContainer, 'left', { duration: 0.8, ease: 'power3' });
-        const yMoveContainer = gsap.quickTo(modalContainer, 'top', { duration: 0.8, ease: 'power3' });
-
-        const xMoveCursor = gsap.quickTo(cursor, 'left', { duration: 0.5, ease: 'power3' });
-        const yMoveCursor = gsap.quickTo(cursor, 'top', { duration: 0.5, ease: 'power3' });
-
-
-        window.addEventListener('mousemove', (e) => {
-            if (!active) return; 
-            const { pageX, pageY } = e;
-            
-            xMoveContainer(pageX);
-            yMoveContainer(pageY);
-
-            xMoveCursor(pageX);
-            yMoveCursor(pageY);
-        });
-        
-        //При наведении на портфолио итемы меняем картинку
-        projects.forEach((item, index) => {
-            item.addEventListener('mouseenter', () => {
-                updateModalSlider(index);
-            });
-
-            item.addEventListener('mouseleave', () => {
-
-                updateModalSlider(index);
-
-            });
-        });
-
-
-        // При наведении на родительский блок убираем/показываем модальное окно
-        document.querySelector('.portfolio-items').addEventListener('mouseleave', () => {
-            toggleModal()
-        });
-
-        document.querySelector('.portfolio-items').addEventListener('mouseenter', () => {
-            toggleModal()
-        });
-
-
-        // Изменение фото
-        function updateModalSlider(index) {
-            modalSlider.style.top = `${index * -100}%`;
-        }
-
-        // Скрытие/показ модального окна
-        function toggleModal() {
-            active = !active;
-
-            if (active) {
-                modalContainer.style.transition = "all 0.4s ease";
-                modalContainer.style.opacity = 1;
-                modalContainer.style.transform = "translate(-50%, -50%) scale(1)";
-                cursor.style.opacity = 1;
-            } else {
-                modalContainer.style.opacity = 0;
-                modalContainer.style.transform = "translate(-50%, -50%) scale(0)";
-                cursor.style.opacity = 0;
-            }
-        }
-    });
-
-</script>
+<script src="{%static 'js/portfolio.js'%}"></script>
 {%endblock%}
