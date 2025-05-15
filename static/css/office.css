@@ -1,6 +1,8 @@
 #office-title{
-     margin-top: 356px;
+     margin-top: 320px;
 }
+
+
 
 h2 {
     font-family: 'Hauora Medium';
@@ -16,8 +18,8 @@ h3 {
     font-weight: 700;
     font-size: 60px;
     line-height: 70px;
-    margin-top: 120px;
-    margin-bottom: 42px;
+    margin-top: 140px;
+    margin-bottom: 80px;
 }
 
  p {
@@ -28,18 +30,25 @@ h3 {
 
 .people-items{
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 40px 20px;
+}
+
+.people-item img{
+    width: 312px;
+    height: 312px;
+    object-fit: contain;
 }
 
 .peolple-name{
     margin-top: 16px;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 24px;
 }
 
 .peolple-desc{
     margin-top: 8px;
-    font-size: 24px;
+    font-size: 18px;
+    font-weight: 400;
 }
 
 .vacancies-item{
@@ -54,3 +63,8 @@ h3 {
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     padding-top: 8px;
 }
+
+.big-text{
+    margin: 140px 0;
+}
+
