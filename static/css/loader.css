@@ -1,0 +1,77 @@
+@keyframes bigloadLogoAnimation {
+    0% {
+        opacity: 1;
+        scale: 1;
+    }
+
+    100% {
+        opacity: 0;
+        scale: 100;
+    }
+}
+
+
+@keyframes headerAnimation {
+    0% {
+        transform: translateY(-200px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes loadAnimation {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes loadMainAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.big-load-logo {
+    transition: transform 3s ease-in-out;
+    animation: bigloadLogoAnimation 4s ease forwards;
+    animation-delay: 1s;
+}
+
+.load-text {
+    position: absolute;
+    bottom: 0;
+    width: 221px;
+    height: 27px;
+}
+
+#preloader {
+    transition: transform 3s ease-in-out;
+    animation: bigloadLogoAnimation 4s ease forwards;
+    animation-delay: 1s;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+}
+
+.headerAnimation {
+    transform: translateY(-200px);
+    transition: transform 1s ease-in-out;
+    animation: headerAnimation 2s ease forwards;
+    animation-delay: 1.8s;
+}
+
+.main-content{
+    transition: transform 1s ease-in-out;
+    animation: loadMainAnimation 2s ease forwards;
+    animation-delay: 1s;
+}

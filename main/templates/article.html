@@ -3,6 +3,7 @@
 
 {%block style%}
     <link rel="stylesheet" type="text/css" href="{%static 'css/article.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}" />
 {%endblock%}
 {%block content%} 
     <section id="article-page">
@@ -105,7 +106,8 @@
 {%endblock%}
 
 {%block script%}
-
+<script defer src="{%static 'js/jquery.js'%}"></script>
+<script src="{%static 'js/swiper.min.js'%}"></script>
 <script>
     var __slider = new Swiper(".slider ", {
         slidesPerView: 1,

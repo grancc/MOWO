@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	}, 150);    
 		
 	function hasScrolled() {        
+		$('header').removeClass('headerAnimation');
 		var st = $(this).scrollTop();  
 			
 		if(Math.abs(lastScrollTop - st) <= delta)            
