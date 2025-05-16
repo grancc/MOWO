@@ -23,6 +23,11 @@
         url('/static/fonts/Hauora-Light.ttf') format('truetype');
 }
 
+*:focus,
+*:focus-visible {
+    box-shadow: unset !important
+}
+
 body {
     color: rgba(255, 255, 255, 1);
     font-family: 'Hauora' !important;
@@ -37,6 +42,10 @@ a {
     max-width: 1700px;
     margin: 0 auto;
     width: 95%;
+}
+
+#preloader{
+    display: none !important;
 }
 
 .big-container {
@@ -154,10 +163,9 @@ footer {
 .cursor {
     pointer-events: none;
     position: fixed;
-    padding: 0.3rem;
+    /* padding: 0.3rem;
     background-color: #fff;
-    border-radius: 50%;
-    mix-blend-mode: difference;
+    border-radius: 50%; */
     transition: transform 0.3s ease;
 }
 
@@ -299,6 +307,7 @@ h2 {
     padding: 0;
     border: 1px solid rgba(255, 255, 255, 0.24);
     margin-left: -20px;
+    cursor: pointer;
 }
 
 .feedback-form-form label {

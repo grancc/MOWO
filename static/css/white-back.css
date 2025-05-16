@@ -14,6 +14,7 @@ footer{
 
 .feedback-form-form input, .feedback-form-form textarea {
     background: #0D10141A;
+    color: #0D1014;
 }
 
 .form-check a{
@@ -28,7 +29,7 @@ footer{
 
 body {
     color: #0D1014;
-    font-family: 'Hauora' !important;
+    font-family: 'Hauora Regular' !important;
     background-color: #FFFFFF !important;
 }
 

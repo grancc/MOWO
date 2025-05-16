@@ -3,11 +3,14 @@
 
 
 {%block style%}
+    <link type="text/css" href="{%static 'css/aos.css' %}" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="{%static 'css/content--half.css'%}" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <link type="text/css" href="{%static 'css/loader.css' %}" rel="stylesheet" />
 {%endblock%}
 
 {%block content%}
+    
 
     <div class="promo-video">
         <video autoplay="" loop="" muted="" playsinline="" class="ma_video" preload="none">
@@ -139,10 +142,10 @@
                         <p>Индивидуальный подход к каждому проекту и гарантированное качество исполнения. Заполните форму, и мы подготовим персональное предложение.</p>
                     </div>
                     <div class="feedback-form-form block-scroll">
-                        <form class="w-100">
+                        <form class="w-100 feedback-form">
                             <div class="d-flex gap-3 mb-3">
                                 <input type="text" placeholder="Имя">
-                                <input type="text" placeholder="Номер телефона">
+                                <input type="tel" placeholder="Номер телефона">
                             </div>
                             <div class="d-flex gap-3 mb-3">
                                 <input type="text" placeholder="Электронная почта">
@@ -154,7 +157,7 @@
                                     <input class="form-check-input" type="checkbox" id="check-modal" name="check" value="yes" checked>
                                     <label class="m-0 ms-2"> Даю согласие на обработку <a href="" style="color: rgba(255, 255, 255, 0.5);">персональных данных</a></label>
                                 </div>
-                                <button class="btn d-flex align-items-center">
+                                <button class="btn d-flex align-items-center" type="submit">
                                     Оставить заявку
                                 </button>
                             </div>
@@ -243,7 +246,7 @@
     
 {%block script%}
 
-<script defer src="{%static 'js/jquery.js'%}"></script>
+
 <script type="text/javascript" src="{%static 'js/aos.js' %}"></script>
 <script src="{%static 'js/numbercount.js' %}"></script>
 <script src="{%static 'js/v4/gsap.min.js'%}"></script>

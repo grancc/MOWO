@@ -30,25 +30,17 @@ function TablePortfolioItemHover(){
     projects.forEach((item, index) => {
 
         item.addEventListener('mouseenter', () => {
+            toggleModal()
             updateModalSlider(index);
         });
 
         item.addEventListener('mouseleave', () => {
-
+            toggleModal()
             updateModalSlider(index);
 
         });
     });
 
-
-    // При наведении на родительский блок убираем/показываем модальное окно
-    document.querySelector('.table-portfolio-items').addEventListener('mouseleave', () => {
-        toggleModal()
-    });
-
-    document.querySelector('.table-portfolio-items').addEventListener('mouseenter', () => {
-        toggleModal()
-    });
 
 
     // Изменение фото
@@ -64,11 +56,9 @@ function TablePortfolioItemHover(){
             modalContainer.style.transition = "all 0.4s ease";
             modalContainer.style.opacity = 1;
             modalContainer.style.transform = "translate(-50%, -50%) scale(1)";
-            cursor.style.opacity = 1;
         } else {
             modalContainer.style.opacity = 0;
             modalContainer.style.transform = "translate(-50%, -50%) scale(0)";
-            cursor.style.opacity = 0;
         }
     }
 }

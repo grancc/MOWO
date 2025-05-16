@@ -55,6 +55,7 @@
 }
 
 #preloader {
+    display: flex !important;
     transition: transform 3s ease-in-out;
     animation: bigloadLogoAnimation 4s ease forwards;
     animation-delay: 1s;
@@ -71,6 +72,7 @@
 }
 
 .main-content{
+    opacity: 0;
     transition: transform 1s ease-in-out;
     animation: loadMainAnimation 2s ease forwards;
     animation-delay: 1s;

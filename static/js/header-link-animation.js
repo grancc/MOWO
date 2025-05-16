@@ -16,9 +16,9 @@
 
           if (e.type === 'mouseleave') {
             span.style.transform = '';
-            cursor.classList.remove('active');
+            // cursor.classList.remove('active');
           }else{
-            cursor.classList.add('active');
+            // cursor.classList.add('active');
           }
 
 

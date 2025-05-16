@@ -58,6 +58,7 @@
 
 .portfolio-item-desc-right .top-left{
     font-weight: 700;
+    transition: .5s;
 }
 
 table{
@@ -108,13 +109,13 @@ table{
 
 .portfolio-item:hover .portfolio-item-desc-right  .top-left{
     color: #FF0000;
-    transition: .5s;
+    transition: .3s;
 }
 
-.portfolio-item:hover,
+/* .portfolio-item:hover,
 .table-portfolio-items:hover{
     cursor: none;
-}
+} */
 
 
 .active-portfolio  svg{
@@ -122,6 +123,7 @@ table{
     width: 24px;
     height: 15px;
     transform: scale(1);
+   
 }
 
 .active-portfolio{
@@ -132,4 +134,5 @@ table{
     align-items: center;
     justify-content: center;
     transform: translate(-50%, -50%) scale(1);
+     border-radius: 50%;
 }
