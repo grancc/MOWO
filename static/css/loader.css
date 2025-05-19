@@ -77,3 +77,9 @@
     animation: loadMainAnimation 2s ease forwards;
     animation-delay: 1s;
 }
+
+@media(max-width:990px) {
+    .promo-text {
+        font-size: 40px;
+    }
+}

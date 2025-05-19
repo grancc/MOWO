@@ -1,6 +1,7 @@
 (function () {
 
-    const link = document.querySelectorAll('.header-links .hover-this');
+    const link = document.querySelectorAll('header .hover-this');
+    console.log(link)
     const cursor = document.querySelector('.cursor');
 
     const animateit = function (e) {
