@@ -47,8 +47,8 @@
                         <div class="d-flex header-top justify-content-between">
                             <p class="mb-0">with love</p>
                             <div class="d-flex gap-4">
-                                <a href="">Wa</a>
-                                <a href="">Tg</a>
+                                <a href="{{whatsapp}}" target="_blank">Wa</a>
+                                <a href="{{tg_url}}" target="_blank">Tg</a>
                             </div>
                         </div>
                         <a href="/v4" class="{%if request.path != '/v4'%} item-top {%endif%} hover-this"><span {%if request.path == '/v4'%} style="color: #FF0000;" {%endif%}>MOWO</span></a>
@@ -56,13 +56,13 @@
                     
                     <div>
                         <div class="d-flex gap-4 header-top justify-content-end">
-                            <a href=""><span>+7 123 456 78 90</span></a>
+                            <a href="tel:{{phone_url}}"><span>{{phone}}</span></a>
                         </div>
                         <a href="/office" class="{%if request.path != '/office'%} item-top {%endif%} hover-this"><span {%if request.path == '/office'%} style="color: #FF0000;" {%endif%}>ОФИС</span></a>
                     </div>
                     <div>
                         <div class="d-flex gap-4 header-top">
-                            <a href=""><span>mowo@world.com</span></a>
+                            <a href="mailto:{{email}}"><span>{{email}}</span></a>
                         </div>
                         <a href="/blog/article/1" class="{%if request.path != '/blog'%} item-top {%endif%} hover-this"><span {%if request.path == '/blog'%} style="color: #FF0000;" {%endif%}>БЛОГ</span></a>
                     </div>
@@ -132,7 +132,7 @@
                         <img src="{%static 'img/footer-logo.svg'%}" alt="footer-logo">
                         {%endif%}
                         <div class="footer-links gap-4 d-flex">
-                            <a href="" class="d-block">Бюро</a>
+                            <a href="/" class="d-block">Бюро</a>
                             <a href="/portfolio" class="d-block">Работы</a>
                             <a href="/blog" class="d-block">Блог</a>
                             <a href="/contacts" class="d-block">Контакты</a>
@@ -140,10 +140,10 @@
 
                     </div>
                     <div class="d-flex gap-3  align-items-center">
-                        <a href="">+7 123 456 78 90</a>
-                        <a href=""> mowo@world.com</a>
-                        <a href="">Wa</a>
-                        <a href="">Tg</a>
+                        <a href="tel:{{phone_url}}">{{phone}}</a>
+                        <a href="mailto:{{email}}"> {{email}}</a>
+                        <a href="{{whatsapp}}">Wa</a>
+                        <a href="{{tg_url}}">Tg</a>
                     </div>
                 </div>
                 <div class="footer-bottom">

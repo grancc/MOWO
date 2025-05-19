@@ -23,6 +23,19 @@ class Vacancies(models.Model):
         return self.name
     
 
+class Contact(models.Model):
+    name = models.CharField(max_length=255, verbose_name='наименование')
+    url = models.CharField(max_length=255, verbose_name='ссылка')
+
+    class Meta:
+        verbose_name = "контакт"
+        verbose_name_plural = "контакты"
+
+
+    def __str__(self):
+        return self.name
+    
+
 class Employees(models.Model):
     name = models.CharField(max_length=255, verbose_name='имя')
     position = models.CharField(max_length=255, verbose_name='должность')
