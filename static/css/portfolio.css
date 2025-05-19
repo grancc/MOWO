@@ -117,6 +117,9 @@ table{
     cursor: none;
 } */
 
+.portfolio-item:hover{
+     color: #0D1014;
+}
 
 .active-portfolio  svg{
     display: block;

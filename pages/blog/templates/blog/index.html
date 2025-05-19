@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{%load static%}
+
+{%block style%}
+    <link rel="stylesheet" type="text/css" href="{%static 'css/portfolio.css'%}" />
+    <link rel="stylesheet" type="text/css" href="{%static 'css/white-back.css'%}" />
+{%endblock%}
+
+{%block content%} 
+    <section id="portfolio-page" class="big-container">
+        <h2>все статьи</h2>
+        <div class="portfolio-items">
+            <a class="portfolio-item position-relative d-flex" href="blog/articles/1">
+                <div class="position-relative">
+                    <img src="{%static 'img/portfolio/1.webp'%}" alt="">
+                    
+                </div>
+                
+                <div class="portfolio-item-desc-right d-flex flex-column justify-content-between h-100 text-start">
+                    <div class="top-left">
+                        Тренды бла­го­устрой­ства в 2025 году: ар­хи­тек­ту­ра дворовых про­странств, плей­ха­бов и об­ще­ствен­ных мест
+                    </div>
+                    <div class="bottom-left">
+                        22.01.2025
+                    </div>
+                </div>
+            </a>
+            <a class="portfolio-item position-relative d-flex" href="blog/articles/1">
+                <div class="position-relative"> 
+                    <img src="{%static 'img/portfolio/4.webp'%}" alt="">
+                </div>
+                
+                <div class="portfolio-item-desc-right d-flex flex-column justify-content-between h-100 text-start">
+                    <div class="top-left">
+                        Статья 2
+                    </div>
+                    <div class="bottom-left">
+                        22.01.2025
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+{%endblock%}
+
+{%block script%}
+<script src="{%static 'js/v4/gsap.min.js'%}"></script>
+<script src="{%static 'js/portfolio.js'%}"></script>
+{%endblock%}
