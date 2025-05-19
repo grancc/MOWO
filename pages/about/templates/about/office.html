@@ -71,168 +71,40 @@
 
     <h3>люди</h3>
     <div class="people-items d-grid">
+        {%for empl in employees%}
         <div class="people-item">
-            <img src="/static/img/empl4.png" alt="">
+            <img src="{{empl.image.url}}" alt="сотрудник {{empl.name}}">
             <div class="peolple-name">
-                Антон Кривенко
+                {{empl.name}}
             </div>
             <div class="peolple-desc">
-                Основатель, Управляющий директор
+                {{empl.position}}
             </div>
         </div>
+        {%endfor%}
+        {%for empl in employees%}
         <div class="people-item">
-            <img src="/static/img/empl5.png" alt="">
+            <img src="{{empl.image.url}}" alt="сотрудник {{empl.name}}">
             <div class="peolple-name">
-                Валерия Недашковская
+                {{empl.name}}
             </div>
             <div class="peolple-desc">
-                Административный директор
+                {{empl.position}}
             </div>
         </div>
+        {%endfor%}
+        {%for empl in employees%}
         <div class="people-item">
-            <img src="/static/img/empl4.png" alt="">
+            <img src="{{empl.image.url}}" alt="сотрудник {{empl.name}}">
             <div class="peolple-name">
-                Алексей Сапрыкин
+                {{empl.name}}
             </div>
             <div class="peolple-desc">
-                Производственный директор
+                {{empl.position}}
             </div>
         </div>
-        <div class="people-item">
-            <img src="/static/img/empl6.png" alt="">
-            <div class="peolple-name">
-                Дмитрий Бурыкин
-            </div>
-            <div class="peolple-desc">
-                Ведущий архитектор
-            </div>
-        </div>
-        <div class="people-item">
-            <img src="/static/img/empl5.png" alt="">
-            <div class="peolple-name">
-                Валерия Фролова 
-            </div>
-            <div class="peolple-desc">
-                Ведущий архитектор
-            </div>
-        </div>
-        <div class="people-item">
-            <img src="/static/img/empl4.png" alt="">
-            <div class="peolple-name">
-                Алексей Сапрыкин
-            </div>
-            <div class="peolple-desc">
-                Производственный директор
-            </div>
-        </div>
-        <div class="people-item">
-            <img src="/static/img/empl4.png" alt="">
-            <div class="peolple-name">
-                Антон Кривенко
-            </div>
-            <div class="peolple-desc">
-                Основатель, Управляющий директор
-            </div>
-        </div>
-        <div class="people-item">
-            <img src="/static/img/empl5.png" alt="">
-            <div class="peolple-name">
-                Валерия Недашковская
-            </div>
-            <div class="peolple-desc">
-                Административный директор
-            </div>
-        </div>
-        <div class="people-item">
-            <img src="/static/img/empl4.png" alt="">
-            <div class="peolple-name">
-                Алексей Сапрыкин
-            </div>
-            <div class="peolple-desc">
-                Производственный директор
-            </div>
-        </div>
-        <div class="people-item">
-            <img src="/static/img/empl6.png" alt="">
-            <div class="peolple-name">
-                Дмитрий Бурыкин
-            </div>
-            <div class="peolple-desc">
-                Ведущий архитектор
-            </div>
-        </div>
-        <div class="people-item">
-            <img src="/static/img/empl5.png" alt="">
-            <div class="peolple-name">
-                Валерия Фролова 
-            </div>
-            <div class="peolple-desc">
-                Ведущий архитектор
-            </div>
-        </div>
-        <div class="people-item">
-            <img src="/static/img/empl4.png" alt="">
-            <div class="peolple-name">
-                Алексей Сапрыкин
-            </div>
-            <div class="peolple-desc">
-                Производственный директор
-            </div>
-        </div>
-        <div class="people-item">
-            <img src="/static/img/empl4.png" alt="">
-            <div class="peolple-name">
-                Антон Кривенко
-            </div>
-            <div class="peolple-desc">
-                Основатель, Управляющий директор
-            </div>
-        </div>
-        <div class="people-item">
-            <img src="/static/img/empl5.png" alt="">
-            <div class="peolple-name">
-                Валерия Недашковская
-            </div>
-            <div class="peolple-desc">
-                Административный директор
-            </div>
-        </div>
-        <div class="people-item">
-            <img src="/static/img/empl4.png" alt="">
-            <div class="peolple-name">
-                Алексей Сапрыкин
-            </div>
-            <div class="peolple-desc">
-                Производственный директор
-            </div>
-        </div>
-        <div class="people-item">
-            <img src="/static/img/empl6.png" alt="">
-            <div class="peolple-name">
-                Дмитрий Бурыкин
-            </div>
-            <div class="peolple-desc">
-                Ведущий архитектор
-            </div>
-        </div>
-        <div class="people-item">
-            <img src="/static/img/empl5.png" alt="">
-            <div class="peolple-name">
-                Валерия Фролова 
-            </div>
-            <div class="peolple-desc">
-                Ведущий архитектор
-            </div>
-        </div>
-        <div class="people-item">
-            <img src="/static/img/empl4.png" alt="">
-            <div class="peolple-name">
-                Алексей Сапрыкин
-            </div>
-            <div class="peolple-desc">
-                Производственный директор
-            </div>
-        </div>
+        {%endfor%}
+        
     </div>
 
     <!-- <h3>Вакансии</h3>

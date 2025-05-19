@@ -3,7 +3,7 @@
 
 
 {%block style%}
-    <link type="text/css" href="{%static 'css/aos.css' %}" rel="stylesheet" />
+    <!-- <link type="text/css" href="{%static 'css/aos.css' %}" rel="stylesheet" /> -->
     <link type="text/css" href="{%static 'css/index.css' %}" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="{%static 'css/content--half.css'%}" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
@@ -179,36 +179,13 @@
                 </div>
                 
                     <div class="employee-items block-scroll">
+                        {%for empl in employees%}
                         <div class="employee-slide">
-                            <img src="{%static 'img/empl1.webp'%}" alt="">
-                            <p class="empl-name">Кривенко Антон</p>
-                            <p class="empl-desc">CEO</p>
+                            <img src="{{empl.image.url}}" alt="">
+                            <p class="empl-name">{{empl.name}}</p>
+                            <p class="empl-desc">{{empl.position}}</p>
                         </div>
-                        <div class="employee-slide">
-                            <img src="{%static 'img/empl2.webp'%}" alt="">
-                            <p class="empl-name">Анна Трофимова</p>
-                            <p class="empl-desc">Руководитель отдела Аналитики</p>
-                        </div>
-                        <div class="employee-slide">
-                            <img src="{%static 'img/empl3.webp'%}" alt="">
-                            <p class="empl-name">Алексей Сапрыкин</p>
-                            <p class="empl-desc">Руководитель отдела Архитектуры и Инженерии</p>
-                        </div>
-                        <div class="employee-slide">
-                            <img src="{%static 'img/empl2.webp'%}" alt="">
-                            <p class="empl-name">Анна Трофимова</p>
-                            <p class="empl-desc">Руководитель отдела Аналитики</p>
-                        </div>
-                        <div class="employee-slide">
-                            <img src="{%static 'img/empl3.webp'%}" alt="">
-                            <p class="empl-name">Алексей Сапрыкин</p>
-                            <p class="empl-desc">Руководитель отдела Архитектуры и Инженерии</p>
-                        </div>
-                        <div class="employee-slide">
-                            <img src="{%static 'img/empl1.webp'%}" alt="">
-                            <p class="empl-name">Кривенко Антон</p>
-                            <p class="empl-desc">CEO</p>
-                        </div>
+                        {%endfor%}
                     </div>
             </div>
         </div>
@@ -248,7 +225,7 @@
 {%block script%}
 
 
-<script type="text/javascript" src="{%static 'js/aos.js' %}"></script>
+<!-- <script type="text/javascript" src="{%static 'js/aos.js' %}"></script> -->
 <script src="{%static 'js/numbercount.js' %}"></script>
 <script src="{%static 'js/v4/gsap.min.js'%}"></script>
 <script src="{%static 'js/v4/ScrollTrigger.min.js'%}"></script>
@@ -276,7 +253,7 @@
 </script>
 
 <script>
-    AOS.init();
+    // AOS.init();
 
     const scrollBlock = document.querySelector('.ma_video');
     

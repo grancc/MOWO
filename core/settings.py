@@ -52,7 +52,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main'
+    'main',
+    'apps.about_app',
+    'apps.service_info',
+    'pages', 
+    'pages.home',
+    'pages.about'
 ]
 
 MIDDLEWARE = [
@@ -119,9 +124,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = "ru"
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = "Asia/Vladivostok"
 
 USE_I18N = True
 
@@ -138,10 +143,17 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATIC_URL = "/static/"
-STATICFILES_DIRS = [
-    BASE_DIR / "static"
-]
+if DEBUG:
+    STATIC_URL = "/static/"
+    STATICFILES_DIRS = [
+        BASE_DIR / "static"
+    ]
 
-MEDIA_URL = "/media/"
-MEDIA_ROOT = BASE_DIR / "media"
+    MEDIA_URL = "/media/"
+    MEDIA_ROOT = BASE_DIR / "media"
+else:
+    MEDIA_URL = "/media/"
+    MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+    STATIC_URL = "/static/"
+    STATIC_ROOT = os.path.join(BASE_DIR, "static")
