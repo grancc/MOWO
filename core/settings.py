@@ -59,7 +59,6 @@ INSTALLED_APPS = [
     'pages', 
     'pages.home',
     'pages.about',
-    'pages.blog'
 ]
 
 MIDDLEWARE = [
