@@ -5,3 +5,6 @@ from .models import *
 class EmployeesAdmin(admin.ModelAdmin):
     pass
 
+@admin.register(Vacancies)
+class VacanciesAdmin(admin.ModelAdmin):
+    pass

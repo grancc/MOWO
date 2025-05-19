@@ -3,3 +3,4 @@ Django==5.1.6
 sqlparse==0.5.3
 pillow==10.4.0
 tzdata==2025.1
+Markdown==3.7

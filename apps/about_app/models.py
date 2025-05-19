@@ -5,6 +5,24 @@ from io import BytesIO
 from django.core.files.uploadedfile import InMemoryUploadedFile
 from django.db import models
 
+
+class Vacancies(models.Model):
+    name = models.CharField(max_length=255, verbose_name='имя')
+    content = models.TextField(
+        verbose_name="описание вакансии", 
+        help_text='поддерживается markdown'
+    )
+    slug = models.SlugField(verbose_name='ссылка для вакансии', help_text='например, main-architect')
+
+    class Meta:
+        verbose_name = "вакансия"
+        verbose_name_plural = "вакансии"
+
+
+    def __str__(self):
+        return self.name
+    
+
 class Employees(models.Model):
     name = models.CharField(max_length=255, verbose_name='имя')
     position = models.CharField(max_length=255, verbose_name='должность')

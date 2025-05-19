@@ -1,0 +1,38 @@
+h1 {
+    font-family: 'Hauora Bold';
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 70px;
+    letter-spacing: -1%;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #0D1014;
+    margin: 80px 0;
+}
+
+.vacancie-content {
+    font-family: 'Hauora Medium';
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.vacancie-content p{
+   margin-top: 24px;
+}
+
+.vacancie-content h4{
+    font-weight: 700;
+    margin-top: 80px;
+}
+
+.vacancie-content ul{
+    margin-top: 24px;
+}
+
+.vacancie-content a{
+    color: #0D60CD;
+    font-weight: 500;
+}
+
+.feedback-form{
+    display: none;
+}

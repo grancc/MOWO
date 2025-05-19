@@ -56,3 +56,13 @@ body {
 .footer-bottom{
     color: #0D1014 !important;
 }
+
+a {
+    color: #0D1014;
+    text-decoration: none;
+}
+
+.bread a{
+    color: #0D1014CC;
+}
+

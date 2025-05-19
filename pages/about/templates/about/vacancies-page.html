@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load markdown_filters %}
+{{news.content|markdown}}
+{%load static%}
+
+{%block style%}
+    <link rel="stylesheet" type="text/css" href="{%static 'css/vacancies-page.css'%}" />
+    <link rel="stylesheet" type="text/css" href="{%static 'css/white-back.css'%}" />
+{%endblock%}
+
+{%block content%} 
+<section id="vacancies" class="mini-container first-page-block">
+    <div class="bread d-flex">
+        <ul>
+            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem" class="d-flex align-items-center gap-2">
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                    <path d="M18.3319 9.66618L18.332 11.3328L4.85545 11.3328L8.14686 14.6242L6.96837 15.8027L1.66503 10.4994L6.96837 5.19609L8.14687 6.37468L4.85536 9.66609L18.3319 9.66618Z" fill="#0D1014CC"/>
+                    </svg>
+                </span>
+                <a itemprop="item" href="/office#office-vacancies"><span itemprop="name"></span>Все вакансии</a>
+        </ul>
+    </div>
+    <h1>{{vacancie.name}}</h1>
+    <div class="vacancie-content">
+        {{vacancie.content|markdown}}
+    </div>
+</section>
+
+{%endblock%}

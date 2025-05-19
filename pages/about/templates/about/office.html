@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+
+
 {%load static%}
 
 {%block style%}
@@ -106,36 +108,18 @@
         {%endfor%}
         
     </div>
-
-    <!-- <h3>Вакансии</h3>
+</section>
+<section id="office-vacancies" class="mini-container">
+        <h3>вакансии</h3>
         <div class="vacancies-items">
-            <div class="vacancies-item">
-                Главный архитектор
-            </div>
-            <div class="vacancies-item">
-                Архитектор
-            </div>
-            <div class="vacancies-item">
-                Ведущий дизайнер интерьеров
-            </div>
-            <div class="vacancies-item">
-                Комплектатор
-            </div>
-            <div class="vacancies-item">
-                Визуализатор
-            </div>
-            <div class="vacancies-item">
-                Интерн архитектор
-            </div>
-            <div class="vacancies-item">
-                Ведущий архитектор
-            </div>
-            <div class="vacancies-item">
-                Проджект менеджер
-            </div>
+            {%for vac in vacancies%}
+            <a href="/vacancies/{{vac.slug}}/" class="vacancies-item d-block">
+                {{vac.name}}
+            </a>
+            {%endfor%}
 
         </div>
-        <div style="margin-bottom: 200px;"></div> -->
+        <div style="margin-bottom: 200px;"></div>
 </section>
 
 {%endblock%}

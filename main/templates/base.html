@@ -126,7 +126,7 @@
             <div class="position-absolute w-100 footer-text" style="bottom: 50px;">
                 <div class="footer-top d-flex justify-content-between align-items-center">
                     <div class="d-flex justify-content-between  align-items-center gap-4">
-                        {%if request.path == '/office' or request.path == '/portfolio'%}
+                        {%if request.path != '/'%}
                         <img src="{%static 'img/white-footer-logo.svg'%}" alt="footer-logo">
                         {%else%}
                         <img src="{%static 'img/footer-logo.svg'%}" alt="footer-logo">
