@@ -1,16 +1,13 @@
 from typing import Any
 
-from django.views.generic import ListView
-
-from apps.blog_app.models import Articles
+from django.views.generic import TemplateView
 
 
-class BlogView(ListView):
+class BlogView(TemplateView):
     """View для отображения страницы Блог"""
 
     template_name = "blog/index.html"
     success_url = "/"
-    model = Articles
 
     def get_context_data(self, **kwargs) -> dict[str, Any]:
         context = super().get_context_data(**kwargs)
