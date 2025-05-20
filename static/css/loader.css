@@ -6,7 +6,7 @@
 
     100% {
         opacity: 0;
-        scale: 100;
+        scale: 80;
     }
 }
 
@@ -15,6 +15,7 @@
     0% {
         transform: translateY(-200px);
     }
+
     100% {
         transform: translateY(0px);
     }
@@ -41,45 +42,41 @@
 }
 
 
-.big-load-logo {
-    transition: transform 3s ease-in-out;
-    animation: bigloadLogoAnimation 4s ease forwards;
-    animation-delay: 1s;
-}
+@media(min-width:990px) {
+    .big-load-logo {
+        transition: transform 5s ease-in-out;
+        animation: bigloadLogoAnimation 8s ease forwards;
+        animation-delay: 1s;
+    }
 
-.load-text {
-    position: absolute;
-    bottom: 0;
-    width: 221px;
-    height: 27px;
-}
+    .load-text {
+        position: absolute;
+        bottom: 0;
+        width: 221px;
+        height: 27px;
+    }
 
-#preloader {
-    display: flex !important;
-    transition: transform 3s ease-in-out;
-    animation: bigloadLogoAnimation 4s ease forwards;
-    animation-delay: 1s;
-    height: 100%;
-    position: fixed;
-    width: 100%;
-}
+    #preloader {
+        display: flex !important;
+        transition: transform 3s ease-in-out;
+        animation: loadAnimation 8s ease forwards;
+        animation-delay: 1s;
+        height: 100%;
+        position: fixed;
+        width: 100%;
+    }
 
-.headerAnimation {
-    transform: translateY(-200px);
-    transition: transform 1s ease-in-out;
-    animation: headerAnimation 2s ease forwards;
-    animation-delay: 1.8s;
-}
+    .headerAnimation {
+        transform: translateY(-200px);
+        transition: transform 1s ease-in-out;
+        animation: headerAnimation 2s ease forwards;
+        animation-delay: 2.5s;
+    }
 
-.main-content{
-    opacity: 0;
-    transition: transform 1s ease-in-out;
-    animation: loadMainAnimation 2s ease forwards;
-    animation-delay: 1s;
-}
-
-@media(max-width:990px) {
-    .promo-text {
-        font-size: 40px;
+    .main-content {
+        opacity: 0;
+        transition: transform 1s ease-in-out;
+        animation: loadMainAnimation 2s ease forwards;
+        animation-delay: 1s;
     }
 }

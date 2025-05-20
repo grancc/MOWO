@@ -138,30 +138,33 @@ function scroll_block_3(){
 }
 gsap.registerPlugin(ScrollTrigger);
 document.addEventListener('DOMContentLoaded', () => {
-    const containers = document.querySelectorAll('.fadeTextBlock');
-    containers.forEach(container => {
-        const fcTtl = container.querySelector('.fc_ttl');
-        // Анимация для fadeText
-        ScrollTrigger.batch(".fadeTextBlock", {
-            onEnter: (batch) => gsap.to(batch, { 
-                opacity: 0, 
-                filter: "blur(10px)", 
-                stagger: 0.1, 
-                duration: 0.7,
-        }),
-            onLeaveBack: (batch) => gsap.to(batch, { 
-                opacity: 1, 
-                filter: "blur(0px)", 
-                stagger: 0.1, 
-                duration: 0.2,
-        }),
-            start: () => `+=${fcTtl.offsetHeight + 300}`,   
-            end: "bottom top",          
-            scrub: true,               
+    if (window.innerWidth > 990){
+        const containers = document.querySelectorAll('.fadeTextBlock');
+        containers.forEach(container => {
+            const fcTtl = container.querySelector('.fc_ttl');
+            // Анимация для fadeText
+            ScrollTrigger.batch(".fadeTextBlock", {
+                onEnter: (batch) => gsap.to(batch, { 
+                    opacity: 0, 
+                    filter: "blur(10px)", 
+                    stagger: 0.1, 
+                    duration: 0.7,
+            }),
+                onLeaveBack: (batch) => gsap.to(batch, { 
+                    opacity: 1, 
+                    filter: "blur(0px)", 
+                    stagger: 0.1, 
+                    duration: 0.2,
+            }),
+                start: () => `+=${fcTtl.offsetHeight + 300}`,   
+                end: "bottom top",          
+                scrub: true,               
+            });
         });
-    });
 
-    scroll_block_1();
-    scroll_block_2();
-    scroll_block_3();
+        scroll_block_1();
+        scroll_block_2();
+        scroll_block_3();
+    }
+    
 });

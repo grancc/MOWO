@@ -31,6 +31,7 @@
 body {
     color: rgba(255, 255, 255, 1);
     font-family: 'Hauora Regular';
+    overflow-x: hidden;
 }
 
 a {
@@ -44,7 +45,7 @@ a {
     width: 95%;
 }
 
-#preloader{
+#preloader {
     display: none !important;
 }
 
@@ -57,7 +58,7 @@ a {
     margin-left: calc(((100vw - 1680px) / 2) - 8px);
 }
 
-.first-page-block{
+.first-page-block {
     margin-top: 320px !important;
 }
 
@@ -159,7 +160,7 @@ footer {
 
 
 
-.hover-this span{
+.hover-this span {
     font-size: 112px;
     font-weight: 800;
     font-family: 'Hauora Bold';
@@ -259,4 +260,99 @@ h2 {
         width: 95%;
         margin: 0 auto;
     }
+}
+
+@media(max-width:990px) {
+
+    .feedback-form-form .btn,
+    .feedback-form-form input,
+    .feedback-form-form textarea {
+        font-size: 20px;
+    }
+
+    .feedback-form-form input,
+    .feedback-form-form textarea {
+        padding: 20px;
+    }
+
+    .margin-400 {
+        margin-bottom: 400px;
+    }
+
+    .feedback-form-text p {
+        margin-top: 28px;
+        margin-bottom: 50px;
+    }
+
+    h2{
+        font-size: 40px;
+        line-height: 100%;
+    }
+}
+
+@media(max-width:768px) {
+
+    .feedback-form-form .btn,
+    .feedback-form-form input,
+    .feedback-form-form textarea {
+        font-size: 18px;
+    }
+
+    .feedback-form-form input,
+    .feedback-form-form textarea {
+        padding: 18px;
+    }
+
+    .margin-400 {
+        margin-bottom: 200px;
+    }
+
+    .feedback-form-text p {
+        margin-top: 24px;
+        margin-bottom: 45px;
+    }
+
+    .feedback-form-form .btn{
+        width: max-content;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+}
+
+@media(max-width:576px) {
+
+    .feedback-form-form .btn,
+    .feedback-form-form input,
+    .feedback-form-form textarea {
+        font-size: 16px;
+    }
+
+    .feedback-form-form input,
+    .feedback-form-form textarea {
+        padding: 16px;
+    }
+
+    .margin-400 {
+        margin-bottom: 60px;
+    }
+
+    .feedback-form-text p {
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+}
+
+@media(max-width:400px) {
+
+    .feedback-form-form .btn{
+        width: 100%;
+        text-align: center;
+    }
+
 }

@@ -115,21 +115,19 @@
                     </div>
                     <div class="feedback-form-form">
                         <form class="w-100 feedback-form-footer" >
-                            <div class="d-flex gap-3 mb-3">
+                            <div class="d-flex gap-3 flex-md-row flex-column mb-3">
                                 <input type="text" placeholder="Имя">
                                 <input type="tel" placeholder="Номер телефона">
                             </div>
-                            <div class="d-flex gap-3 mb-3">
+                            <div class="d-flex gap-3 mb-3 flex-md-row flex-column  mb-3">
                                 <input type="text" placeholder="Электронная почта">
                                 <input type="text" placeholder="Компания">
                             </div>
                             <textarea name="" id="" placeholder="Комментарий" class="mb-3"></textarea>
-                            <div class="d-flex justify-content-between">
-                                <div class="d-flex align-items-center form-check">
-                                    <input class="form-check-input" type="checkbox" id="check-modal" name="check"
-                                        value="yes" checked>
-                                    <label class="m-0 ms-2"> Даю согласие на обработку <a href=""
-                                            style="color: rgba(255, 255, 255, 0.5);">персональных данных</a></label>
+                            <div class="d-flex justify-content-between flex-md-row flex-column  mb-3">
+                                <div class="d-flex align-items-center form-check mb-md-0 mb-3">
+                                    <input class="form-check-input" type="checkbox" id="check-modal" name="check" value="yes" checked>
+                                    <label class="m-0 ms-2"> Даю согласие на обработку <a href="" style="color: rgba(255, 255, 255, 0.5);">персональных данных</a></label>
                                 </div>
                                 <button class="btn d-flex align-items-center" type="submit">
                                     Оставить заявку
@@ -139,19 +137,20 @@
                     </div>
                 </div>
             </div>
-            <div class="position-absolute w-100 footer-text" style="bottom: 50px;">
+            <div class="footer-text" style="bottom: 50px;">
                 <div class="footer-top d-flex justify-content-between align-items-center">
-                    <div class="d-flex justify-content-between  align-items-center gap-4">
+                    <div class="d-flex justify-content-between align-items-center gap-4">
                         {%if request.path != '/v4'%}
-                        <img src="{%static 'img/white-footer-logo.svg'%}" alt="footer-logo">
+                        <img src="{%static 'img/white-footer-logo.svg'%}" alt="footer-logo" class="footer-logo">
                         {%else%}
-                        <img src="{%static 'img/footer-logo.svg'%}" alt="footer-logo">
+                        <img src="{%static 'img/footer-logo.svg'%}" alt="footer-logo" class="footer-logo">
                         {%endif%}
                         <div class="footer-links gap-4 d-flex">
                             <a href="/" class="d-block">Бюро</a>
-                            <a href="/portfolio" class="d-block">Работы</a>
+                            <a href="/office" class="d-block">Офис</a>
                             <a href="/blog" class="d-block">Блог</a>
-                            <a href="/contacts" class="d-block">Контакты</a>
+                            <a href="/portfolio" class="d-block">Работы</a>
+                            <a href="/office#office-vacancies" class="d-block">Вакансии</a>
                         </div>
 
                     </div>
@@ -160,6 +159,23 @@
                         <a href="mailto:{{email}}"> {{email}}</a>
                         <a href="{{whatsapp}}">Wa</a>
                         <a href="{{tg_url}}">Tg</a>
+                    </div>
+                </div>
+                <div class="footer-top-mobile">
+                    <div class="footer-links gap-4 d-flex w-100 justify-content-between">
+                            <a href="/" class="d-block">Бюро</a>
+                            <a href="/office" class="d-block">Офис</a>
+                            <a href="/blog" class="d-block">Блог</a>
+                            <a href="/portfolio" class="d-block">Работы</a>
+                            <a href="/office#office-vacancies" class="d-block">Вакансии</a>
+                    </div>
+                    <a href="tel:{{phone_url}}" class="mb-2 d-block">{{phone}}</a>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <a href="mailto:{{email}}"> {{email}}</a>
+                        <div class="d-flex gap-4">
+                            <a href="{{whatsapp}}">Wa</a>
+                            <a href="{{tg_url}}">Tg</a>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-bottom">

@@ -6,8 +6,8 @@
     <!-- <link type="text/css" href="{%static 'css/aos.css' %}" rel="stylesheet" /> -->
     <link type="text/css" href="{%static 'css/index.css' %}" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="{%static 'css/content--half.css'%}" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
-    <link type="text/css" href="{%static 'css/loader.css' %}" rel="stylesheet" />
+    <script src="{%static 'js/ScrollToPlugin.min.js'%}"></script>
+    <!-- <link type="text/css" href="{%static 'css/loader.css' %}" rel="stylesheet" /> -->
 {%endblock%}
 
 {%block content%}
@@ -144,17 +144,17 @@
                     </div>
                     <div class="feedback-form-form block-scroll">
                         <form class="w-100 feedback-form">
-                            <div class="d-flex gap-3 mb-3">
+                            <div class="d-flex gap-3 flex-md-row flex-column mb-3">
                                 <input type="text" placeholder="Имя">
                                 <input type="tel" placeholder="Номер телефона">
                             </div>
-                            <div class="d-flex gap-3 mb-3">
+                            <div class="d-flex gap-3 mb-3 flex-md-row flex-column  mb-3">
                                 <input type="text" placeholder="Электронная почта">
                                 <input type="text" placeholder="Компания">
                             </div>
                             <textarea name="" id="" placeholder="Комментарий" class="mb-3"></textarea>
-                            <div class="d-flex justify-content-between">
-                                <div class="d-flex align-items-center form-check">
+                            <div class="d-flex justify-content-between flex-md-row flex-column  mb-3">
+                                <div class="d-flex align-items-center form-check mb-md-0 mb-3">
                                     <input class="form-check-input" type="checkbox" id="check-modal" name="check" value="yes" checked>
                                     <label class="m-0 ms-2"> Даю согласие на обработку <a href="" style="color: rgba(255, 255, 255, 0.5);">персональных данных</a></label>
                                 </div>
@@ -194,7 +194,7 @@
     <div class="margin-400"></div>
     <div data-aos="fade-up" data-aos-duration="1000">
         <div class="mini-container">
-            <h2 class="fadeText">Технологии, которые делают наш продукт точным эффективным и коммерчески успешным</h2>
+            <h2 class="fadeText mobile-mini">Технологии, которые делают наш продукт точным эффективным и коммерчески успешным</h2>
         </div>
     </div>
     <div class="margin-400"></div>
