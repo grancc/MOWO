@@ -3,6 +3,7 @@ from typing import Any
 from django.views.generic import TemplateView, DetailView
 
 from apps.about_app.models import Employees, Vacancies
+from apps.pages_meta.models import PagesMeta
 
 class OfficeView(TemplateView):
     """View для отображения страницы Офис"""
@@ -16,8 +17,9 @@ class OfficeView(TemplateView):
         context["employees"] = Employees.objects.all()
         context["vacancies"] = Vacancies.objects.all()
 
-        context["title"] = 'Mowo'
-        context["description"] = ''
+        page_obj = PagesMeta.objects.get(name='Офис')
+        context["title"] = page_obj.title
+        context["description"] = page_obj.desc
         
         return context
 
@@ -34,8 +36,8 @@ class VacanciesView(DetailView):
     def get_context_data(self, **kwargs) -> dict[str, Any]:
         context = super().get_context_data(**kwargs)
 
-        context["title"] = 'Mowo'
-        context["description"] = ''
+        context["title"] = f'MOWO Вакансия {context['vacancie'].name}'
+        context["description"] = f'MOWO Вакансия {context['vacancie'].name}'
         
         return context
     
@@ -49,7 +51,8 @@ class PortfolioView(TemplateView):
     def get_context_data(self, **kwargs) -> dict[str, Any]:
         context = super().get_context_data(**kwargs)
 
-        context["title"] = 'Mowo'
-        context["description"] = ''
+        page_obj = PagesMeta.objects.get(name='Работы')
+        context["title"] = page_obj.title
+        context["description"] = page_obj.desc
         
         return context
