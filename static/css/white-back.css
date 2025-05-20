@@ -1,23 +1,24 @@
 footer::after,
-.footer-background{
+.footer-background {
     display: none;
 }
 
-footer .position-absolute{
+footer .position-absolute {
     position: relative !important;
     bottom: 0 !important;
 }
 
-footer{
+footer {
     margin-top: 140px;
 }
 
-.feedback-form-form input, .feedback-form-form textarea {
+.feedback-form-form input,
+.feedback-form-form textarea {
     background: #0D10141A;
     color: #0D1014;
 }
 
-.form-check a{
+.form-check a {
     color: #0D101480 !important;
 }
 
@@ -35,16 +36,18 @@ body {
 
 .hover-this span,
 .header-top a,
-.header-top{
+.header-top {
     color: #0D1014;
 }
 
-.footer-text{
+.footer-text {
     margin-top: 140px;
     color: #0D1014 !important;
+    margin: 0 auto;
+    position: unset !important;
 }
 
-.footer-text a{
+.footer-text a {
     color: #0D1014 !important;
     font-weight: 700;
 }
@@ -53,7 +56,7 @@ body {
     border-bottom: 1px solid #0D1014;
 }
 
-.footer-bottom{
+.footer-bottom {
     color: #0D1014 !important;
 }
 
@@ -62,7 +65,6 @@ a {
     text-decoration: none;
 }
 
-.bread a{
+.bread a {
     color: #0D1014CC;
 }
-
