@@ -1,0 +1,17 @@
+@media (max-width: 1500px) {
+        .portfolio-item {
+        margin-left: 15%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .portfolio-item {
+        margin-left: 10%;
+    }
+}
+
+@media (max-width: 990px) {
+    .portfolio-item {
+        margin-left: 0;
+    }
+}

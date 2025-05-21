@@ -3,19 +3,20 @@
 
 {%block style%}
     <link rel="stylesheet" type="text/css" href="{%static 'css/portfolio.css'%}" />
+    <link rel="stylesheet" type="text/css" href="{%static 'css/blog.css'%}" />
     <link rel="stylesheet" type="text/css" href="{%static 'css/white-back.css'%}" />
 {%endblock%}
 
 {%block content%} 
-    <section id="portfolio-page" class="big-container">
+    <section id="portfolio-page" class="big-container first-page-block">
         <div class="portfolio-items">
-            <a class="portfolio-item position-relative d-flex" href="blog/articles/1">
-                <div class="position-relative">
+            <a class="portfolio-item position-relative d-flex flex-lg-row flex-column" href="blog/articles/1">
+                <div class="position-relative order-2 order-lg-1">
                     <img src="{%static 'img/portfolio/1.webp'%}" alt="">
                     
                 </div>
                 
-                <div class="portfolio-item-desc-right d-flex flex-column justify-content-between h-100 text-start">
+                <div class="portfolio-item-desc-right order-1 order-lg-2 d-flex flex-column justify-content-between h-100 text-start">
                     <div class="top-left">
                         Тренды бла­го­устрой­ства в 2025 году: ар­хи­тек­ту­ра дворовых про­странств, плей­ха­бов и об­ще­ствен­ных мест
                     </div>
@@ -24,12 +25,12 @@
                     </div>
                 </div>
             </a>
-            <a class="portfolio-item position-relative d-flex" href="blog/articles/1">
-                <div class="position-relative"> 
+            <a class="portfolio-item position-relative d-flex flex-lg-row flex-column" href="blog/articles/1">
+                <div class="position-relative order-2 order-lg-1"> 
                     <img src="{%static 'img/portfolio/4.webp'%}" alt="">
                 </div>
                 
-                <div class="portfolio-item-desc-right d-flex flex-column justify-content-between h-100 text-start">
+                <div class="portfolio-item-desc-right order-1 order-lg-2 d-flex flex-column justify-content-between h-100 text-start">
                     <div class="top-left">
                         Статья 2
                     </div>
