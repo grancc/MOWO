@@ -15,24 +15,97 @@ h1 {
     font-size: 24px;
 }
 
-.vacancie-content p{
-   margin-top: 24px;
+.vacancie-content p {
+    margin-top: 24px;
 }
 
-.vacancie-content h4{
+.vacancie-content h4 {
     font-weight: 700;
     margin-top: 80px;
 }
 
-.vacancie-content ul{
+.vacancie-content ul {
     margin-top: 24px;
 }
 
-.vacancie-content a{
+.vacancie-content a {
     color: #0D60CD;
     font-weight: 500;
 }
 
-.feedback-form{
+.feedback-form {
     display: none;
+}
+
+@media(max-width:990px) {
+    h1 {
+        font-size: 40px;
+        margin-bottom: 60px;
+        margin-top: 24px;
+        padding-bottom: 30px;
+    }
+
+    .vacancie-content p,
+    .vacancie-content {
+        font-size: 20px;
+    }
+
+    .vacancie-content h4 {
+        margin-top: 60px;
+        font-size: 20px;
+    }
+
+    .vacancie-content ul {
+        margin-top: 20px;
+    }
+}
+
+@media(max-width:768px) {
+    h1 {
+        font-size: 35px;
+        margin-top: 16px;
+        margin-bottom: 50px;
+        padding-bottom: 28px;
+    }
+
+    .vacancie-content p,
+    .vacancie-content {
+        font-size: 18px;
+    }
+
+    .vacancie-content h4 {
+        margin-top: 50px;
+        font-size: 18px;
+    }
+
+    .vacancie-content ul {
+        margin-top: 18px;
+    }
+}
+
+@media(max-width:576px) {
+    h1 {
+        font-size: 32px;
+        margin-top: 4px;
+        margin-bottom: 24px;
+        padding-bottom: 16px;
+    }
+
+    .vacancie-content p {
+        font-size: 16px;
+        margin-bottom: 0.5rem;
+    }
+
+    .vacancie-content h4 {
+        margin-top: 40px;
+        font-size: 16px;
+    }
+
+    .vacancie-content ul {
+        margin-top: 16px;
+    }
+
+    .vacancie-content{
+        font-size: 16px;
+    }
 }
