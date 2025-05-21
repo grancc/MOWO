@@ -67,7 +67,7 @@
                                 <a href="{{tg_url}}" target="_blank">Tg</a>
                             </div>
                         </div>
-                        <a href="/v4" class="{%if request.path != '/v4'%} item-top {%endif%} hover-this"><span {%if request.path == '/v4'%} style="color: #FF0000;" {%endif%}>MOWO</span></a>
+                        <a href="/" class="{%if request.path != '/'%} item-top {%endif%} hover-this"><span {%if request.path == '/'%} style="color: #FF0000;" {%endif%}>MOWO</span></a>
                     </div>
                     
                     <div>
@@ -140,7 +140,7 @@
             <div class="footer-text" style="bottom: 50px;">
                 <div class="footer-top d-flex justify-content-between align-items-center">
                     <div class="d-flex justify-content-between align-items-center gap-4">
-                        {%if request.path != '/v4'%}
+                        {%if request.path != '/'%}
                         <img src="{%static 'img/white-footer-logo.svg'%}" alt="footer-logo" class="footer-logo">
                         {%else%}
                         <img src="{%static 'img/footer-logo.svg'%}" alt="footer-logo" class="footer-logo">

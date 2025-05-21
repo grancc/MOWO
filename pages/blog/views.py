@@ -17,5 +17,21 @@ class BlogView(TemplateView):
         context["description"] = page_obj.desc
         
         return context
+    
+
+class ArticleView(TemplateView):
+    """View для отображения страницы Статьи"""
+
+    template_name = "blog/articles/1.html"
+    success_url = "/"
+
+    def get_context_data(self, **kwargs) -> dict[str, Any]:
+        context = super().get_context_data(**kwargs)
+
+        page_obj = PagesMeta.objects.get(name='Блог')
+        context["title"] = page_obj.title
+        context["description"] = page_obj.desc
+        
+        return context
 
 

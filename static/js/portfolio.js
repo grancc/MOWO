@@ -25,7 +25,7 @@ function TablePortfolioItemHover(){
         xMoveCursor(pageX);
         yMoveCursor(pageY);
     });
-    console.log(cursor)
+
     //При наведении на портфолио итемы меняем картинку
     projects.forEach((item, index) => {
 
@@ -80,6 +80,9 @@ function PortfolioItemHover(){
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    TablePortfolioItemHover()
-    PortfolioItemHover()
+    if (window.innerWidth > 990){
+        TablePortfolioItemHover()
+        PortfolioItemHover()
+    }
+    
 });

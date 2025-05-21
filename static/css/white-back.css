@@ -6,6 +6,7 @@ footer::after,
 footer .position-absolute {
     position: relative !important;
     bottom: 0 !important;
+    margin-bottom: 190px;
 }
 
 footer {
@@ -67,4 +68,27 @@ a {
 
 .bread a {
     color: #0D1014CC;
+}
+
+@media(max-width:990px) {
+    footer {
+        margin-top: 120px;
+    }
+
+    footer .position-absolute{
+        margin-bottom: 0;
+    }
+}
+
+
+@media(max-width:768px) {
+    footer {
+        margin-top: 100px;
+    }
+}
+
+@media(max-width:576px) {
+    footer {
+        margin-top: 60px;
+    }
 }

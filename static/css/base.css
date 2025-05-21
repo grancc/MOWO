@@ -221,6 +221,7 @@ h2 {
     margin-left: -20px;
     cursor: pointer;
     margin-top: 0;
+    flex-shrink: 0;
 }
 
 .feedback-form-form label {
@@ -262,6 +263,22 @@ h2 {
     }
 }
 
+@media(max-width:1200px) {
+    .first-page-block {
+        margin-top: 280px !important;
+    }
+}
+
+@media (max-width: 1160px) {
+    .footer-top-mobile .footer-links {
+        border-bottom: 1px solid rgb(0, 0, 0) !important;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid rgb(0, 0, 0) !important;
+    }
+}
+
 @media(max-width:990px) {
 
     .feedback-form-form .btn,
@@ -282,11 +299,16 @@ h2 {
     .feedback-form-text p {
         margin-top: 28px;
         margin-bottom: 50px;
+        font-size: 20px;
     }
 
-    h2{
+    h2 {
         font-size: 40px;
         line-height: 100%;
+    }
+
+    .first-page-block {
+        margin-top: 200px !important;
     }
 }
 
@@ -310,14 +332,19 @@ h2 {
     .feedback-form-text p {
         margin-top: 24px;
         margin-bottom: 45px;
+        font-size: 18px;
     }
 
-    .feedback-form-form .btn{
+    .feedback-form-form .btn {
         width: max-content;
     }
 
     h2 {
         font-size: 35px;
+    }
+
+    .first-page-block {
+        margin-top: 150px !important;
     }
 }
 
@@ -341,18 +368,23 @@ h2 {
     .feedback-form-text p {
         margin-top: 20px;
         margin-bottom: 40px;
+        font-size: 16px;
     }
 
     h2 {
         font-size: 32px;
     }
+
+    .first-page-block {
+        margin-top: 90px !important;
+    }
 }
 
 @media(max-width:400px) {
 
-    .feedback-form-form .btn{
+    .feedback-form-form .btn {
         width: 100%;
-        text-align: center;
+        justify-content: center;
     }
 
 }
