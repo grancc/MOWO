@@ -1,9 +1,3 @@
-#office-title {
-    margin-top: 320px;
-}
-
-
-
 h2 {
     font-family: 'Hauora Medium';
     font-weight: 500;
@@ -22,7 +16,7 @@ h3 {
     margin-bottom: 80px;
 }
 
-p {
+#office-title p {
     margin-bottom: 32px;
     font-weight: 500;
     font-size: 24px;
@@ -74,4 +68,132 @@ p {
 
 .big-text {
     margin: 140px 0;
+}
+
+@media(max-width:1200px) {
+    h2 {
+        font-size: 48px;
+    }
+}
+
+@media(max-width:1100px) {
+    .people-item img {
+        width: 280px;
+    }
+}
+
+@media(max-width:990px) {
+    h2 {
+        font-size: 32px;
+        line-height: 50px;
+        margin-bottom: 0;
+    }
+
+    h3 {
+        font-size: 48px;
+        margin-top: 60px;
+        margin-bottom: 48px;
+        line-height: 100%;
+    }
+
+    #office-title p {
+        font-size: 22px;
+    }
+
+    .big-text {
+        margin: 100px 0;
+    }
+
+    .people-items {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 20px;
+    }
+
+    .people-item img {
+        width: 100%;
+    }
+
+    .vacancies-items a{
+        font-size: 20px;
+    }
+
+
+}
+
+@media(max-width:768px) {
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 36px;
+        margin-top: 50px;
+        margin-bottom: 24px;
+    }
+
+    #office-title p {
+        font-size: 18px;
+    }
+
+    .big-text {
+        margin: 60px 0;
+    }
+
+    .people-items {
+        gap: 40px 18px;
+    }
+
+    .peolple-desc,
+    .peolple-name {
+        font-size: 16px;
+    }
+
+    .people-item img {
+        object-fit: cover;
+    }
+
+    .vacancies-items a{
+        font-size: 18px;
+    }
+}
+
+@media(max-width:576px) {
+    h2 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    h3 {
+        font-size: 32px;
+        margin-top: 40px;
+        margin-bottom: 16px;
+    }
+
+    #office-title p {
+        margin-bottom: 24px;
+        font-size: 16px;
+    }
+
+    .big-text {
+        margin: 40px 0;
+    }
+
+    .people-items {
+        gap: 40px 12px;
+    }
+
+    .peolple-desc,
+    .peolple-name {
+        font-size: 14px;
+    }
+
+    .people-item img {
+        height: 180px;
+        object-fit: cover;
+        width: 130px;
+    }
+
+    .vacancies-items a{
+        font-size: 16px;
+    }
 }
