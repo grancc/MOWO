@@ -1,18 +1,3 @@
-.preloader {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99;
-  background-color: #141516;
-  transition: opacity 0.8s ease, transform 0.8s ease;
-  z-index: 100001;
-}
-
 @keyframes preloaderExit {
   0% {
     transform: translateY(0%);
@@ -21,25 +6,6 @@
   100% {
     transform: translateY(-110%);
   }
-}
-
-.preloader.exit {
-  animation: preloaderExit 1s ease;
-  pointer-events: none;
-}
-
-.preloader .wave {
-  position: absolute;
-  bottom: -10%;
-  width: 100%;
-  height: 300px;
-  background-color: #141516;
-  border-bottom-left-radius: 100%;
-  border-bottom-right-radius: 100%;
-  animation: waveDown 0.7s ease forwards 1.8s;
-  /* animation-duration: 1s; */
-  z-index: 110001;
-  transform: scaleY(2);
 }
 
 @keyframes waveDown {
@@ -60,29 +26,63 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
 
+@media (min-width: 990px) {
+  .preloader p {
+    display: flex;
+    color: white;
+    font-size: 42px;
+    align-items: center;
+    position: absolute;
+    z-index: 100003;
+    animation: fadeIn 1s ease-out forwards;
+  }
 
+  .preloader span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 10px;
+    z-index: 100003;
+  }
 
-.preloader p {
-  display: flex;
-  color: white;
-  font-size: 42px;
-  align-items: center;
-  position: absolute;
-  z-index: 100003;
-  animation: fadeIn 1s ease-out forwards;
-}
+  .preloader.exit {
+    animation: preloaderExit 1s ease;
+    pointer-events: none;
+  }
 
-.preloader span {
-  display: block;
-  width: 10px;
-  height: 10px;
-  background-color: white;
-  border-radius: 50%;
-  margin-right: 10px;
-  z-index: 100003;
+  .preloader .wave {
+    position: absolute;
+    bottom: -10%;
+    width: 100%;
+    height: 300px;
+    background-color: #141516;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    animation: waveDown 0.7s ease forwards 1.8s;
+    z-index: 110001;
+    transform: scaleY(2);
+  }
+
+  .preloader {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-color: #141516;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    z-index: 100001;
+  }
 }
