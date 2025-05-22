@@ -1,7 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   if (window.innerWidth > 990) {
-    const words = ["Архитектура и инженерия", "Исследование территории", "BIM", "GIS Analysis", "MOWO"];
+    const words = ["Архитектура и инженерия", "Исследование территории", "BIM", "GIS Analysis", "Algoritmic design", "AI design", "MOWO"];
     let index = 0;
 
     const container = document.querySelector('.preloader');
