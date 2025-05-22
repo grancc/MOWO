@@ -7,7 +7,7 @@
     <link type="text/css" href="{%static 'css/index.css' %}" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="{%static 'css/content--half.css'%}" />
     <script src="{%static 'js/ScrollToPlugin.min.js'%}"></script>
-    <!-- <link type="text/css" href="{%static 'css/loader.css' %}" rel="stylesheet" /> -->
+    <link type="text/css" href="{%static 'css/loader.css' %}" rel="stylesheet" />
 {%endblock%}
 
 {%block content%}
@@ -218,7 +218,10 @@
             </div>
         </div>
     </div>  
-    <div class="margin-400"></div>    
+    <div class="margin-400"></div> 
+    <div class="preloader">
+         <div class="wave"></div>
+    </div>  
 {%endblock%}
 
     
@@ -231,6 +234,8 @@
 <script src="{%static 'js/v4/ScrollTrigger.min.js'%}"></script>
 <script src="{%static 'js/v4/imagesloaded.pkgd.min.js'%}"></script>
 <script type="module" src="{%static 'js/v4/index.js'%}"></script>
+<script defer src="{%static 'js/loader.js'%}"></script>
+
 
 <!-- <script src="{%static 'js/v4/utils.js'%}"></script> -->
 <script src="{%static 'js/v4/block-scroll.js'%}"></script>

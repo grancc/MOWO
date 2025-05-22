@@ -43,18 +43,7 @@
 </head>
 
 <body style="background-color: black;">
-    <div id="preloader" class="justify-content-center align-items-center">
-        <div class="big-container d-flex justify-content-center align-items-center flex-column">
-            <div class="position-relative">
-                <img src="{%static 'img/big-load-logo.svg'%}" alt="Загрузка" class="big-load-logo">
-                <img src="{%static 'img/big-load-text.svg'%}" alt="" class="load-text">
-            </div>  
-            <div class="load-count mt-4">
-                (<span id="percentage">0</span>%)
-            </div>
-            
-        </div>
-    </div>
+
     <div class="main-content">
          <header class="position-fixed pb-4 w-100 top-0 headerAnimation" style="background-color: transparent; z-index: 10000;">
             <div class="w-100">
@@ -203,20 +192,6 @@
 <script defer src="{%static 'js/header-link-animation.js' %}"></script>
 <script src="{%static 'js/base.js'%}"></script>
 <script defer src="{%static 'js/feedback.js'%}"></script>
-
-<script>
-    let percentage = 0;
-
-    function updateProgress() {
-        percentage += 1;
-        document.getElementById('percentage').textContent = percentage;
-        if (percentage === 100) {
-            clearInterval(progressInterval);
-        }
-    }
-
-    let progressInterval = setInterval(updateProgress, 5); 
-</script>
 {%block script%}
 {%endblock%}
 
