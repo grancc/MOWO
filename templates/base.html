@@ -52,31 +52,31 @@
                         <div class="d-flex header-top justify-content-between">
                             <p class="mb-0">with love</p>
                             <div class="d-flex gap-4">
-                                <a href="{{whatsapp}}" target="_blank">Wa</a>
-                                <a href="{{tg_url}}" target="_blank">Tg</a>
+                                <a href="{{whatsapp}}" target="_blank" class="cursor-hover">Wa</a>
+                                <a href="{{tg_url}}" target="_blank" class="cursor-hover">Tg</a>
                             </div>
                         </div>
-                        <a href="/" class="{%if request.path != '/'%} item-top {%endif%} hover-this"><span {%if request.path == '/'%} style="color: #FF0000;" {%endif%}>MOWO</span></a>
+                        <a href="/" class="{%if request.path != '/'%} item-top {%endif%} hover-this cursor-hover"><span {%if request.path == '/'%} style="color: #FF0000;" {%endif%}>MOWO</span></a>
                     </div>
                     
                     <div>
                         <div class="d-flex gap-4 header-top justify-content-end">
-                            <a href="tel:{{phone_url}}"><span>{{phone}}</span></a>
+                            <a href="tel:{{phone_url}}" class="cursor-hover"><span>{{phone}}</span></a>
                         </div>
-                        <a href="/office" class="{%if request.path != '/office'%} item-top {%endif%} hover-this"><span {%if request.path == '/office'%} style="color: #FF0000;" {%endif%}>ОФИС</span></a>
+                        <a href="/office" class="{%if request.path != '/office'%} item-top {%endif%} hover-this cursor-hover"><span {%if request.path == '/office'%} style="color: #FF0000;" {%endif%}>ОФИС</span></a>
                     </div>
                     <div>
                         <div class="d-flex gap-4 header-top">
-                            <a href="mailto:{{email}}"><span>{{email}}</span></a>
+                            <a href="mailto:{{email}}" class="cursor-hover"><span>{{email}}</span></a>
                         </div>
-                        <a href="/blog" class="{%if request.path != '/blog'%} item-top {%endif%} hover-this"><span {%if request.path == '/blog'%} style="color: #FF0000;" {%endif%}>БЛОГ</span></a>
+                        <a href="/blog" class="{%if request.path != '/blog'%} item-top {%endif%} hover-this cursor-hover"><span {%if request.path == '/blog'%} style="color: #FF0000;" {%endif%}>БЛОГ</span></a>
                     </div>
                     <div>
                         <div class="d-flex justify-content-between header-group-3 header-top">
                             <a href=""><span>Владивосток, Россия</span></a>
                             <a href=""><span>Бали, Индонезия</span></a>
                         </div>
-                        <a href="/portfolio" class="{%if request.path != '/portfolio'%} item-top {%endif%} hover-this"><span {%if request.path == '/portfolio'%} style="color: #FF0000;" {%endif%}>РАБОТЫ</span></a>
+                        <a href="/portfolio" class="{%if request.path != '/portfolio'%} item-top {%endif%} hover-this cursor-hover"><span {%if request.path == '/portfolio'%} style="color: #FF0000;" {%endif%}>РАБОТЫ</span></a>
                     </div>
                     
                 </div>
@@ -94,9 +94,8 @@
         {%endblock%}
 
         <footer class="position-relative">
-            <img src="{%static 'img/footer.webp'%}" alt="" class="w-100 footer-background">
             <div class="mini-container ">
-                <div class="feedback-form position-absolute mx-auto mini-container" style="z-index: 5; bottom: 250px;">
+                <div class="feedback-form mx-auto mini-container" style="z-index: 5; bottom: 250px;">
                     <div class="feedback-form-text">
                         <h2>Превратим идею в архитектуру</h2>
                         <p>Индивидуальный подход к каждому проекту и гарантированное качество исполнения. Заполните форму, и
@@ -115,10 +114,10 @@
                             <textarea name="" id="" placeholder="Комментарий" class="mb-3"></textarea>
                             <div class="d-flex justify-content-between flex-md-row flex-column  mb-3">
                                 <div class="d-flex align-items-center form-check mb-md-0 mb-3">
-                                    <input class="form-check-input" type="checkbox" id="check-modal" name="check" value="yes" checked>
-                                    <label class="m-0 ms-2"> Даю согласие на обработку <a href="" style="color: rgba(255, 255, 255, 0.5);">персональных данных</a></label>
+                                    <input class="form-check-input cursor-hover" type="checkbox" id="check-modal" name="check" value="yes" checked>
+                                    <label class="m-0 ms-2"> Даю согласие на обработку <a href="" style="color: rgba(255, 255, 255, 0.5);" class="cursor-hover">персональных данных</a></label>
                                 </div>
-                                <button class="btn d-flex align-items-center" type="submit">
+                                <button class="btn d-flex align-items-center cursor-hover" type="submit">
                                     Оставить заявку
                                 </button>
                             </div>
@@ -126,7 +125,7 @@
                     </div>
                 </div>
             </div>
-            <div class="footer-text" style="bottom: 50px;">
+            <div class="footer-text big-container" style="bottom: 50px;">
                 <div class="footer-top d-flex justify-content-between align-items-center">
                     <div class="d-flex justify-content-between align-items-center gap-4">
                         {%if request.path != '/'%}
@@ -135,35 +134,35 @@
                         <img src="{%static 'img/footer-logo.svg'%}" alt="footer-logo" class="footer-logo">
                         {%endif%}
                         <div class="footer-links gap-4 d-flex">
-                            <a href="/" class="d-block">Бюро</a>
-                            <a href="/office" class="d-block">Офис</a>
-                            <a href="/blog" class="d-block">Блог</a>
-                            <a href="/portfolio" class="d-block">Работы</a>
-                            <a href="/office#office-vacancies" class="d-block">Вакансии</a>
+                            <a href="/" class="d-block cursor-hover">Бюро</a>
+                            <a href="/office" class="d-block cursor-hover">Офис</a>
+                            <a href="/blog" class="d-block cursor-hover">Блог</a>
+                            <a href="/portfolio" class="d-block cursor-hover">Работы</a>
+                            <a href="/office#office-vacancies" class="d-block cursor-hover">Вакансии</a>
                         </div>
 
                     </div>
                     <div class="d-flex gap-3  align-items-center">
-                        <a href="tel:{{phone_url}}">{{phone}}</a>
-                        <a href="mailto:{{email}}"> {{email}}</a>
-                        <a href="{{whatsapp}}">Wa</a>
-                        <a href="{{tg_url}}">Tg</a>
+                        <a href="tel:{{phone_url}}" class="cursor-hover">{{phone}}</a>
+                        <a href="mailto:{{email}}" class="cursor-hover"> {{email}}</a>
+                        <a href="{{whatsapp}}" class="cursor-hover">Wa</a>
+                        <a href="{{tg_url}}" class="cursor-hover">Tg</a>
                     </div>
                 </div>
                 <div class="footer-top-mobile">
                     <div class="footer-links gap-4 d-flex w-100 justify-content-between">
-                            <a href="/" class="d-block">Бюро</a>
-                            <a href="/office" class="d-block">Офис</a>
-                            <a href="/blog" class="d-block">Блог</a>
-                            <a href="/portfolio" class="d-block">Работы</a>
-                            <a href="/office#office-vacancies" class="d-block">Вакансии</a>
+                            <a href="/" class="d-block cursor-hover">Бюро</a>
+                            <a href="/office" class="d-block cursor-hover">Офис</a>
+                            <a href="/blog" class="d-block cursor-hover">Блог</a>
+                            <a href="/portfolio" class="d-block cursor-hover">Работы</a>
+                            <a href="/office#office-vacancies" class="d-blockcursor-hover ">Вакансии</a>
                     </div>
-                    <a href="tel:{{phone_url}}" class="mb-2 d-block">{{phone}}</a>
+                    <a href="tel:{{phone_url}}" class="mb-2 d-block cursor-hover">{{phone}}</a>
                     <div class="d-flex align-items-center justify-content-between">
-                        <a href="mailto:{{email}}"> {{email}}</a>
+                        <a href="mailto:{{email}}" class="cursor-hover"> {{email}}</a>
                         <div class="d-flex gap-4">
-                            <a href="{{whatsapp}}">Wa</a>
-                            <a href="{{tg_url}}">Tg</a>
+                            <a href="{{whatsapp}}" class="cursor-hover">Wa</a>
+                            <a href="{{tg_url}}" class="cursor-hover">Tg</a>
                         </div>
                     </div>
                 </div>

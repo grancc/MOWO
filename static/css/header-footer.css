@@ -19,9 +19,8 @@
     margin-right: -65px;
 }
 
-.footer-text,
-.feedback-form {
-    position: absolute;
+.feedback-form{
+    margin-bottom: 140px;
 }
 
 .footer-text{
@@ -145,6 +144,10 @@
     footer{
         font-size: 20px;
     }
+
+    .feedback-form{
+        margin-bottom: 100px;
+    }
 }
 
 @media(max-width:768px) {
@@ -156,7 +159,9 @@
         font-size: 18px;
     }
     
-
+    .feedback-form{
+        margin-bottom:80px;
+    }
 }
 
 @media(max-width:690px) {
@@ -182,5 +187,9 @@
     footer,
     .footer-bottom{
         font-size: 16px !important;
+    }
+
+    .feedback-form{
+        margin-bottom: 60px;
     }
 }

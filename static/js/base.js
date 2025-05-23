@@ -38,5 +38,16 @@ document.addEventListener('DOMContentLoaded', () => {
 		}     
 		lastScrollTop = st;    
 	};	
+
+
+	document.querySelectorAll('.cursor-hover').forEach(function (cursor) {
+		const cursorObj = document.getElementById('cursor');
+		cursor.addEventListener('mousemove', function () {
+			cursorObj.classList.add('cursor-active-hover')
+    	});
+		cursor.addEventListener('mouseleave', function () {
+			cursorObj.classList.remove('cursor-active-hover')
+    	});
+	})
 })
 

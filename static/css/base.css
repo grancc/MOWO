@@ -32,6 +32,27 @@ body {
     color: rgba(255, 255, 255, 1);
     font-family: 'Hauora Regular';
     overflow-x: hidden;
+    cursor: none !important;
+}
+
+*{
+    cursor: none !important;
+}
+
+#cursor{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 1);
+    opacity: 0.9;
+}
+
+.cursor-hover{
+    cursor: none !important;
+}
+
+.cursor-active-hover{
+    transform: scale(2);
 }
 
 a {
@@ -77,16 +98,6 @@ a {
     gap: 100px;
 }
 
-footer::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        linear-gradient(180.06deg, #000000 0.05%, rgba(0, 0, 0, 0) 99.95%);
-}
 
 footer {
     font-size: 24px;

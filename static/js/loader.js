@@ -33,11 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setTimeout(() => {
       container.classList.add('exit');
-    }, 2000);
+    }, 2200);
 
     setTimeout(() => {
       container.style.display = 'none';
-    }, 2600);
+    }, 3000);
   }
 });
 

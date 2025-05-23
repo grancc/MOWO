@@ -1,3 +1,8 @@
+#cursor{
+    background-color: rgb(0, 0, 0);
+}
+
+
 footer::after,
 .footer-background {
     display: none;
