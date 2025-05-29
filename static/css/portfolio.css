@@ -187,6 +187,16 @@ table {
     z-index: 100;
 }
 
+    /* top: 50%;
+    position: absolute;
+    left: 15px;
+    backdrop-filter: blur(11px);
+    background: #0101017D;
+    padding: 10px;
+    border-radius: 100px;
+    width: 30px;
+    height: 30px; */
+
 @media(max-width:1500px) {
     .portfolio-item-wrapper {
         width: 800px;
