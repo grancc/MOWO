@@ -1,5 +1,5 @@
 .content {
-	padding: var(--page-padding);
+	padding: 100px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -18,12 +18,21 @@
 .content--half {
 	display: flex;
 	flex-direction: column;
-	gap: 3vh;
+	gap: 30px;
 	text-align: center;
 }
 
 .content--half:nth-child(odd) {
 	margin-left: auto;
+}
+
+.content--sticky-bottom {
+	padding: 100px;
+	justify-content: end;
+}
+
+.content--sticky-top {
+	justify-content: start !important;
 }
 
 

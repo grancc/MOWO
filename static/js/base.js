@@ -10,10 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		
 	setInterval(function() {        
 		if (didScroll) {   
-			if(window.innerWidth > 992){
-				hasScrolled();  
-			}   
-			          
+			hasScrolled(); 
 			didScroll = false;        
 		}    
 	}, 150);    
@@ -29,7 +26,18 @@ document.addEventListener('DOMContentLoaded', () => {
 			$('header .header-top').css('transform', 'translateY(-100px)');
 			$('header .header-top').css('transition', 'transform 0.5s ease-in-out');
 
-			$('header .item-top span').css('transform', 'translateY(-100px)');
+			if (innerWidth < 576){
+				$('header .item-top span').css('transform', 'translateY(-45px)');
+			}
+			else if (innerWidth < 992){
+				$('header .item-top span').css('transform', 'translateY(-60px)');
+			}
+			else if (innerWidth < 1200){
+				$('header .item-top span').css('transform', 'translateY(-80px)');
+			}else{
+				$('header .item-top span').css('transform', 'translateY(-100px)');
+			}
+			
             $('header .item-top span').css('transition', 'transform 0.5s ease-in-out');
 		} 
 		else {    

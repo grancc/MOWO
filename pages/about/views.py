@@ -4,6 +4,7 @@ from django.views.generic import TemplateView, DetailView
 
 from apps.about_app.models import Employees, Vacancies
 from apps.pages_meta.models import PagesMeta
+from apps.projects.models import Project
 
 class OfficeView(TemplateView):
     """View для отображения страницы Офис"""
@@ -52,6 +53,8 @@ class PortfolioView(TemplateView):
         context = super().get_context_data(**kwargs)
 
         page_obj = PagesMeta.objects.get(name='Работы')
+        context["projects"] = Project.objects.all().order_by('id')
+        context["projects_main"] = Project.objects.filter(main=True).order_by('id')
         context["title"] = page_obj.title
         context["description"] = page_obj.desc
         

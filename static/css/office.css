@@ -20,6 +20,7 @@ h3 {
     margin-bottom: 32px;
     font-weight: 500;
     font-size: 24px;
+    line-height: 150%;
 }
 
 .people-items {
@@ -71,7 +72,7 @@ h3 {
 }
 
 @media(max-width:1200px) {
-    h2 {
+    #office-title h2 {
         font-size: 48px;
     }
 }
@@ -83,7 +84,7 @@ h3 {
 }
 
 @media(max-width:990px) {
-    h2 {
+    #office-title h2 {
         font-size: 32px;
         line-height: 50px;
         margin-bottom: 0;
@@ -91,7 +92,7 @@ h3 {
 
     h3 {
         font-size: 48px;
-        margin-top: 60px;
+        margin-top: 100px;
         margin-bottom: 48px;
         line-height: 100%;
     }
@@ -117,26 +118,25 @@ h3 {
         font-size: 20px;
     }
 
+    h2 {
+        font-size: 40px;
+        line-height: 100%;
+    }
 
 }
 
 @media(max-width:768px) {
-    h2 {
+    #office-title h2 {
         font-size: 28px;
     }
 
     h3 {
         font-size: 36px;
-        margin-top: 50px;
         margin-bottom: 24px;
     }
 
     #office-title p {
         font-size: 18px;
-    }
-
-    .big-text {
-        margin: 60px 0;
     }
 
     .people-items {
@@ -155,27 +155,26 @@ h3 {
     .vacancies-items a{
         font-size: 18px;
     }
+
+    h2 {
+        font-size: 35px;
+    }
 }
 
 @media(max-width:576px) {
-    h2 {
+    #office-title h2 {
         font-size: 24px;
         line-height: 30px;
     }
 
     h3 {
         font-size: 32px;
-        margin-top: 40px;
         margin-bottom: 16px;
     }
 
     #office-title p {
         margin-bottom: 24px;
         font-size: 16px;
-    }
-
-    .big-text {
-        margin: 40px 0;
     }
 
     .people-items {
@@ -195,5 +194,9 @@ h3 {
 
     .vacancies-items a{
         font-size: 16px;
+    }
+
+    h2 {
+        font-size: 32px;
     }
 }

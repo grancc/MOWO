@@ -9,6 +9,11 @@ h1 {
     margin: 80px 0;
 }
 
+.first-page-block {
+    margin-top: 418px !important;
+    margin-bottom: 200px;
+}
+
 .vacancie-content {
     font-family: 'Hauora Medium';
     font-weight: 500;
@@ -17,6 +22,11 @@ h1 {
 
 .vacancie-content p {
     margin-top: 24px;
+    line-height: 150%;
+}
+
+.vacancie-content li {
+    line-height: 150%;
 }
 
 .vacancie-content h4 {
@@ -57,6 +67,11 @@ h1 {
 
     .vacancie-content ul {
         margin-top: 20px;
+    }
+
+    .first-page-block {
+        margin-top: 175px !important;
+        margin-bottom: 100px;
     }
 }
 
@@ -105,7 +120,7 @@ h1 {
         margin-top: 16px;
     }
 
-    .vacancie-content{
+    .vacancie-content {
         font-size: 16px;
     }
 }

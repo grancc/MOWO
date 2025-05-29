@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 {%load static%}
+{% load humanize %}
 
 {%block style%}
+    <link rel="stylesheet" href="{% static 'vendor/swiper.min.css' %}" />
     <link rel="stylesheet" type="text/css" href="{%static 'css/portfolio.css'%}" />
     <link rel="stylesheet" type="text/css" href="{%static 'css/white-back.css'%}" />
 {%endblock%}
@@ -10,456 +12,127 @@
     <section id="portfolio-page" class="custom-container first-page-block">
         <h2>главные проекты</h2>
         <div class="portfolio-items">
-            <div class="portfolio-item position-relative d-flex flex-lg-row flex-column">
-                <div class="position-relative order-2 order-lg-1">
-                    <img src="{%static 'img/portfolio/1.webp'%}" alt="" class="">
-                    <div class="portfolio-item-desc-left d-flex flex-column justify-content-between h-100 top-0 left-0 text-end ">
+            {%for project in projects_main%}
+                <div class="portfolio-item position-relative d-flex flex-lg-row flex-column">
+                    <div class="portfolio-item-desc-left order-1 order-lg-1 d-flex flex-column justify-content-between h-100 top-0 left-0 text-end ">
+                            <div class="top-left">
+                                {{project.name}}
+                            </div>
+                            
+                            <div class="bottom-left">
+                                {{project.location}}
+                            </div>
+                    </div>
+                    <div class="portfolio-item-wrapper order-2 position-relative">
+                        <div class="swiper swiper-photos">
+                            <div class="swiper-wrapper">
+                                {%for img in project.photos.all %}
+                                    <img src="{{img.image.url}}" alt="" class="swiper-slide">
+                                {%endfor%}
+                            </div>
+                        </div>
+                        <div class="swiper-btns">
+                            <div class="swiper--prev button-prev-{{forloop.counter}}">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20" fill="none">
+<path d="M1.13045 9.38045L9.88045 0.630449C9.96175 0.549152 10.0583 0.484667 10.1645 0.44067C10.2707 0.396671 10.3845 0.374025 10.4995 0.374025C10.6145 0.374025 10.7283 0.396671 10.8345 0.44067C10.9408 0.484667 11.0373 0.549152 11.1186 0.630449C11.1999 0.711746 11.2644 0.80826 11.3084 0.914478C11.3524 1.0207 11.375 1.13454 11.375 1.24951C11.375 1.36448 11.3524 1.47833 11.3084 1.58455C11.2644 1.69077 11.1999 1.78728 11.1186 1.86858L2.98655 9.99951L11.1186 18.1305C11.2828 18.2946 11.375 18.5173 11.375 18.7495C11.375 18.9817 11.2828 19.2044 11.1186 19.3686C10.9544 19.5328 10.7317 19.625 10.4995 19.625C10.2673 19.625 10.0446 19.5328 9.88045 19.3686L1.13045 10.6186C1.0491 10.5373 0.984558 10.4408 0.940524 10.3346C0.89649 10.2284 0.873827 10.1145 0.873827 9.99951C0.873827 9.88452 0.89649 9.77066 0.940524 9.66444C0.984558 9.55822 1.0491 9.46171 1.13045 9.38045Z" fill="white"/>
+</svg>
+                            </div>
+                            <div class="swiper--next button-next-{{forloop.counter}}">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20" viewBox="0 0 12 20" fill="none">
+                                <path d="M10.8695 10.6195L2.11955 19.3696C2.03825 19.4508 1.94174 19.5153 1.83552 19.5593C1.7293 19.6033 1.61546 19.626 1.50049 19.626C1.38552 19.626 1.27167 19.6033 1.16545 19.5593C1.05923 19.5153 0.96272 19.4508 0.881424 19.3696C0.800127 19.2883 0.735639 19.1917 0.691642 19.0855C0.647645 18.9793 0.625 18.8655 0.625 18.7505C0.625 18.6355 0.647645 18.5217 0.691642 18.4155C0.735639 18.3092 0.800127 18.2127 0.881424 18.1314L9.01346 10.0005L0.881424 1.86955C0.717238 1.70536 0.625 1.48268 0.625 1.25049C0.625 1.01829 0.717238 0.79561 0.881424 0.631424C1.04561 0.467238 1.26829 0.375 1.50049 0.375C1.73268 0.375 1.95536 0.467238 2.11955 0.631424L10.8695 9.38142C10.9509 9.46269 11.0154 9.55919 11.0595 9.66541C11.1035 9.77164 11.1262 9.8855 11.1262 10.0005C11.1262 10.1155 11.1035 10.2293 11.0595 10.3356C11.0154 10.4418 10.9509 10.5383 10.8695 10.6195Z" fill="white"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="portfolio-item-desc-right order-3 order-lg-2 d-flex flex-column justify-content-between h-100 text-start">
                         <div class="top-left">
-                            архитектура 
-                            и инженерия
-                        </div>
+                                {{project.direction}}
+                            </div>
                         <div class="bottom-left">
-                            Владивосток, Россия
+                            {{project.status}}
                         </div>
                     </div>
                 </div>
-                
-                <div class="portfolio-item-desc-right order-1 order-lg-2 d-flex flex-column justify-content-between h-100 text-start">
-                    <div class="top-left">
-                        жилой комплекс Тихвинский
-                    </div>
-                    <div class="bottom-left">
-                        Реализация
-                    </div>
-                </div>
-            </div>
-            <div class="portfolio-item position-relative flex-lg-row flex-column">
-                <div class="position-relative order-2 order-lg-1">
-                    <img src="{%static 'img/portfolio/2.webp'%}" alt="">
-                    <div class=" top-0  portfolio-item-desc-left d-flex flex-column justify-content-between h-100 text-end">
-                        <div class="top-left">
-                            архитектура 
-                            и инженерия
-                        </div>
-                        <div class="bottom-left">
-                            Дахла, Западная Сахара
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item-desc-right order-1 order-lg-2 d-flex flex-column justify-content-between h-100 text-start">
-                    <div class="top-left">
-                        университет Дахла
-                    </div>
-                    <div class="bottom-left">
-                        Концепция
-                    </div>
-                </div>
-            </div>
-            <div class="portfolio-item position-relative flex-lg-row flex-column">
-                
-                <div class="position-relative order-2 order-lg-1">
-                    <img src="{%static 'img/portfolio/6.webp'%}" alt="">
-                        <div class=" top-0 portfolio-item-desc-left d-flex flex-column justify-content-between h-100 text-end">
-                        <div class="top-left">
-                            архитектура 
-                            и инженерия
-                        </div>
-                        <div class="bottom-left">
-                            Владивосток, Россия
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item-desc-right order-1 order-lg-2 d-flex flex-column justify-content-between h-100 text-start">
-                    <div class="top-left">
-                       вилла Дефриз
-                    </div>
-                    <div class="bottom-left">
-                        Концепция
-                    </div>
-                </div>
-            </div>
-            <div class="portfolio-item position-relative flex-lg-row flex-column">
-                
-                <div class="position-relative order-2 order-lg-1">
-                    <img src="{%static 'img/portfolio/3.webp'%}" alt="">
-                    <div class=" top-0 portfolio-item-desc-left d-flex flex-column justify-content-between h-100 text-end">
-                        <div class="top-left">
-                            архитектура 
-                            и инженерия
-                        </div>
-                        <div class="bottom-left">
-                            Марракеш, Морроко
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item-desc-right order-1 order-lg-2 d-flex flex-column justify-content-between h-100 text-start">
-                    <div class="top-left">
-                        университет Марракеш
-                    </div>
-                    <div class="bottom-left">
-                        Концепция
-                    </div>
-                </div>
-            </div>
-            <div class="portfolio-item position-relative flex-lg-row flex-column">
-
-                <div class="position-relative order-2 order-lg-1">
-                    <img src="{%static 'img/portfolio/5.webp'%}" alt="">
-                    <div class=" top-0 portfolio-item-desc-left d-flex flex-column justify-content-between h-100 text-end">
-                        <div class="top-left">
-                            благоустройство
-                        </div>
-                        <div class="bottom-left">
-                            Владивосток, Россия
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="portfolio-item-desc-right order-1 order-lg-2 d-flex flex-column justify-content-between h-100 text-start">
-                    <div class="top-left">
-                        жилой комплекс Тихвинский
-                    </div>
-                    <div class="bottom-left">
-                        Реализация
-                    </div>
-                </div>
-            </div>
-            <div class="portfolio-item position-relative flex-lg-row flex-column">
-                
-                <div class="position-relative order-2 order-lg-1"> 
-                    <img src="{%static 'img/portfolio/4.webp'%}" alt="">
-                    <div class=" top-0 portfolio-item-desc-left d-flex flex-column justify-content-between h-100 text-end">
-                        <div class="top-left">
-                            архитектура 
-                            и инженерия
-                        </div>
-                        <div class="bottom-left">
-                            Бали, Индонезия
-                        </div>
-                </div>
-                </div>
-                
-                <div class="portfolio-item-desc-right order-1 order-lg-2 d-flex flex-column justify-content-between h-100 text-start">
-                    <div class="top-left">
-                        комплекс апартаментов Елизиум
-                    </div>
-                    <div class="bottom-left">
-                        Реализация
-                    </div>
-                </div>
-            </div>
+            {%endfor%}
         </div>
         <h2 class="text-center ms-0">все проекты</h2>
-        <table class="table table-portfolio-items d-lg-block d-none">
+        <table class="table table-portfolio-items">
             <thead>
                 <tr class="font-weight-bold">
-                    <th scope="col" class="text-end">наименование</th>
+                    <th scope="col">наименование</th>
                     <th scope="col">направление</th>
                     <th scope="col">локация</th>
-                    <th scope="col" class="text-end">статус</th>
+                    <th scope="col">статус</th>
                     <th scope="col">площадь</th>
                     <th scope="col">год</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td class="text-end">ЖК Тихвинский</td>
-                    <td>квартирография</td>
-                    <td>Владивосток, Россия</td>
-                    <td class="text-end">реализован</td>
-                    <td>14 980 м<sup>2</sup></td>
-                    <td>2024</td>
-                </tr>
-                <tr>
-                    <td class="text-end">комплекс вилл Edem</td>
-                    <td>архитектура и инженерия</td>
-                    <td>Бали, Индонезия</td>
-                    <td class="text-end">комплекс вилл Едем</td>
-                    <td>35 640 м<sup>2</sup></td>
-                    <td>2024</td>
-                </tr>
-                <tr>
-                    <td class="text-end">ижс Прибрежная</td>
-                    <td>архитектура и инженерия</td>
-                    <td>Владивосток, Россия</td>
-                    <td class="text-end">реализован</td>
-                    <td>210 м<sup>2</sup></td>
-                    <td>2017</td>
-                </tr>
-                <tr>
-                    <td class="text-end">Air Mall</td>
-                    <td>архитектура и инженерия</td>
-                    <td>Владивосток, Россия</td>
-                    <td class="text-end">концепция</td>
-                    <td>56 440 м<sup>2</sup></td>
-                    <td>2018</td>
-                </tr>
-                <tr class="font-weight-bold table-portfolio-item">
-                    <td class="text-end">апартаменты Elysium</td>
-                    <td>архитектура и инженерия</td>
-                    <td>Бали, Индонезия</td>
-                    <td class="text-end">реализация</td>
-                    <td>36 270 м<sup>2</sup></td>
-                    <td>2024</td>
-                </tr>
-                <tr>
-                    <td class="text-end">медцентр Plastec</td>
-                    <td>архитектура и инженерия</td>
-                    <td>Владивосток, Россия</td>
-                    <td class="text-end">реализация</td>
-                    <td>3 580 м<sup>2</sup></td>
-                    <td>2023</td>
-                </tr>
-                <tr>
-                    <td class="text-end">озеро Сердце Патрокла</td>
-                    <td>архитектура и инженерия</td>
-                    <td>Владивосток, Россия</td>
-                    <td class="text-end">концепция</td>
-                    <td>2 506 м<sup>2</sup></td>
-                    <td>2023</td>
-                </tr>
-                <tr class="font-weight-bold table-portfolio-item">
-                    <td class="text-end">ЖК Тихвинский</td>
-                    <td>архитектура и инженерия</td>
-                    <td>Владивосток, Россия</td>
-                    <td class="text-end">реализация</td>
-                    <td>14 980 м<sup>2</sup></td>
-                    <td>2022</td>
-                </tr>
-                <tr>
-                    <td class="text-end">жилой комплекс ТАММ</td>
-                    <td>цифровая модель</td>
-                    <td>Владивосток, Россия</td>
-                    <td class="text-end">реализован</td>
-                    <td>23 770 м<sup>2</sup></td>
-                    <td>2023</td>
-                </tr>
-                <tr class="font-weight-bold table-portfolio-item">
-                    <td class="text-end">университет Марракеш</td>
-                    <td>архитектура и инженерия</td>
-                    <td>Марракеш, Морокко</td>
-                    <td class="text-end">концепция</td>
-                    <td>289 450 м<sup>2</sup></td>
-                    <td>2020</td>
-                </tr>
-                <tr>
-                    <td class="text-end">соцжилье Агадир</td>
-                    <td>архитектура и инженерия</td>
-                    <td>Агадир, Морроко</td>
-                    <td class="text-end">реализация</td>
-                    <td>54 350 м<sup>2</sup></td>
-                    <td>2020</td>
-                </tr>
-                <tr>
-                    <td class="text-end">средняя школа 1600</td>
-                    <td>архитектура и инженерия</td>
-                    <td>Москва, Россия</td>
-                    <td class="text-end">реализация</td>
-                    <td>23 833 м<sup>2</sup></td>
-                    <td>2023</td>
-                </tr>
-                <tr class="font-weight-bold table-portfolio-item">
-                    <td class="text-end">ЖК Тихвинский</td>
-                    <td>благоустройство</td>
-                    <td>Владивосток, Россия</td>
-                    <td class="text-end">реализация</td>
-                    <td>1 834 м<sup>2</sup></td>
-                    <td>2025</td>
-                </tr>
+            <tbody style="text-transform: lowercase;">
+                {%for project in projects%}
+                    {%if project.main%}
+                    <tr class="table-portfolio-item">
+                        <td class="font-weight-bold ">{{project.name}}</td>
+                        <td>{{project.direction}}</td>
+                        <td>{{project.location}}</td>
+                        <td>{{project.status}}</td>
+                        <td>{{project.square |intcomma}} м<sup>2</sup></td>
+                        <td>{{project.year}}</td>
+                    </tr>
+                    {%else%}
+                        {% if project.photos.exists%}
+                        <tr class="table-portfolio-item">
+                            <td>{{project.name}}</td>
+                            <td>{{project.direction}}</td>
+                            <td>{{project.location}}</td>
+                            <td>{{project.status}}</td>
+                            <td>{{project.square |intcomma}} м<sup>2</sup></td>
+                            <td>{{project.year}}</td>
+                        </tr>
+                        {%else%}
+                        <tr>
+                            <td>{{project.name}}</td>
+                            <td>{{project.direction}}</td>
+                            <td>{{project.location}}</td>
+                            <td>{{project.status}}</td>
+                            <td>{{project.square |intcomma}} м<sup>2</sup></td>
+                            <td>{{project.year}}</td>
+                        </tr>
+                        {%endif%}
+                    {%endif%}
+                {%endfor%}
+                
+                
             </tbody>
         </table>
-        <div class="table-portfolio-items d-lg-none d-block">
-            <div class="table-portfolio-item">
-                <div class="table-portfolio-item-title">
-                    ЖК Тихвинский
-                </div>
-                <div class="table-portfolio-item-desc">
-                    <p class="mb-2">квартирография</p>
-                    <p class="mb-1">Владивосток, Россия</p>
-                    <div class="d-flex justify-content-between">
-                        <p>Реализован</p>
-                        <p>14 980 м <span class="ms-2">2024</span></p>
+        <div class="table-portfolio-items d-lg-none d-block" style="text-transform: lowercase;">
+                {%for project in projects%}
+                <div class="table-portfolio-item">
+                    <div class="table-portfolio-item-title">
+                        {{project.name}}
+                    </div>
+                    <div class="table-portfolio-item-desc">
+                        <p class="mb-2">{{project.direction}}</p>
+                        <p class="mb-1">{{project.location}}</p>
+                        <div class="d-flex justify-content-between">
+                            <p>{{project.status}}</p>
+                            <p>{{project.square |intcomma}} м <span class="ms-2">{{project.year}}</span></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="table-portfolio-item">
-                <div class="table-portfolio-item-title">
-                    комплекс вилл Edem
-                </div>
-                <div class="table-portfolio-item-desc">
-                    <p class="mb-2">архитектура и инженерия</p>
-                    <p class="mb-1">Бали, Индонезия</p>
-                    <div class="d-flex justify-content-between">
-                        <p>Концепция</p>
-                        <p>35 640 м <span class="ms-2">2024</span></p>
-                    </div>
-                </div>
-            </div>
-            <div class="table-portfolio-item">
-                <div class="table-portfolio-item-title">
-                   ижс Прибрежная
-                </div>
-                <div class="table-portfolio-item-desc">
-                    <p class="mb-2">архитектура и инженерия</p>
-                    <p class="mb-1">Владивосток, Россия</p>
-                    <div class="d-flex justify-content-between">
-                        <p>Реализован</p>
-                        <p>210 м <span class="ms-2">2017</span></p>
-                    </div>
-                </div>
-            </div>
-            <div class="table-portfolio-item">
-                <div class="table-portfolio-item-title">
-                    Air Mall
-                </div>
-                <div class="table-portfolio-item-desc">
-                    <p class="mb-2">архитектура и инженерия</p>
-                    <p class="mb-1">Владивосток, Россия</p>
-                    <div class="d-flex justify-content-between">
-                        <p>Концепция</p>
-                        <p>56 440 м <span class="ms-2">2018</span></p>
-                    </div>
-                </div>
-            </div>
-            <div class="table-portfolio-item active">
-                <div class="table-portfolio-item-title">
-                    апартаменты Elysium
-                </div>
-                <div class="table-portfolio-item-desc">
-                    <p class="mb-2">архитектура и инженерия</p>
-                    <p class="mb-1">Бали, Индонезия</p>
-                    <div class="d-flex justify-content-between">
-                        <p>Реализация</p>
-                        <p>36 270 м <span class="ms-2">2024</span></p>
-                    </div>
-                </div>
-            </div>
-            <div class="table-portfolio-item">
-                <div class="table-portfolio-item-title">
-                    медцентр Plastec
-                </div>
-                <div class="table-portfolio-item-desc">
-                    <p class="mb-2">архитектура и инженерия</p>
-                    <p class="mb-1">Владивосток, Россия</p>
-                    <div class="d-flex justify-content-between">
-                        <p>Реализация</p>
-                        <p>3 580 м <span class="ms-2">2023</span></p>
-                    </div>
-                </div>
-            </div>
-            <div class="table-portfolio-item">
-                <div class="table-portfolio-item-title">
-                    озеро Сердце Патрокла
-                </div>
-                <div class="table-portfolio-item-desc">
-                    <p class="mb-2">квартирография</p>
-                    <p class="mb-1">Владивосток, Россия</p>
-                    <div class="d-flex justify-content-between">
-                        <p>Концепция</p>
-                        <p>2 506 м<span class="ms-2">2023</span></p>
-                    </div>
-                </div>
-            </div>
-            <div class="table-portfolio-item active">
-                <div class="table-portfolio-item-title">
-                    ЖК Тихвинский
-                </div>
-                <div class="table-portfolio-item-desc">
-                    <p class="mb-2">архитектура и инженерия</p>
-                    <p class="mb-1">Владивосток, Россия</p>
-                    <div class="d-flex justify-content-between">
-                        <p>Реализован</p>
-                        <p>14 980 м <span class="ms-2">2022</span></p>
-                    </div>
-                </div>
-            </div>
-            <div class="table-portfolio-item">
-                <div class="table-portfolio-item-title">
-                    жилой комплекс ТАММ
-                </div>
-                <div class="table-portfolio-item-desc">
-                    <p class="mb-2">цифровая модель</p>
-                    <p class="mb-1">Владивосток, Россия</p>
-                    <div class="d-flex justify-content-between">
-                        <p>Реализован</p>
-                        <p>23 770 м <span class="ms-2">2023</span></p>
-                    </div>
-                </div>
-            </div>
-            <div class="table-portfolio-item active">
-                <div class="table-portfolio-item-title">
-                    университет Марракеш
-                </div>
-                <div class="table-portfolio-item-desc">
-                    <p class="mb-2">архитектура и инженерия</p>
-                    <p class="mb-1">Марракеш, Морокко</p>
-                    <div class="d-flex justify-content-between">
-                        <p>Концепция</p>
-                        <p>289 450 м <span class="ms-2">2020</span></p>
-                    </div>
-                </div>
-            </div>
-            <div class="table-portfolio-item">
-                <div class="table-portfolio-item-title">
-                    соцжилье Агади
-                </div>
-                <div class="table-portfolio-item-desc">
-                    <p class="mb-2">архитектура и инженерия</p>
-                    <p class="mb-1">Агадир, Морроко</p>
-                    <div class="d-flex justify-content-between">
-                        <p>Реализация</p>
-                        <p>54 350 м <span class="ms-2">2020</span></p>
-                    </div>
-                </div>
-            </div>
-            <div class="table-portfolio-item">
-                <div class="table-portfolio-item-title">
-                    средняя школа 1600
-                </div>
-                <div class="table-portfolio-item-desc">
-                    <p class="mb-2">архитектура и инженерия</p>
-                    <p class="mb-1">Москва, Россия</p>
-                    <div class="d-flex justify-content-between">
-                        <p>Реализация</p>
-                        <p>23 833 м <span class="ms-2">2023</span></p>
-                    </div>
-                </div>
-            </div>
-            <div class="table-portfolio-item">
-                <div class="table-portfolio-item-title">
-                    ЖК Тихвинский
-                </div>
-                <div class="table-portfolio-item-desc">
-                    <p class="mb-2">благоустройство</p>
-                    <p class="mb-1">Владивосток, Россия</p>
-                    <div class="d-flex justify-content-between">
-                        <p>Реализация</p>
-                        <p>1 834 м <span class="ms-2">2025</span></p>
-                    </div>
-                </div>
-            </div>
+                {%endfor%}
         </div>
         <div class="modal-container" id="modalContainer" style="transform: translate(150%) translateY(-100%) scale(0) translateZ(0)">
             <div class="modal-slider" id="modalSlider">
-                    <div class="style_modal" style="background-color:#000000"><img alt="image" loading="lazy"
+                {%for project in projects%}
+                    {% if project.photos.exists%}
+                    <div class="style_modal"><img alt="image" loading="lazy"
                             width="300" height="0" decoding="async" data-nimg="1" style="color:transparent"
-                            src="{%static 'img/portfolio/1.webp'%}">
+                            src="{{project.photos.first.image.url}}">
                     </div>
-                    <div class="style_modal" style="background-color:#8C8C8C"><img alt="image" loading="lazy"
-                            width="300" height="0" decoding="async" data-nimg="1" style="color:transparent"
-                            src="{%static 'img/portfolio/5.webp'%}">
-                    </div>
-                    <div class="style_modal" style="background-color:#EFE8D3"><img alt="image" loading="lazy"
-                            width="300" height="0" decoding="async" data-nimg="1" style="color:transparent"
-                            src="{%static 'img/portfolio/3.webp'%}">
-                    </div>
-                    <div class="style_modal" style="background-color:#706D63"><img alt="image" loading="lazy"
-                            width="300" height="0" decoding="async" data-nimg="1" style="color:transparent"
-                            src="{%static 'img/portfolio/4.webp'%}">
-                    </div>
+                    {%endif%}
+                {%endfor%}
             </div>
         </div>
     </section>
@@ -467,6 +140,8 @@
 {%endblock%}
 
 {%block script%}
+<script src="{% static 'vendor/swiper.min.js' %}"></script>
 <script src="{%static 'js/v4/gsap.min.js'%}"></script>
 <script src="{%static 'js/portfolio.js'%}"></script>
+<script src="{%static 'js/portfolio-swiper.js'%}"></script>
 {%endblock%}

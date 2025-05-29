@@ -35,11 +35,11 @@ body {
     cursor: none !important;
 }
 
-*{
+* {
     cursor: none !important;
 }
 
-#cursor{
+#cursor {
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -47,11 +47,11 @@ body {
     opacity: 0.9;
 }
 
-.cursor-hover{
+.cursor-hover {
     cursor: none !important;
 }
 
-.cursor-active-hover{
+.cursor-active-hover {
     transform: scale(2);
 }
 
@@ -192,6 +192,7 @@ h2 {
     font-size: 24px;
     margin-bottom: 60px;
     font-family: 'Hauora Regular';
+    line-height: 150%;
 }
 
 .feedback-form-form input,
@@ -200,7 +201,6 @@ h2 {
     padding: 24px;
     background-color: rgba(255, 255, 255, 0.1);
     border: none;
-    border-radius: 24px;
     width: 100%;
     color: rgba(255, 255, 255, 0.5);
     font-size: 24px;
@@ -210,7 +210,6 @@ h2 {
     color: rgba(255, 255, 255, 1);
     padding: 16px 26px;
     gap: 16px;
-    border-radius: 100px;
     border-width: 1px;
     font-family: Hauora;
     font-weight: 600;
@@ -220,7 +219,8 @@ h2 {
     backdrop-filter: blur(32px);
     background: #FFFFFF1A;
     font-family: 'Hauora';
-
+    width: 330px;
+    justify-content: center;
 }
 
 .feedback-form-form .form-check-input {
@@ -388,6 +388,10 @@ h2 {
 
     .first-page-block {
         margin-top: 90px !important;
+    }
+
+    .feedback-form-form .btn{
+        width: 100%;
     }
 }
 

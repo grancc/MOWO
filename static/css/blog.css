@@ -1,5 +1,22 @@
+.portfolio-item-desc-right .top-left {
+    max-width: unset;
+}
+
+.portfolio-item-wrapper {
+    flex-shrink: 0;
+}
+
+.portfolio-item .portfolio-item-desc-right .top-left{
+    font-weight: 700;
+}
+
+.portfolio-item:hover .portfolio-item-desc-right .top-left {
+    color: #FF0000;
+    transition: .3s;
+}
+
 @media (max-width: 1500px) {
-        .portfolio-item {
+    .portfolio-item {
         margin-left: 15%;
     }
 }
