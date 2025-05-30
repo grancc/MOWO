@@ -4,9 +4,14 @@ document.addEventListener("DOMContentLoaded", function () {
     swipers.forEach((swiperEl, index) => {
         let swiper = new Swiper(swiperEl, {
             slidesPerView: 1,
+            grabCursor: true,
             navigation: {
                 nextEl: `.button-next-${index + 1}`,
                 prevEl: `.button-prev-${index + 1}`,
+            },
+            pagination: {
+                el: `.swiper-pagination-${index + 1}`,
+                clickable: true,
             },
         });
 

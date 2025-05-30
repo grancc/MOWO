@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Allow: /blog
+Allow: /portfolio
+Allow: /office
+Allow: /blog/articles/*
+Allow: /vacancies/*
+
+Sitemap: https://mowo.world/sitemap.xml

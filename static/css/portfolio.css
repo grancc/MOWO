@@ -187,15 +187,25 @@ table {
     z-index: 100;
 }
 
-    /* top: 50%;
+.swiper-pagination {
     position: absolute;
-    left: 15px;
-    backdrop-filter: blur(11px);
-    background: #0101017D;
-    padding: 10px;
-    border-radius: 100px;
-    width: 30px;
-    height: 30px; */
+    bottom: 0;
+    z-index: 10;
+    left: 50%;
+    display: none;
+}
+
+.swiper-pagination-bullet {
+    background: white;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    background: white;
+    opacity: 1;
+}
+
+
 
 @media(max-width:1500px) {
     .portfolio-item-wrapper {
@@ -312,6 +322,15 @@ table {
     table.table-portfolio-items {
         display: none;
     }
+
+    .swiper-pagination {
+        display: block;
+    }
+
+    .swiper--next,
+    .swiper--prev{
+        z-index: unset;
+    }
 }
 
 
@@ -342,6 +361,8 @@ table {
     .table-portfolio-item-desc {
         font-size: 16px;
     }
+
+
 }
 
 @media(max-width:576px) {
