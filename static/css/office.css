@@ -3,8 +3,7 @@ h2 {
     font-weight: 500;
     font-size: 60px;
     line-height: 70px;
-    margin-top: 34px;
-    margin-bottom: 32px;
+    margin-bottom: 50px;
 }
 
 h3 {
@@ -12,8 +11,34 @@ h3 {
     font-weight: 700;
     font-size: 60px;
     line-height: 70px;
-    margin-top: 140px;
     margin-bottom: 80px;
+}
+
+.office-back {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    object-fit: cover;
+    z-index: -1;
+    height: 100%;
+}
+
+.header-inverted .hover-this span,
+.header-inverted .header-top a,
+.header-inverted .header-top {
+    color: rgb(255, 255, 255);
+}
+
+.manifest {
+    margin-top: 400px;
+}
+
+.first-h2 {
+    color: rgba(255, 255, 255, 1);
+}
+
+#office-title {
+    margin-top: 287px !important;
 }
 
 #office-title p {
@@ -71,9 +96,55 @@ h3 {
     margin: 140px 0;
 }
 
+
+@media(min-width:2000px) {
+    .office-back {
+        height: unset;
+        top: -40%;
+    }
+}
+
+@media(min-width:3700px) {
+    .office-back {
+        top: -60%;
+    }
+}
+
+
+@media(min-width:4300px) {
+    .office-back {
+        top: -70%;
+    }
+}
+
+@media(min-width:5700px) {
+    .office-back {
+        top: -85%;
+    }
+}
+
+@media(max-width:2000px) {
+    .office-back {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
 @media(max-width:1200px) {
     #office-title h2 {
         font-size: 48px;
+    }
+
+    #office-title {
+        margin-top: 180px !important;
+    }
+
+    .manifest {
+        margin-top: 200px;
+    }
+
+    .office-back {
+        height: 80%;
     }
 }
 
@@ -114,13 +185,17 @@ h3 {
         width: 100%;
     }
 
-    .vacancies-items a{
+    .vacancies-items a {
         font-size: 20px;
     }
 
     h2 {
         font-size: 40px;
         line-height: 100%;
+    }
+
+    .office-back {
+        height: 47%;
     }
 
 }
@@ -152,12 +227,16 @@ h3 {
         object-fit: cover;
     }
 
-    .vacancies-items a{
+    .vacancies-items a {
         font-size: 18px;
     }
 
     h2 {
         font-size: 35px;
+    }
+
+    .office-back {
+        height: 55%;
     }
 }
 
@@ -192,11 +271,24 @@ h3 {
         width: 130px;
     }
 
-    .vacancies-items a{
+    .vacancies-items a {
         font-size: 16px;
     }
 
     h2 {
         font-size: 32px;
+    }
+
+
+    #office-title {
+        margin-top: 100px !important;
+    }
+
+    .manifest {
+        margin-top: 150px;
+    }
+
+    .office-back {
+        height: 35%;
     }
 }
