@@ -38,10 +38,9 @@
             и бюро в 2025 год.
         </p>
         <div class="slider swiper" style="overflow: unset;">
-            <div class="swiper-wrapper" style="overflow: hidden;">
+            <div class="swiper-wrapper">
                 <img src="{%static 'img/temp2.webp'%}" alt="" class="swiper-slide">
-                <img src="{%static 'img/temp2.webp'%}" alt="" class="swiper-slide">
-                <img src="{%static 'img/temp2.webp'%}" alt="" class="swiper-slide">
+                <img src="{%static 'img/temp3.webp'%}" alt="" class="swiper-slide">
             </div>
             <div class="swiper-pagination"></div>
             <div class="siper-btns">
@@ -115,6 +114,7 @@
 <script>
     var __slider = new Swiper(".slider ", {
         slidesPerView: 1,
+        spaceBetween: 30,
         infinity: false,
         centeredSlides: false,
         pagination: {
