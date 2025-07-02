@@ -1,0 +1,155 @@
+h1 {
+
+    font-size: 60px;
+    margin-bottom: 55px !important;
+}
+
+.block-text {
+    font-size: 60px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.block-text-block {
+    margin-bottom: 46px;
+}
+
+.main-img {
+    width: 100%;
+    margin-bottom: 133px;
+}
+
+.block-text-block img {
+    width: 100%
+}
+
+.year {
+    font-size: 16px;
+    color: #262626;
+}
+
+h2 {
+    margin-bottom: 40px;
+}
+
+.project-items {
+    gap: 24px;
+    margin-bottom: 130px;
+}
+
+.project-item {
+    padding: 24px;
+    width: 284px;
+    flex-shrink: 0;
+}
+
+.project-item:first-child {
+    padding: 24px;
+    max-width: unset;
+    width: 100%;
+    flex-shrink: 1;
+}
+
+.project-item-title {
+    font-size: 18px;
+    color: #262626;
+    margin-bottom: 40px;
+}
+
+
+.project-item-value {
+    font-size: 24px;
+    color: #262626;
+    font-weight: 700;
+}
+
+.swiper-slide{
+    max-height: 800px;
+    object-fit: cover;
+    height: auto;
+}
+
+.swiper{
+    margin-left: calc(((100vw - 1700px) / 2) - 8px);
+}
+
+.block-text-block h2{
+    margin-bottom: 70px;
+}
+
+
+@media (max-width: 1536px) {
+    .project-item {
+        width: 194px;
+    }
+}
+
+@media (max-width: 1045px) {
+    .project-item {
+        width: 100%;
+        flex-shrink: unset;
+    }
+}
+
+
+@media (max-width: 990px) {
+
+    h1,
+    .block-text {
+        font-size: 40px;
+    }
+
+    .project-item,
+    .project-item:first-child {
+        padding: 0;
+    }
+}
+
+@media (max-width: 936px) {
+    .project-items {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .main-img,
+    .project-items {
+        margin-bottom: 50px;
+    }
+
+    .block-text-block:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 769px) {
+
+    h1,
+    .block-text {
+        font-size: 30px;
+        margin-bottom: 40px !important;
+    }
+
+    .year {
+        font-size: 14px;
+    }
+
+    h2 {
+        margin-bottom: 30px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    h1,
+    .block-text {
+        font-size: 20px;
+        margin-bottom: 20px !important;
+    }
+
+    .year {
+        font-size: 12px;
+    }
+}

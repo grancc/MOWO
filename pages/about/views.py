@@ -4,7 +4,7 @@ from django.views.generic import TemplateView, DetailView
 
 from apps.about_app.models import Employees, Vacancies
 from apps.pages_meta.models import PagesMeta
-from apps.projects.models import Project
+from apps.projects.models import Project, ProjectPage
 
 class OfficeView(TemplateView):
     """View для отображения страницы Офис"""
@@ -57,5 +57,24 @@ class PortfolioView(TemplateView):
         context["projects_main"] = Project.objects.filter(main=True).order_by('id')
         context["title"] = page_obj.title
         context["description"] = page_obj.desc
+        
+        return context
+    
+
+class ProjectView(DetailView):
+    """View для отображения страницы Проекта"""
+
+    template_name = "about/project-page.html"
+    success_url = "/"
+    model = ProjectPage
+    slug_url_kwarg = 'slug'
+    context_object_name = 'project'
+
+    def get_context_data(self, **kwargs) -> dict[str, Any]:
+        context = super().get_context_data(**kwargs)
+
+        page_obj = PagesMeta.objects.get(name='Блог')
+        context["title"] = context["project"].project.name
+        context["description"] = context["project"].description
         
         return context

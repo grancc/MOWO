@@ -13,7 +13,13 @@
         <h2>главные проекты</h2>
         <div class="portfolio-items">
             {%for project in projects_main%}
-                <div class="portfolio-item position-relative d-flex flex-lg-row flex-column">
+                {%if project.project_page.exists%}
+                    
+                    <a class="portfolio-item position-relative d-flex flex-lg-row flex-column" href="project/{{project.project_page.first.slug}}">
+                {%else%}
+                    <div class="portfolio-item position-relative d-flex flex-lg-row flex-column">
+                {%endif%}
+                        
                     <div class="portfolio-item-desc-left order-1 order-lg-1 d-flex flex-column justify-content-between h-100 top-0 left-0 text-end ">
                             <div class="top-left">
                                 {{project.name}}
@@ -52,7 +58,12 @@
                             {{project.status}}
                         </div>
                     </div>
-                </div>
+                {%if project.project_page.exists%}
+                    </a>
+                {%else%}
+                    </div>
+                {%endif%}
+                
             {%endfor%}
         </div>
         <h2 class="text-center ms-0">все проекты</h2>

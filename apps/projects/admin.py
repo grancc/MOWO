@@ -9,3 +9,16 @@ class ProjectAdmin(admin.ModelAdmin):
 @admin.register(ImageModel)
 class ImageModelAdmin(admin.ModelAdmin):
     pass
+
+
+@admin.register(ProjectBlocks)
+class ProjectBlocksAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(ProjectPeople)
+class ProjectPeoplesAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(ProjectPage)
+class ProjectPageAdmin(admin.ModelAdmin):
+    pass

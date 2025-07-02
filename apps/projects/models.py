@@ -5,6 +5,8 @@ from io import BytesIO
 from django.db import models
 from django.core.files.uploadedfile import InMemoryUploadedFile
 
+from apps.about_app.models import Employees
+
 class ImageModel(models.Model):
     """Модель для изображений"""
     image = models.ImageField(upload_to="images/%Y/%m/%d/", verbose_name="изображение",
@@ -46,5 +48,46 @@ class Project(models.Model):
 
     def __str__(self):
         return self.name
+    
+
+class ProjectBlocks(models.Model):
+    text = models.TextField('текст')
+    photo = models.ForeignKey(ImageModel, verbose_name="фото", blank=True, on_delete=models.CASCADE, null=True)
+    class Meta:
+        verbose_name = "блок"
+        verbose_name_plural = "Блоки на страницах проектов"
+
+    def __str__(self):
+        return f'Блок {self.id}'
+
+
+class ProjectPeople(models.Model):
+    position = models.CharField(max_length=255, verbose_name='Позиция')
+    #empl = models.ForeignKey(Employees, verbose_name="участник", blank=True, on_delete=models.CASCADE)
+    empl = models.CharField('имя', max_length=255)
+    class Meta:
+        verbose_name = "участник"
+        verbose_name_plural = "Участники команды для проектов"
+
+    def __str__(self):
+        return f'{self.empl} ({self.position})'
+
+class ProjectPage(models.Model):
+    project = models.ForeignKey(Project, on_delete=models.CASCADE, verbose_name='Проект', related_name='project_page')
+    slug = models.SlugField(verbose_name='ссылка на проект')
+    description = models.TextField(verbose_name='краткое описание проекта')
+    cektor = models.CharField(max_length=255, verbose_name='сектор')
+    blocks = models.ManyToManyField(ProjectBlocks, verbose_name='блоки проекта на странице')
+    command = models.ManyToManyField(ProjectPeople, verbose_name="команда проекта")
+    slider_one = models.ManyToManyField(ImageModel, verbose_name="фотографии проекта", blank=True, related_name='project_slider_one')
+    slider_two = models.ManyToManyField(ImageModel, verbose_name="фотографии чертежей и фасадов", blank=True, related_name='project_slider_two')
+    
+    class Meta:
+        verbose_name = "проект"
+        verbose_name_plural = "Страницы для проектов"
+
+
+    def __str__(self):
+        return self.project.name
     
     

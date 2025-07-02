@@ -23,6 +23,12 @@
         url('/static/fonts/Hauora-Light.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Akshar';
+    src: local('Akshar Light'), local('Akshar-Light'),
+        url('/static/fonts/Akshar-Light.ttf') format('truetype');
+}
+
 *:focus,
 *:focus-visible {
     box-shadow: unset !important
