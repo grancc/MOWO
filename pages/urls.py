@@ -1,7 +1,7 @@
 from django.urls import path
 
 
-from pages.home.views import HomeView
+from pages.home.views import HomeView, FeedBackView
 from pages.about.views import PortfolioView, OfficeView, VacanciesView, ProjectView
 from pages.blog.views import BlogView, ArticleView
 
@@ -13,4 +13,5 @@ urlpatterns = [
     path('vacancies/<str:slug>/', VacanciesView.as_view(), name="vacancies-page"),
     path('blog', BlogView.as_view(), name="blog"),
     path('blog/articles/<int:id>', ArticleView.as_view(), name="article"),
+    path("feedback/", FeedBackView.as_view(), name="send_feed_back"),
 ]

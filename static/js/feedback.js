@@ -33,43 +33,35 @@ $('.feedback-form-footer #check-modal').change(function() {
     }
 });
 
-// $('#contact-feedback-form').on('submit', function (event) {
-//     send_feedback_preparation(event, $(this))
-// });
+$('#feedback-form').on('submit', function(event){
+	event.preventDefault();
+	const formData = $(this).serialize();
+	sendFeedBAck(formData)
+	$(this).trigger('reset');
+})
 
+$('#feedback-form-footer').on('submit', function(event){
+	event.preventDefault();
+	const formData = $(this).serialize();
+	sendFeedBAck(formData)
+	$(this).trigger('reset');
+})
 
-// $('#feedback-modal').on('submit', function (event) {
-//     send_feedback_preparation(event, $(this), 'modal')
-// });
+function sendFeedBAck(formData) {
+  $.ajax({
+    data: formData,
+    type: 'POST',
+    datatype: "json",
+    url: "/feedback/",
+    success: function (response) {
+      $('#successfeedBackModal').modal('show');
 
-// function send_feedback_preparation(event, form, block=null){
-//     event.preventDefault(); 
-//     const formData = form.serialize();
-//     sendFeedBAck(formData, block)
-//     form.trigger('reset');
-// }
-
-// function sendFeedBAck(formData, block = null) {
-//     $.ajax({
-//         data: formData,
-//         type: 'POST',
-//         datatype: "json",
-//         url: "/feedback/",
-//         success: function(response) {
-//             ym(100976661,'reachGoal','send_form')
-//             if(block === 'modal'){
-//                 $('#modalFeedback').modal('hide');  
-//             }
-
-//             $('#successFeedback').modal('show');  
-
-//             setTimeout(() => {
-//                 $('#successFeedback').modal('hide');     
-//             }, 5000);
-
-//         },
-//         error: function(error) {
-//             console.error("Ошибка при отправке формы:", error);
-//         }
-//     });
-// }
+      setTimeout(() => {
+        $('#successfeedBackModal').modal('hide');
+      }, 5000);
+    },
+    error: function (error) {
+      console.error("Ошибка при отправке формы:", error);
+    }
+  });
+}

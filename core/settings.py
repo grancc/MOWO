@@ -63,6 +63,7 @@ INSTALLED_APPS = [
     'apps.pages_meta',
     'apps.service_info',
     'apps.projects',
+    'apps.feedback',
     'pages', 
     'pages.home',
     'pages.about',
