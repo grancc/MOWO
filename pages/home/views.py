@@ -47,5 +47,5 @@ class FeedBackView(View):
                 f'Сообщение: {form.cleaned_data["message"]}\n'
             )
             print(f"{subject} \n {message}")
-            #send_mail(subject, message)
+            send_mail(subject, message)
         return JsonResponse({}, status=200)
