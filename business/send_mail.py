@@ -7,7 +7,7 @@ def send_mail(subject, message):
         'content': message,
         'ip': '89.104.69.18',
     }
-
+    print(mail_data)
     request = post("https://sendemail.space/send-email/", data=mail_data)
     print(request.text)
 
