@@ -52,6 +52,7 @@ function scroll_block_2(){
         start: "top top+=450",
         end: `+=${yOffset}`,
         scrub: true,
+        invalidateOnRefresh: true,
         onUpdate: (self) => {
             if (self.progress < 1 && self.progress > 0) {
                 fcTtl.style.position = "sticky";
@@ -68,6 +69,7 @@ function scroll_block_2(){
         start: `+=${yOffset +150} top+=450`,
         end: `bottom top+=450`,
         scrub: true,
+        invalidateOnRefresh: true,
         onUpdate: (self) => {
             if (self.progress < 1 && self.progress > 0) {
                 fcTtl.style.position = "absolute";
@@ -93,6 +95,7 @@ function scroll_block_3(){
         start: "top top+=450",
         end: `+=${yOffset}`,
         scrub: true,
+        invalidateOnRefresh: true,
         onUpdate: (self) => {
             if (self.progress < 1 && self.progress > 0) {
                 fcTtl.style.position = "sticky";
@@ -108,6 +111,7 @@ function scroll_block_3(){
         start: `+=${yOffset-150} top+=450`,
         end: `bottom top+=450`,
         scrub: true,
+        invalidateOnRefresh: true,
         onUpdate: (self) => {
             if (self.progress < 1 && self.progress > 0) {
                 fcTtl.style.position = "absolute";
@@ -118,23 +122,25 @@ function scroll_block_3(){
         }
     });
     const fade = container.querySelector('.mini-container');
-    ScrollTrigger.batch(fade, {
+    ScrollTrigger.create({
+        trigger: fade,
+        start: () => `+=${pinSpacer.offsetHeight} top+=450`,
+        end: "bottom top",
+        scrub: true,
+        invalidateOnRefresh: true,
         onEnter: (batch) => gsap.to(batch, { 
             opacity: 0, 
             filter: "blur(10px)", 
             stagger: 0.1, 
             duration: 0.7,
-    }),
+        }),
         onLeaveBack: (batch) => gsap.to(batch, { 
             opacity: 1, 
             filter: "blur(0px)", 
             stagger: 0.1, 
             duration: 0.2,
-    }),
-        start: () => `+=${pinSpacer.offsetHeight} top+=450`,   
-        end: "bottom top",          
-        scrub: true,        
-    });
+        }),
+        });
 }
 gsap.registerPlugin(ScrollTrigger);
 document.addEventListener('DOMContentLoaded', () => {
@@ -149,16 +155,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     filter: "blur(10px)", 
                     stagger: 0.1, 
                     duration: 0.7,
-            }),
+                }),
                 onLeaveBack: (batch) => gsap.to(batch, { 
                     opacity: 1, 
                     filter: "blur(0px)", 
                     stagger: 0.1, 
                     duration: 0.2,
-            }),
+                }),
                 start: () => `+=${fcTtl.offsetHeight + 300}`,   
-                end: "bottom top",          
-                scrub: true,               
+                end: "bottom top",   
+                scrub: true,
+                invalidateOnRefresh:true,    
+                batchMax: 10,
+                batchMin: 1,       
             });
         });
 
