@@ -298,16 +298,16 @@ table {
     }
 
     .table-portfolio-item-title {
-        font-size: 24px;
-        line-height: 100%;
+        font-size: 18px;
         color: rgba(13, 16, 20, 1);
         margin-bottom: 8px;
     }
 
     .table-portfolio-item-desc {
         color: rgba(13, 16, 20, 0.8);
-        font-size: 18px;
+        font-size: 14px;
         font-weight: 700;
+        line-height: 19px;
     }
 
     .table-portfolio-item.active {
@@ -355,7 +355,7 @@ table {
     }
 
     .table-portfolio-item-title {
-        font-size: 22px;
+        font-size: 16px;
     }
 
     .table-portfolio-item-desc {
@@ -380,9 +380,6 @@ table {
         font-size: 32px;
     }
 
-    .table-portfolio-item-title {
-        font-size: 18px;
-    }
 
     .table-portfolio-item-desc {
         font-size: 14px;
