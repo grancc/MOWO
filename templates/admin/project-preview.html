@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load humanize %}
+{%load static%}
+
+{%block style%}
+    <link rel="stylesheet" href="{% static 'vendor/swiper.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{%static 'css/project-page.css'%}" />
+    <link rel="stylesheet" type="text/css" href="{%static 'css/white-back.css'%}" />
+{%endblock%}
+
+{%block content%} 
+<section id="project-page" class="first-page-block">
+    <h1 class="custom-container">{{project.description}}</h1>
+    <img src="{{project.project.photos.first.image.url}}" alt="{{project.project.name}}" class="main-img">
+    <div class="custom-container">
+        <p class="year">{{project.project.year}}</p>
+        <h2>{{project.project.name}}</h2>
+        <div class="d-flex project-items">
+            <div class="project-item ps-0">
+                <div class="project-item-title">
+                    Локация
+                </div>
+                <div class="project-item-value">
+                    {{project.project.location}}
+                </div>
+            </div>
+             <div class="project-item">
+                <div class="project-item-title">
+                    Сектор
+                </div>
+                <div class="project-item-value">
+                    {{project.cektor}}
+                </div>
+            </div>
+             <div class="project-item">
+                <div class="project-item-title">
+                    Тип
+                </div>
+                <div class="project-item-value">
+                    {{project.project.direction}}
+                </div>
+            </div>
+             <div class="project-item">
+                <div class="project-item-title">
+                    Статус
+                </div>
+                <div class="project-item-value">
+                    {{project.project.status}}
+                </div>
+            </div>
+             <div class="project-item">
+                <div class="project-item-title">
+                    Масштаб
+                </div>
+                <div class="project-item-value">
+                    {{project.project.square |intcomma}} кв.м.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="custom-container">
+    {%for block in project.blocks.all%}
+    <div class="block-text-block">
+        <div class="block-text">
+            {{block.text}}
+        </div>
+        <img src="{{block.photo.image.url}}" alt="">
+    </div>
+    {%endfor%}
+    </div>
+    {%if project.slider_one.all%}
+     <div class="block-text-block">
+        <h2 class="custom-container ">Слайдер с изображениями</h2>
+        <div class="img-swiper swiper">
+            <div class="swiper-wrapper">
+             {%for img in project.slider_one.all %}
+                    <img src="{{img.image.url}}" alt="" class="swiper-slide">
+               {%endfor%}
+            </div>
+        </div>
+    </div>
+    {%endif%}
+    {%if project.slider_two.all%}
+     <div class="block-text-block">
+        <h2 class="custom-container ">Слайдер с чертежами и фасадами</h2>
+        <div class="img-swiper-ch swiper">
+            <div class="swiper-wrapper">
+             {%for img in project.slider_two.all %}
+                    <img src="{{img.image.url}}" alt="" class="swiper-slide">
+               {%endfor%}
+            </div>
+        </div>
+    </div>
+    {%endif%}
+    <div class="custom-container">
+        <h2>Команда проекта</h2>
+        <div class="d-flex project-items">
+            {%for com in project.command.all%}
+            <div class="project-item ps-0">
+                <div class="project-item-title">
+                    {{com.position}}
+                </div>
+                <div class="project-item-value">
+                    {{com.empl}}
+                </div>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+    
+   
+</section>
+<style>
+    footer, header{
+        display: none;
+    }
+</style>
+{%endblock%}
+
+{%block script%}
+<script src="{% static 'vendor/swiper.min.js' %}"></script>
+<script src="{%static 'js/project-swiper.js'%}"></script>
+{%endblock%}

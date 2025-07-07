@@ -81,6 +81,8 @@ class ProjectPage(models.Model):
     command = models.ManyToManyField(ProjectPeople, verbose_name="команда проекта")
     slider_one = models.ManyToManyField(ImageModel, verbose_name="фотографии проекта", blank=True, related_name='project_slider_one')
     slider_two = models.ManyToManyField(ImageModel, verbose_name="фотографии чертежей и фасадов", blank=True, related_name='project_slider_two')
+
+    view = models.BooleanField('Отображать?', help_text='Сделать видимым на сайте', default=False)
     
     class Meta:
         verbose_name = "проект"

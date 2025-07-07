@@ -13,8 +13,7 @@
         <h2>главные проекты</h2>
         <div class="portfolio-items">
             {%for project in projects_main%}
-                {%if project.project_page.exists%}
-                    
+                {%if project.project_page.exists and project.project_page.first.view == True%}
                     <a class="portfolio-item position-relative d-flex flex-lg-row flex-column" href="project/{{project.project_page.first.slug}}">
                 {%else%}
                     <div class="portfolio-item position-relative d-flex flex-lg-row flex-column">
@@ -58,7 +57,7 @@
                             {{project.status}}
                         </div>
                     </div>
-                {%if project.project_page.exists%}
+                {%if project.project_page.exists and project.project_page.first.view == True%}
                     </a>
                 {%else%}
                     </div>
