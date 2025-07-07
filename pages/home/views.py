@@ -5,7 +5,7 @@ from django.views.generic import TemplateView
 from django.views import View
 
 from apps.about_app.models import Employees
-from apps.pages_meta.models import PagesMeta
+from apps.pages_meta.models import PagesMeta, VectorBlocks, ProjectsBlocks, TehnologyBlocks
 
 from .forms import FeedbackForm
 from business.send_mail import send_mail
@@ -19,9 +19,10 @@ class HomeView(TemplateView):
     def get_context_data(self, **kwargs) -> dict[str, Any]:
         context = super().get_context_data(**kwargs)
 
-
-
         context["employees"] = Employees.objects.all()
+        context["vector_blocks"] = VectorBlocks.objects.all()
+        context["projects_blocks"] = ProjectsBlocks.objects.all()
+        context["technology_blocks"] = TehnologyBlocks.objects.all()
 
         page_obj = PagesMeta.objects.get(name='Главная')
         context["title"] = page_obj.title

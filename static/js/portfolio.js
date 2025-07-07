@@ -8,8 +8,8 @@ function TablePortfolioItemHover(){
     let active = false;
 
     // Расчет координат при движении курсора
-    const xMoveContainer = gsap.quickTo(modalContainer, 'left', { duration: 0.8, ease: 'power3' });
-    const yMoveContainer = gsap.quickTo(modalContainer, 'top', { duration: 0.8, ease: 'power3' });
+    const xMoveContainer = gsap.quickTo(modalContainer, 'left', { duration: 0.1, ease: 'power3' });
+    const yMoveContainer = gsap.quickTo(modalContainer, 'top', { duration: 0.1, ease: 'power3' });
 
     const xMoveCursor = gsap.quickTo(cursor, 'left', { duration: 0.8, ease: 'power3' });
     const yMoveCursor = gsap.quickTo(cursor, 'top', { duration: 0.8, ease: 'power3' });
@@ -53,7 +53,7 @@ function TablePortfolioItemHover(){
         active = !active;
 
         if (active) {
-            modalContainer.style.transition = "all 0.4s ease";
+            modalContainer.style.transition = "all 0s ease";
             modalContainer.style.opacity = 1;
             modalContainer.style.transform = "translate(5%, 5%) scale(1)";
             cursor.classList.add('active-portfolio-table');

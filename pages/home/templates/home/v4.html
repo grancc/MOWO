@@ -31,14 +31,12 @@
 
     <div data-aos="fade-up" data-aos-duration="1000" class="after-promo-index-block">
         <div>
-            <div class="content content--sticky content--half bg-1 content--sticky-bottom" style="background-image: linear-gradient(179.96deg, rgba(0, 0, 0, 0) 39.99%, #000000 106.58%), url({%static 'img/4.webp'%});">
-                <h2 class="content__title">Архитектура и инженерия</h2>
-                <p class="content__text">Создаём архитектуру, где эстетика, функциональность и экономическая эффективность работают в балансе.</p>
+            {%for block in vector_blocks%}
+            <div class="content content--sticky content--half bg-1 content--sticky-bottom" style="background-image: linear-gradient(179.96deg, rgba(0, 0, 0, 0) 39.99%, #000000 106.58%), url({{block.image.url}});">
+                <h2 class="content__title">{{block.title}}</h2>
+                <p class="content__text">{{block.desc}}</p>
             </div>
-            <div class="content content--sticky content--half bg-1 content--sticky-bottom" style="background-image: linear-gradient(179.96deg, rgba(0, 0, 0, 0) 39.99%, #000000 106.58%), url({%static 'img/5.webp'%});">
-                <h2 class="content__title">Исследование территории</h2>
-                <p class="content__text">Проводим комплексное исследование локации, выявляя её потенциал и ограничения</p>
-            </div>
+            {%endfor%}
         </div>
     </div>
     <div class="margin-400"></div>
@@ -98,15 +96,12 @@
     <div class="margin-400"></div>
     <div data-aos="fade-up" data-aos-duration="1000">
         <div>
-
-            <div class="content content-bottom  content--sticky-top content--sticky content--half bg-1" style="background-image: linear-gradient(359.96deg, rgba(0, 0, 0, 0) 50%, #94B0C0 94.16%), url({%static 'img/2.webp'%});">
-                <h2 class="content__title">Архитектура и инженерия</h2>
-                <p class="content__text">Создаём архитектуру, где эстетика, функциональность и экономическая эффективность работают в балансе.</p>
+            {%for block in projects_blocks%}
+            <div class="content content--sticky content--half bg-1 content--sticky-bottom" style="background-image: linear-gradient(179.96deg, rgba(0, 0, 0, 0) 39.99%, #000000 106.58%), url({{block.image.url}});">
+                <h2 class="content__title">{{block.title}}</h2>
+                <p class="content__text">{{block.desc}}</p>
             </div>
-            <div class="content content-bottom content--sticky content--half bg-1" style="background-image: linear-gradient(179.96deg, rgba(0, 0, 0, 0) 39.19%, #000000 108.48%) , url({%static 'img/1.webp'%});">
-                <h2 class="content__title">Исследование территории</h2>
-                <p class="content__text">Проводим комплексное исследование локации, выявляя её потенциал и ограничения</p>
-            </div>
+            {%endfor%}
         </div>
     </div>
     <div class="margin-400"></div>
@@ -177,18 +172,15 @@
     <div class="margin-400"></div>
     <div data-aos="fade-up" data-aos-duration="1000">
         <div>
-
-            <div class="content content--sticky content--sticky-bottom content--half bg-1" style="background-image: linear-gradient(179.96deg, rgba(0, 0, 0, 0) 31.38%, #000000 112.98%), url({%static 'img/7.webp'%});">
-                <h2 class="content__title">GIS Analysis</h2>
-                <p class="content__text">Используем GIS-аналитику, чтобы глубже понимать территорию и разрабатывать коммерчески успешные проекты.</p>
+           {%for block in technology_blocks%}
+            <div class="content content--sticky content--half bg-1 content--sticky-bottom" style="background-image: linear-gradient(179.96deg, rgba(0, 0, 0, 0) 39.99%, #000000 106.58%), url({{block.image.url}});">
+                <h2 class="content__title">{{block.title}}</h2>
+                <p class="content__text">{{block.desc}}</p>
             </div>
-            <div class="content content--sticky content--sticky-bottom content--half bg-1" style="background-image: linear-gradient(179.96deg, rgba(0, 0, 0, 0) 31.38%, #000000 112.98%), url({%static 'img/3.webp'%});;">
-                <h2 class="content__title">BIM</h2>
-                <p class="content__text">Применяем BIM-проектирование, чтобы создавать коммерчески эффективные объекты с точными расчётами и минимизированными рисками.</p>
-            </div>
+            {%endfor%}
         </div>
     </div>  
-    <div class="margin-400"></div> 
+    
     <div class="preloader">
          <div class="wave"></div>
     </div>  

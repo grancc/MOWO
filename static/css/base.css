@@ -363,6 +363,10 @@ h2 {
     .first-page-block {
         margin-top: 150px !important;
     }
+
+    #cursor{
+        opacity: 0;
+    }
 }
 
 @media(max-width:576px) {
