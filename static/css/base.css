@@ -273,6 +273,65 @@ h2 {
     font-size: 24px;
 }
 
+#successfeedBackModal .modal-content {
+    background-color: rgba(13, 16, 20, 1);
+    width: 739px;
+    padding: 60px;
+    border-radius: 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#successfeedBackModal .modal-content::after {
+    content: "";
+    position: absolute;
+    bottom: -150px;
+    left: -500px;
+    width: 100%;
+    background: url(/static/img/success-back.png);
+    height: 100%;
+    opacity: 0.4;
+    transform: rotateZ(10deg);
+}
+
+#successfeedBackModal .btn-secondary {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(32px);
+    font-size: 24px;
+    padding: 16px 26px;
+    border-radius: 54px;
+    border: 0;
+}
+
+#successfeedBackModal .modal-content::before {
+    content: "";
+    position: absolute;
+    top: -150px;
+    right: -500px;
+    width: 100%;
+    background: url(/static/img/success-back.png);
+    height: 100%;
+    opacity: 0.4;
+    transform: rotateZ(154deg);
+}
+
+
+.success-modal-header {
+    font-size: 52px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.success-modal-text {
+    font-size: 24px;
+    margin-bottom: 40PX;
+}
+
+.modal-body {
+    z-index: 1;
+}
+
 @media(max-width:1670px) {
     .big-container {
         width: 95%;
@@ -327,6 +386,30 @@ h2 {
     .first-page-block {
         margin-top: 200px !important;
     }
+
+    #successfeedBackModal .modal-dialog {
+        width: 100%;
+        max-width: unset;
+        margin: 0;
+    }
+
+    #successfeedBackModal .modal-content {
+        width: unset;
+    }
+
+    .success-modal-header {
+        font-size: 40px;
+    }
+
+    .success-modal-text,
+    #successfeedBackModal .btn-secondary {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    #successfeedBackModal .btn-secondary{
+        margin-bottom: 0;
+    }
 }
 
 @media(max-width:768px) {
@@ -364,8 +447,12 @@ h2 {
         margin-top: 150px !important;
     }
 
-    #cursor{
+    #cursor {
         opacity: 0;
+    }
+
+    #successfeedBackModal .modal-content {
+        padding: 40px;
     }
 }
 
@@ -400,8 +487,21 @@ h2 {
         margin-top: 90px !important;
     }
 
-    .feedback-form-form .btn{
+    .feedback-form-form .btn {
         width: 100%;
+    }
+
+    .success-modal-header {
+        font-size: 24px;
+    }
+
+    .success-modal-text,
+    #successfeedBackModal .btn-secondary {
+        font-size: 14px;
+    }
+
+    #successfeedBackModal .modal-content {
+        padding: 16px;
     }
 }
 
