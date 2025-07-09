@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 {%load static%}
+{% load cropping %}
+{% load thumbnail %}
 
 {%block style%}
     <link rel="stylesheet" type="text/css" href="{%static 'css/portfolio.css'%}" />
@@ -10,20 +12,23 @@
 {%block content%} 
     <section id="portfolio-page" class="custom-container first-page-block">
         <div class="portfolio-items">
-            <a class="portfolio-item position-relative d-flex flex-lg-row flex-column" href="blog/articles/1">
+            {%for obj in articles%}
+            <a class="portfolio-item position-relative d-flex flex-lg-row flex-column" href="blog/articles/{{obj.slug}}">
                     <div class="portfolio-item-wrapper order-2 position-relative">
-                        <img src="{%static 'img/portfolio/1.webp'%}" alt="">
+                        <!-- <img src="{% cropped_thumbnail obj.photo  "cropping" scale=1 %}"> -->
+                         <img src="{{obj.photo.image.url}}" alt="{{obj.name}}">
                     </div>
                     
                     <div class="portfolio-item-desc-right order-1 order-lg-2 d-flex flex-column justify-content-between h-100 text-start">
                         <div class="top-left">
-                            Тренды бла­го­устрой­ства в 2025 году: ар­хи­тек­ту­ра дворовых про­странств, плей­ха­бов и об­ще­ствен­ных мест
+                            {{obj.name}}
                         </div>
                         <div class="bottom-left">
-                            22.01.2025
+                            {{obj.date|date:"d.m.Y"}}
                         </div>
                     </div>
             </a>
+            {%endfor%}
         </div>
     </section>
 

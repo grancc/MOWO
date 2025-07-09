@@ -1,11 +1,10 @@
 from django.contrib import admin
-from .models import *
 from django.urls import path
 from django.http import HttpResponse
-from django.template.response import TemplateResponse
 from django.contrib import admin
-from .models import ProjectPage
 from django.template.loader import render_to_string
+
+from .models import *
 
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):

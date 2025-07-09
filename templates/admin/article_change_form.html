@@ -1,0 +1,10 @@
+{% extends "admin/change_form.html" %}
+
+{% block submit_buttons_bottom %}
+    {{ block.super }}
+    {% if original.id %}
+        <a class="button" href="{% url 'admin:article-preview' original.id %}" target="_blank">Предварительный просмотр</a>
+    {% else %}
+        <button type="button" class="button" disabled>Предпросмотр (доступно после сохранения)</button>
+    {% endif %}
+{% endblock %}

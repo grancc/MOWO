@@ -3,12 +3,12 @@
 {%load static%}
 
 {%block style%}
-    <link rel="stylesheet" href="{% static 'vendor/swiper.min.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{%static 'css/project-page.css'%}" />
-    <link rel="stylesheet" type="text/css" href="{%static 'css/white-back.css'%}" />
+<link rel="stylesheet" href="{% static 'vendor/swiper.min.css' %}" />
+<link rel="stylesheet" type="text/css" href="{%static 'css/project-page.css'%}" />
+<link rel="stylesheet" type="text/css" href="{%static 'css/white-back.css'%}" />
 {%endblock%}
 
-{%block content%} 
+{%block content%}
 <section id="project-page" class="first-page-block">
     <h1 class="custom-container">{{project.description}}</h1>
     <img src="{{project.project.photos.first.image.url}}" alt="{{project.project.name}}" class="main-img">
@@ -24,7 +24,7 @@
                     {{project.project.location}}
                 </div>
             </div>
-             <div class="project-item">
+            <div class="project-item">
                 <div class="project-item-title">
                     Сектор
                 </div>
@@ -32,7 +32,7 @@
                     {{project.cektor}}
                 </div>
             </div>
-             <div class="project-item">
+            <div class="project-item">
                 <div class="project-item-title">
                     Тип
                 </div>
@@ -40,7 +40,7 @@
                     {{project.project.direction}}
                 </div>
             </div>
-             <div class="project-item">
+            <div class="project-item">
                 <div class="project-item-title">
                     Статус
                 </div>
@@ -48,7 +48,7 @@
                     {{project.project.status}}
                 </div>
             </div>
-             <div class="project-item">
+            <div class="project-item">
                 <div class="project-item-title">
                     Масштаб
                 </div>
@@ -59,35 +59,35 @@
         </div>
     </div>
     <div class="custom-container">
-    {%for block in project.blocks.all%}
-    <div class="block-text-block">
-        <div class="block-text">
-            {{block.text}}
+        {%for block in project.blocks.all%}
+        <div class="block-text-block">
+            <div class="block-text">
+                {{block.text}}
+            </div>
+            <img src="{{block.photo.image.url}}" alt="">
         </div>
-        <img src="{{block.photo.image.url}}" alt="">
-    </div>
-    {%endfor%}
+        {%endfor%}
     </div>
     {%if project.slider_one.all%}
-     <div class="block-text-block">
+    <div class="block-text-block">
         <h2 class="custom-container ">Слайдер с изображениями</h2>
         <div class="img-swiper swiper">
             <div class="swiper-wrapper">
-             {%for img in project.slider_one.all %}
-                    <img src="{{img.image.url}}" alt="" class="swiper-slide">
-               {%endfor%}
+                {%for img in project.slider_one.all %}
+                <img src="{{img.image.url}}" alt="" class="swiper-slide">
+                {%endfor%}
             </div>
         </div>
     </div>
     {%endif%}
     {%if project.slider_two.all%}
-     <div class="block-text-block">
+    <div class="block-text-block">
         <h2 class="custom-container ">Слайдер с чертежами и фасадами</h2>
         <div class="img-swiper-ch swiper">
             <div class="swiper-wrapper">
-             {%for img in project.slider_two.all %}
-                    <img src="{{img.image.url}}" alt="" class="swiper-slide">
-               {%endfor%}
+                {%for img in project.slider_two.all %}
+                <img src="{{img.image.url}}" alt="" class="swiper-slide">
+                {%endfor%}
             </div>
         </div>
     </div>
@@ -107,12 +107,18 @@
             {%endfor%}
         </div>
     </div>
-    
-   
+
+
 </section>
 <style>
-    footer, header{
+    footer,
+    header {
         display: none;
+    }
+
+    *,
+    body {
+        cursor: auto !important;
     }
 </style>
 {%endblock%}

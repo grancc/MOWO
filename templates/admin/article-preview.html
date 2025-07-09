@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{%load static%}
+{% load cropping %}
+
+{%block style%}
+    <link rel="stylesheet" type="text/css" href="{%static 'css/article.css'%}" />
+    <link rel="stylesheet" type="text/css" href="{%static 'css/white-back.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}" />
+{%endblock%}
+{%block content%} 
+    <section id="article-page" class="first-page-block">
+        <div class="bread d-flex mini-container">
+            <a href="/blog" class="cursor-hover">
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                <path d="M18.3319 9.66618L18.332 11.3328L4.85545 11.3328L8.14686 14.6242L6.96837 15.8027L1.66503 10.4994L6.96837 5.19609L8.14687 6.37468L4.85536 9.66609L18.3319 9.66618Z" fill="#9D9D9D"/>
+                </svg>
+            </span>
+            Все статьи
+            </a>    
+            
+        </div>
+        <div class="article-header mini-container">
+            <h1>{{blog_obj.name}}</h1>
+            <div class="date">
+                {{blog_obj.date|date:"d.m.Y"}}
+            </div>
+        </div>
+        <div class="text-center">
+            <img src="{{blog_obj.photo.image.url}}" alt="{{blog_obj.name}}" class="big-img">
+        </div>
+        {%for item in blog_obj.blocks.all%}
+            {%if item.title%}
+                <div class="mini-container margin-100" >
+                    <h2>{{item.title}}</h2>
+                    <p >
+                        {{item.text}}
+                    </p>
+                </div>
+            {%else%}
+                <p class="mini-container">{{item.text}}</p>
+            {%endif%}
+        
+            
+
+            {%if item.photo.exists%}
+                {%if item.slider%}
+                    <div class="slider swiper" id="slider-{{ item.id }}" style="overflow: unset;">
+                        <div class="swiper-wrapper">
+                            {%for item_photo in item.photo.all%}
+                            <img src="{{item_photo.image.url}}" alt="" class="swiper-slide">
+                            {%endfor%}
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="siper-btns">
+                            <div class="swiper-button-prev cursor-hover">
+                                <svg width="36" height="24" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M35.9451 10.2013L35.9453 13.7908L6.91883 13.7908L14.008 20.8801L11.4697 23.4185L0.0471621 11.9959L11.4697 0.573379L14.008 3.11187L6.91865 10.2011L35.9451 10.2013Z" fill="white"/>
+                                </svg>
+                            </div>
+                            <div class="swiper-button-next cursor-hover">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="24" viewBox="0 0 36 24" fill="none">
+                                    <path d="M0.0549387 13.7987L0.0546875 10.2092H29.0812L21.992 3.11987L24.5303 0.581543L35.9528 12.0041L24.5303 23.4266L21.992 20.8881L29.0814 13.7989L0.0549387 13.7987Z" fill="white"/>
+                                    </svg>
+                            </div>
+                        </div>
+                    </div>
+                {%else%}
+                    {%for item_photo in item.photo.all%}
+                        <img src="{{item_photo.image.url}}" alt="" class="big-img">
+                    {%endfor%}
+                {%endif%}
+
+            {%endif%}
+
+
+        {%endfor%}
+    </section>
+{%endblock%}
+
+{%block script%}
+<script defer src="{%static 'js/jquery.js'%}"></script>
+<script src="{%static 'js/swiper.min.js'%}"></script>
+<script>
+    document.querySelectorAll('.slider.swiper').forEach(function(sliderEl) {
+        // Получите уникальный id или используйте сам элемент
+        new Swiper(sliderEl, {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: false,
+            centeredSlides: false,
+            pagination: {
+                el: sliderEl.querySelector('.swiper-pagination'),
+                type: 'fraction',
+            },
+            navigation: {
+                nextEl: sliderEl.querySelector('.swiper-button-next'),
+                prevEl: sliderEl.querySelector('.swiper-button-prev'),
+            },
+        });
+    });
+</script>
+<style>
+    footer,
+    header {
+        display: none;
+    }
+
+    *,
+    body {
+        cursor: auto !important;
+    }
+</style>
+{%endblock%}

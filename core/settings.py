@@ -59,7 +59,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "django.contrib.humanize",
     'django.contrib.sitemaps',
+    'easy_thumbnails',
+    'image_cropping',
     'apps.about_app',
+    'apps.blog_app',
     'apps.pages_meta',
     'apps.service_info',
     'apps.projects',
@@ -69,6 +72,7 @@ INSTALLED_APPS = [
     'pages.about',
     'pages.blog'
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
