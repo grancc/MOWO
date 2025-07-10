@@ -102,6 +102,10 @@ h2 {
     .block-text-block {
         margin-bottom: 80px;
     }
+
+    .project-item-title {
+        margin-bottom: 0;
+    }
 }
 
 @media (max-width: 936px) {

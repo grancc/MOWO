@@ -10,11 +10,11 @@
 
 {%block content%}
 <section id="project-page" class="first-page-block">
-    <h1 class="custom-container">{{project.description}}</h1>
+    <h1 class="custom-container">{{project.description|safe}}</h1>
     <img src="{{project.project.photos.first.image.url}}" alt="{{project.project.name}}" class="main-img">
     <div class="custom-container">
         <p class="year">{{project.project.year}}</p>
-        <h2>{{project.project.name}}</h2>
+        <h2>{{project.project.name|safe}}</h2>
         <div class="d-flex project-items">
             <div class="project-item ps-0">
                 <div class="project-item-title">

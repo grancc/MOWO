@@ -22,7 +22,7 @@
         <div class="position-relative" style="height: 100vh;">
             <div class="promo-text fadeText">
                 <p class="mb-0">
-                    Создаём архитектуру, которая соединяет искусство, маркетинг, экономику и инженерию для максимальной эффективности застройки
+                    Создаём архитектуру, которая соединяет искусство, маркетинг, экономику и&nbsp;инженерию для&nbsp;максимальной эффективности застройки
                 </p>
             </div>
         </div>
@@ -33,8 +33,8 @@
         <div>
             {%for block in vector_blocks%}
             <div class="content content--sticky content--half bg-1 content--sticky-bottom" style="background-image: linear-gradient(179.96deg, rgba(0, 0, 0, 0) 39.99%, #000000 106.58%), url({{block.image.url}});">
-                <h2 class="content__title">{{block.title}}</h2>
-                <p class="content__text">{{block.desc}}</p>
+                <h2 class="content__title">{{block.title|safe}}</h2>
+                <p class="content__text">{{block.desc|safe}}</p>
             </div>
             {%endfor%}
         </div>
@@ -44,7 +44,7 @@
         <div data-aos="fade-up" data-aos-duration="1000">
             <div class="mini-container numbers-block fadeTextBlock">
                 <div class="fc_ttl">   
-                    <h2 >mowo - мультидисциплинарное бюро с экспертностью в жилой и коммерческой недвижимости</h2>
+                    <h2 >mowo&nbsp;&mdash; мультидисциплинарное бюро с&nbsp;экспертностью в&nbsp;жилой и&nbsp;коммерческой недвижимости</h2>
                 </div>
                 
                 <div class="d-grid numbers-items block-scroll">
@@ -98,8 +98,8 @@
         <div>
             {%for block in projects_blocks%}
             <div class="content content--sticky content--half bg-1 content--sticky-bottom" style="background-image: linear-gradient(179.96deg, rgba(0, 0, 0, 0) 39.99%, #000000 106.58%), url({{block.image.url}});">
-                <h2 class="content__title">{{block.title}}</h2>
-                <p class="content__text">{{block.desc}}</p>
+                <h2 class="content__title">{{block.title|safe}}</h2>
+                <p class="content__text">{{block.desc|safe}}</p>
             </div>
             {%endfor%}
         </div>
@@ -111,7 +111,7 @@
                 <div class="feedback-form fadeTextBlock">
                     <div class="feedback-form-text fc_ttl">
                         <h2>Превратим идею в архитектуру</h2>
-                        <p>Индивидуальный подход к каждому проекту и гарантированное качество исполнения. Заполните форму, и мы подготовим персональное предложение.</p>
+                        <p>Индивидуальный подход к&nbsp;каждому проекту и&nbsp;гарантированное качество исполнения. Заполните форму, и&nbsp;мы&nbsp;подготовим персональное предложение.</p>
                     </div>
                     <div class="feedback-form-form block-scroll">
                         <form class="w-100 feedback-form" id="feedback-form">
@@ -147,7 +147,7 @@
             <div class="mini-container">
                 <div class="fc_ttl">
                     <h2 style="margin-bottom: 32px;">Наша команда</h2>
-                    <p class="our-command-desc">Каждый проект — это результат совместного творчества архитекторов, урбанистов, дизайнеров и инженеров. Именно такой командный подход позволяет нам создавать по-настоящему выдающиеся решения, где функциональность встречается с искусством.</p>
+                    <p class="our-command-desc">Каждый проект&nbsp;&mdash; это&nbsp;результат совместного творчества архитекторов, урбанистов, дизайнеров и&nbsp;инженеров. Именно такой командный подход позволяет нам создавать по-настоящему выдающиеся решения, где&nbsp;функциональность встречается с&nbsp;искусством.</p>
                 </div>
                 
                     <div class="employee-items block-scroll">
@@ -166,7 +166,7 @@
     <div class="margin-400"></div>
     <div data-aos="fade-up" data-aos-duration="1000">
         <div class="mini-container">
-            <h2 class="fadeText mobile-mini">Технологии, которые делают наш продукт точным эффективным и коммерчески успешным</h2>
+            <h2 class="fadeText mobile-mini">Технологии, которые делают наш продукт точным эффективным и&nbsp;коммерчески успешным</h2>
         </div>
     </div>
     <div class="margin-400"></div>
@@ -174,8 +174,8 @@
         <div>
            {%for block in technology_blocks%}
             <div class="content content--sticky content--half bg-1 content--sticky-bottom" style="background-image: linear-gradient(179.96deg, rgba(0, 0, 0, 0) 39.99%, #000000 106.58%), url({{block.image.url}});">
-                <h2 class="content__title">{{block.title}}</h2>
-                <p class="content__text">{{block.desc}}</p>
+                <h2 class="content__title">{{block.title|safe}}</h2>
+                <p class="content__text">{{block.desc|safe}}</p>
             </div>
             {%endfor%}
         </div>

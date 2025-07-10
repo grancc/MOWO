@@ -4,7 +4,7 @@ from django.views.generic import ListView, DetailView
 from apps.pages_meta.models import PagesMeta
 from apps.blog_app.models import Article
 
-from image_cropping.utils import get_backend
+#from image_cropping.utils import get_backend
 
 class BlogView(ListView):
     """View для отображения страницы Блог"""

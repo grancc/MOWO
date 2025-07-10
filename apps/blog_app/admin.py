@@ -5,8 +5,8 @@ from django.contrib import admin
 from django.template.loader import render_to_string
 from django.http import HttpResponseRedirect
 
-from image_cropping import ImageCroppingMixin
-from easy_thumbnails.files import get_thumbnailer
+#from image_cropping import ImageCroppingMixin
+#from easy_thumbnails.files import get_thumbnailer
 from django.utils.html import format_html
 from django import forms
 

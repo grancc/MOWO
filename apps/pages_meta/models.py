@@ -23,8 +23,8 @@ class PagesMeta(models.Model):
     
 
 class Indexblocks(models.Model):
-    title = models.CharField(max_length=255, verbose_name='название')
-    desc = models.TextField(verbose_name="краткое описание")
+    title = models.CharField(max_length=255, verbose_name='название', null=True, blank=True)
+    desc = models.TextField(verbose_name="краткое описание", null=True, blank=True)
     image = models.ImageField(verbose_name='фоновое фото', upload_to='index_blocks/')
 
     class Meta:

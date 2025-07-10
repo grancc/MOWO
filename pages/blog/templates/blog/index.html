@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
 {%load static%}
-{% load cropping %}
-{% load thumbnail %}
 
 {%block style%}
     <link rel="stylesheet" type="text/css" href="{%static 'css/portfolio.css'%}" />
@@ -15,13 +13,12 @@
             {%for obj in articles%}
             <a class="portfolio-item position-relative d-flex flex-lg-row flex-column" href="blog/articles/{{obj.slug}}">
                     <div class="portfolio-item-wrapper order-2 position-relative">
-                        <!-- <img src="{% cropped_thumbnail obj.photo  "cropping" scale=1 %}"> -->
                          <img src="{{obj.photo.image.url}}" alt="{{obj.name}}">
                     </div>
                     
                     <div class="portfolio-item-desc-right order-1 order-lg-2 d-flex flex-column justify-content-between h-100 text-start">
                         <div class="top-left">
-                            {{obj.name}}
+                            {{obj.name|safe}}
                         </div>
                         <div class="bottom-left">
                             {{obj.date|date:"d.m.Y"}}

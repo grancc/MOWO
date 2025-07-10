@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {%load static%}
-{% load cropping %}
 
 {%block style%}
     <link rel="stylesheet" type="text/css" href="{%static 'css/article.css'%}" />
@@ -20,7 +19,7 @@
             
         </div>
         <div class="article-header mini-container">
-            <h1>{{blog_obj.name}}</h1>
+            <h1>{{blog_obj.name|safe}}</h1>
             <div class="date">
                 {{blog_obj.date|date:"d.m.Y"}}
             </div>
@@ -31,13 +30,13 @@
         {%for item in blog_obj.blocks.all%}
             {%if item.title%}
                 <div class="mini-container margin-100" >
-                    <h2>{{item.title}}</h2>
+                    <h2>{{item.title|safe}}</h2>
                     <p >
-                        {{item.text}}
+                        {{item.text|safe}}
                     </p>
                 </div>
             {%else%}
-                <p class="mini-container">{{item.text}}</p>
+                <p class="mini-container">{{item.text|safe}}</p>
             {%endif%}
         
             

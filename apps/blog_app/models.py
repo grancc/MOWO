@@ -1,7 +1,7 @@
 import uuid
 from PIL import Image
 from io import BytesIO
-from image_cropping import ImageRatioField
+#from image_cropping import ImageRatioField
 
 from django.db import models
 from django.core.files.uploadedfile import InMemoryUploadedFile
