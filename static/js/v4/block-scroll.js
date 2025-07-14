@@ -60,7 +60,6 @@ function scroll_block_1(){
                 invalidateOnRefresh:true,    
                 batchMax: 10,
                 batchMin: 1,  
-                markers: true,    
             });
         });
 }
