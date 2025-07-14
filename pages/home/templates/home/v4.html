@@ -161,13 +161,12 @@
                     </div>
             </div>
         </div>
+        <div class="margin-400"></div>
     </section>
 
-    <div class="margin-400"></div>
-    <div data-aos="fade-up" data-aos-duration="1000">
-        <div class="mini-container">
-            <h2 class="fadeText mobile-mini">Технологии, которые делают наш продукт точным эффективным и&nbsp;коммерчески успешным</h2>
-        </div>
+    
+    <div class="fadeText2 mini-container">
+        <h2 class=" mobile-mini">Технологии, которые делают наш продукт точным эффективным и&nbsp;коммерчески успешным</h2>
     </div>
     <div class="margin-400"></div>
     <div data-aos="fade-up" data-aos-duration="1000">
@@ -193,6 +192,7 @@
 <script src="{%static 'js/v4/gsap.min.js'%}"></script>
 <script src="{%static 'js/v4/ScrollTrigger.min.js'%}"></script>
 <script src="{%static 'js/v4/imagesloaded.pkgd.min.js'%}"></script>
+<script src="{%static 'js/v4/lenis.min.js'%}"></script>
 <script type="module" src="{%static 'js/v4/index.js'%}"></script>
 <script defer src="{%static 'js/loader.js'%}"></script>
 <script src="{%static 'js/v4/block-scroll.js'%}"></script>
@@ -210,7 +210,25 @@
             stagger: 0.1, 
             duration: 0.2,
         }),
-        start: "top top+=300", 
+        start: "top top+=100", 
+        scrub: false,
+        invalidateOnRefresh:true, 
+    });
+
+    ScrollTrigger.batch(".fadeText2", {
+        onEnter: (batch) => gsap.to(batch, { 
+            opacity: 0, 
+            filter: "blur(10px)", 
+            stagger: 0.1, 
+            duration: 0.7,
+        }),
+        onLeaveBack: (batch) => gsap.to(batch, { 
+            opacity: 1, 
+            filter: "blur(0px)", 
+            stagger: 0.1, 
+            duration: 0.2,
+        }),
+        start: "center top", 
         scrub: false,
         invalidateOnRefresh:true, 
     });

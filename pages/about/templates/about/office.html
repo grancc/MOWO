@@ -18,7 +18,7 @@
     </div>
 
     <div class="manifest">
-        <h3>манифест</h3>
+        <h2>Манифест</h2>
         <p>Мы&nbsp;часто задаем себе вопрос что на&nbsp;самом деле является архитектурой? И&nbsp;какая 
             она на&nbsp;самом деле? Мы&nbsp;думаем что настоящая архитектура&nbsp;&mdash; это живая
              архитектура. Не&nbsp;просто функциональная, не&nbsp;просто эстетичная&nbsp;&mdash; а&nbsp;
@@ -62,33 +62,11 @@
 
     <h2 class="big-text">
         modern wonder современной архитектуры&nbsp;&mdash; не&nbsp;в&nbsp;форме, не&nbsp;в&nbsp;технологии и&nbsp;не&nbsp;в&nbsp;масштабе.
-А&nbsp;в&nbsp;том,&nbsp;как&nbsp;точно&nbsp;она&nbsp;возвращает человека к&nbsp;самому естественному&nbsp;&mdash; ощущению связи с&nbsp;миром,
+А&nbsp;в&nbsp;том,&nbsp;как&nbsp;точно она&nbsp;возвращает человека к&nbsp;самому естественному&nbsp;&mdash; ощущению связи с&nbsp;миром,
  с&nbsp;собой, с&nbsp;пространством, в&nbsp;котором он&nbsp;действительно чувствует, что&nbsp;живёт.</h2>
 
-    <h3>люди</h3>
+    <h2>Люди</h2>
     <div class="people-items d-grid">
-        {%for empl in employees%}
-        <div class="people-item">
-            <img src="{{empl.image.url}}" alt="сотрудник {{empl.name}}">
-            <div class="peolple-name">
-                {{empl.name}}
-            </div>
-            <div class="peolple-desc">
-                {{empl.position}}
-            </div>
-        </div>
-        {%endfor%}
-        {%for empl in employees%}
-        <div class="people-item">
-            <img src="{{empl.image.url}}" alt="сотрудник {{empl.name}}">
-            <div class="peolple-name">
-                {{empl.name}}
-            </div>
-            <div class="peolple-desc">
-                {{empl.position}}
-            </div>
-        </div>
-        {%endfor%}
         {%for empl in employees%}
         <div class="people-item">
             <img src="{{empl.image.url}}" alt="сотрудник {{empl.name}}">
@@ -104,7 +82,7 @@
     </div>
 </section>
 <section id="office-vacancies" class="mini-container">
-    <h3>вакансии</h3>
+    <h2>Вакансии</h2>
     <div class="vacancies-items">
         {%for vac in vacancies%}
         <a href="/vacancies/{{vac.slug}}/" class="vacancies-item d-block">

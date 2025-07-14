@@ -258,17 +258,26 @@
         font-weight: 500;
     }
 
-    .numbers-items {
-        gap: 60px;
-    }
+    
 
     .number-num {
         margin-bottom: 8px;
     }
 
     .block-scroll {
-        padding-top: 180px;
+        padding-top: 150px;
     }
+
+    .numbers-items {
+        gap: 60px;
+        padding-top: 140px;
+    }
+
+    #numbers-block{
+        padding-top: 0;
+    }
+
+    
 
     .employee-items.block-scroll {
         padding-top: 230px !important;
@@ -337,10 +346,6 @@
     .after-promo-index-block {
         margin-top: 200px;
     }
-
-    #numbers-block{
-        padding-top: 100px;
-    }
 }
 
 @media(max-width:576px) {
@@ -387,15 +392,11 @@
         gap: 20px;
     }
 
-    #numbers-block{
-        padding-top: 300px;
-    }
-
     #os-1{
         margin-top: -20px;
     }
 
     .block-scroll {
-        padding-top: 220px;
+        padding-top: 100px;
     }
 }

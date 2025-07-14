@@ -1,17 +1,33 @@
 import { preloadImages } from '/static/js/v4/utils.js';
-
+let lenis;
 // Выбираем DOM элементы
+
 const contentElements = [...document.querySelectorAll('.content--sticky')];
 const totalContentElements = contentElements.length;
 gsap.registerPlugin(ScrollToPlugin);
 // Инициализация плавного скролла с использованием GSAP
 const initSmoothScrolling = () => {
-    // Плавный скролл с использованием GSAP
-    gsap.to(window, {
-        scrollTo: { y: 0, autoKill: false },
-        duration: 0.5, // Продолжительность анимации скролла
-        ease: 'power2.out'
-    });
+	// Создаем экземпляр Lenis с желаемыми настройками
+	lenis = new Lenis({
+		lerp: 0.7, // Настройте плавность (чем меньше — тем мягче)
+		smoothWheel: true // Включите плавную прокрутку колесиком мыши
+	});
+
+	// Обновляем ScrollTrigger при каждом событии скролла
+	lenis.on('scroll', () => ScrollTrigger.update());
+
+	// Функция для обновления анимации на каждом кадре
+	let lastTime = 0;
+    const scrollFn = (time) => {
+        if (time - lastTime > 16) { // примерно 60 FPS
+        lenis.raf(time);
+        lastTime = time;
+        }
+        requestAnimationFrame(scrollFn);
+    };
+	
+	// Запускаем цикл анимации
+	requestAnimationFrame(scrollFn);
 };
 
 // Функция для обработки анимаций, связанных с прокруткой

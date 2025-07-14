@@ -10,7 +10,7 @@
 
 {%block content%} 
     <section id="portfolio-page" class="custom-container first-page-block">
-        <h2>главные проекты</h2>
+        <h2>Главные проекты</h2>
         <div class="portfolio-items">
             {%for project in projects_main%}
                 {%if project.project_page.exists and project.project_page.first.view == True%}
@@ -65,7 +65,7 @@
                 
             {%endfor%}
         </div>
-        <h2 class="text-center ms-0">все проекты</h2>
+        <h2 class="text-center ms-0">Все проекты</h2>
         <table class="table table-portfolio-items">
             <thead>
                 <tr class="font-weight-bold">

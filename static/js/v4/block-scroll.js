@@ -36,6 +36,33 @@ function scroll_block_1(){
             }
         }
     });
+
+    const containers = document.querySelectorAll('.fadeTextBlock');
+        containers.forEach(container => {
+            const fcTtl = container.querySelector('.fc_ttl');
+            // Анимация для fadeText
+            ScrollTrigger.batch(".fadeTextBlock", {
+                onEnter: (batch) => gsap.to(batch, { 
+                    opacity: 0, 
+                    filter: "blur(10px)", 
+                    stagger: 0.1, 
+                    duration: 0.7,
+                }),
+                onLeaveBack: (batch) => gsap.to(batch, { 
+                    opacity: 1, 
+                    filter: "blur(0px)", 
+                    stagger: 0.1, 
+                    duration: 0.2,
+                }),
+                start: () => `+=${fcTtl.offsetHeight + 400}`,   
+                end: "bottom top",   
+                scrub: true,
+                invalidateOnRefresh:true,    
+                batchMax: 10,
+                batchMin: 1,  
+                markers: true,    
+            });
+        });
 }
 
 // первая ОС
@@ -124,7 +151,7 @@ function scroll_block_3(){
     const fade = container.querySelector('.mini-container');
     ScrollTrigger.create({
         trigger: fade,
-        start: () => `+=${pinSpacer.offsetHeight} top+=450`,
+        start: () => `+=${pinSpacer.offsetHeight} top+=350`,
         end: "bottom top",
         scrub: true,
         invalidateOnRefresh: true,
@@ -145,32 +172,6 @@ function scroll_block_3(){
 gsap.registerPlugin(ScrollTrigger);
 document.addEventListener('DOMContentLoaded', () => {
     if (window.innerWidth > 990){
-        const containers = document.querySelectorAll('.fadeTextBlock');
-        containers.forEach(container => {
-            const fcTtl = container.querySelector('.fc_ttl');
-            // Анимация для fadeText
-            ScrollTrigger.batch(".fadeTextBlock", {
-                onEnter: (batch) => gsap.to(batch, { 
-                    opacity: 0, 
-                    filter: "blur(10px)", 
-                    stagger: 0.1, 
-                    duration: 0.7,
-                }),
-                onLeaveBack: (batch) => gsap.to(batch, { 
-                    opacity: 1, 
-                    filter: "blur(0px)", 
-                    stagger: 0.1, 
-                    duration: 0.2,
-                }),
-                start: () => `+=${fcTtl.offsetHeight + 300}`,   
-                end: "bottom top",   
-                scrub: true,
-                invalidateOnRefresh:true,    
-                batchMax: 10,
-                batchMin: 1,       
-            });
-        });
-
         scroll_block_1();
         scroll_block_2();
         scroll_block_3();
