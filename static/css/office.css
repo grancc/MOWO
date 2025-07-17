@@ -151,7 +151,7 @@ h3 {
     }
 
     .office-back {
-        top: -10%;
+        top: -5%;
     }
 }
 
@@ -290,14 +290,14 @@ h3 {
         margin-top: 150px;
     }
 
-    .office-back {
+    /* .office-back {
         top: -40%;
-    }
+    } */
 }
 
 @media(max-width:395px) {
 
-    .office-back {
+    /* .office-back {
         top: -30%;
-    }
+    } */
 }
