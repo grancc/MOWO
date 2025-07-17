@@ -203,13 +203,6 @@ h3 {
         font-size: 40px;
         line-height: 100%;
     }
-
-    .office-back {
-        top: -40%;
-    }
-
-
-
 }
 
 @media(max-width:768px) {
@@ -298,6 +291,13 @@ h3 {
     }
 
     .office-back {
-        top: -50%;
+        top: -40%;
+    }
+}
+
+@media(max-width:395px) {
+
+    .office-back {
+        top: -30%;
     }
 }
