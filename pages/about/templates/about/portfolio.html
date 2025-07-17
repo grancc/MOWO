@@ -21,11 +21,11 @@
                         
                     <div class="portfolio-item-desc-left order-1 order-lg-1 d-flex flex-column justify-content-between h-100 top-0 left-0 text-end ">
                             <div class="top-left">
-                                {{project.name}}
+                                {{project.name|safe}}
                             </div>
                             
                             <div class="bottom-left">
-                                {{project.location}}
+                                {{project.location|safe}}
                             </div>
                     </div>
                     <div class="portfolio-item-wrapper order-2 position-relative">
@@ -51,10 +51,10 @@
                     
                     <div class="portfolio-item-desc-right order-3 order-lg-2 d-flex flex-column justify-content-between h-100 text-start">
                         <div class="top-left">
-                                {{project.direction}}
+                                {{project.direction|safe}}
                             </div>
                         <div class="bottom-left">
-                            {{project.status}}
+                            {{project.status|safe}}
                         </div>
                     </div>
                 {%if project.project_page.exists and project.project_page.first.view == True%}
@@ -82,7 +82,7 @@
                     {%if project.main%}
                     <tr class="table-portfolio-item">
                         <td class="font-weight-bold ">{{project.name}}</td>
-                        <td>{{project.direction}}</td>
+                        <td>{{project.direction|safe}}</td>
                         <td>{{project.location}}</td>
                         <td>{{project.status}}</td>
                         <td>{{project.square |intcomma}} м<sup>2</sup></td>
@@ -118,13 +118,13 @@
                 {%for project in projects%}
                 <div class="table-portfolio-item">
                     <div class="table-portfolio-item-title">
-                        {{project.name}}
+                        {{project.name|safe}}
                     </div>
                     <div class="table-portfolio-item-desc">
-                        <p class="mb-1">{{project.direction}}</p>
-                        <p class="mb-1">{{project.location}}</p>
+                        <p class="mb-1">{{project.direction|safe}}</p>
+                        <p class="mb-1">{{project.location|safe}}</p>
                         <div class="d-flex justify-content-between">
-                            <p class="mb-0"> {{project.status}}</p>
+                            <p class="mb-0"> {{project.status|safe}}</p>
                             <p class="mb-0">{{project.square |intcomma}} м <span class="ms-2">{{project.year}}</span></p>
                         </div>
                     </div>
