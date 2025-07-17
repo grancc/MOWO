@@ -374,7 +374,7 @@ h2 {
 
     .feedback-form-text p {
         margin-top: 28px;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
         font-size: 20px;
     }
 
@@ -407,9 +407,11 @@ h2 {
         margin-bottom: 20px;
     }
 
-    #successfeedBackModal .btn-secondary{
+    #successfeedBackModal .btn-secondary {
         margin-bottom: 0;
     }
+
+
 }
 
 @media(max-width:768px) {
@@ -431,7 +433,6 @@ h2 {
 
     .feedback-form-text p {
         margin-top: 24px;
-        margin-bottom: 45px;
         font-size: 18px;
     }
 
@@ -454,6 +455,8 @@ h2 {
     #successfeedBackModal .modal-content {
         padding: 40px;
     }
+
+
 }
 
 @media(max-width:576px) {
@@ -475,7 +478,6 @@ h2 {
 
     .feedback-form-text p {
         margin-top: 20px;
-        margin-bottom: 40px;
         font-size: 16px;
     }
 
@@ -503,6 +505,7 @@ h2 {
     #successfeedBackModal .modal-content {
         padding: 16px;
     }
+
 }
 
 @media(max-width:400px) {

@@ -158,10 +158,6 @@
     footer{
         font-size: 18px;
     }
-    
-    .feedback-form{
-        margin-bottom:80px;
-    }
 }
 
 @media(max-width:690px) {
@@ -189,7 +185,4 @@
         font-size: 16px !important;
     }
 
-    .feedback-form{
-        margin-bottom: 60px;
-    }
 }
