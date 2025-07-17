@@ -9,8 +9,8 @@ gsap.registerPlugin(ScrollToPlugin);
 const initSmoothScrolling = () => {
 	// Создаем экземпляр Lenis с желаемыми настройками
 	lenis = new Lenis({
-		lerp: 0.7, // Настройте плавность (чем меньше — тем мягче)
-		smoothWheel: true // Включите плавную прокрутку колесиком мыши
+		lerp: 0.7, 
+		smoothWheel: true 
 	});
 
 	// Обновляем ScrollTrigger при каждом событии скролла
@@ -63,7 +63,7 @@ const scroll = () => {
 // Инициализация
 const init = () => {
     preloadImages().then(() => { // Убедимся, что все изображения загружены
-        initSmoothScrolling(); // Инициализируем плавный скролл с GSAP
+        //initSmoothScrolling(); // Инициализируем плавный скролл с GSAP
         scroll(); // Применяем анимации для прокрутки
     });
 };
