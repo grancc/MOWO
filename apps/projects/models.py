@@ -12,17 +12,17 @@ class ImageModel(models.Model):
     image = models.ImageField(upload_to="images/%Y/%m/%d/", verbose_name="изображение",
                             help_text="все форматы(кроме svg) конвертируются в webp",)
 
-    def save(self, *args, **kwargs):
-        name = str(uuid.uuid1())
-        img = Image.open(self.image)
-        img_io = BytesIO()
-        img.save(img_io, format="WebP")
-        img_file = InMemoryUploadedFile(
-            img_io, None, f"{name}.webp", "image/webp", img_io.tell(), None
-        )
-        self.image.save(f"{name}.webp", img_file, save=False)
+    # def save(self, *args, **kwargs):
+    #     name = str(uuid.uuid1())
+    #     img = Image.open(self.image)
+    #     img_io = BytesIO()
+    #     img.save(img_io, format="WebP")
+    #     img_file = InMemoryUploadedFile(
+    #         img_io, None, f"{name}.webp", "image/webp", img_io.tell(), None
+    #     )
+    #     self.image.save(f"{name}.webp", img_file, save=False)
 
-        super(ImageModel, self).save(*args, **kwargs)
+    #     super(ImageModel, self).save(*args, **kwargs)
 
     class Meta:
         verbose_name = ("фото")
