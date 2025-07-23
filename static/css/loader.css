@@ -36,7 +36,7 @@
   .preloader p {
     display: flex;
     color: white;
-    font-size: 42px;
+    font-size: 3.2rem;
     align-items: center;
     position: absolute;
     z-index: 100003;
@@ -84,5 +84,11 @@
     background-color: #141516;
     transition: opacity 0.8s ease, transform 0.8s ease;
     z-index: 100001;
+  }
+}
+
+@media(min-width:1800px) {
+  .preloader p {
+    font-size: 42px;
   }
 }

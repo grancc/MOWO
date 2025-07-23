@@ -41,8 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
             $('header .item-top span').css('transition', 'transform 0.5s ease-in-out');
 		} 
 		else {    
-            $('header .item-top span').css('transform', 'translateY(0)');   
-			$('header .header-top').css('transform', 'translateY(0)');   
+            $('header .item-top span').css('transform', 'unset');   
+			$('header .header-top').css('transform', 'unset');   
+			
 		}     
 		lastScrollTop = st;    
 	};	

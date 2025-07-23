@@ -48,35 +48,6 @@
     }
 }
 
-@media(max-width:1670px) {
-    .hover-this span {
-        font-size: 95px;
-    }
-
-    .header-top {
-        font-size: 20px;
-    }
-}
-
-@media(max-width:1400px) {
-    .hover-this span {
-        font-size: 80px;
-    }
-
-    .header-top {
-        font-size: 16px;
-    }
-}
-
-@media(max-width:1200px) {
-    .hover-this span {
-        font-size: 60px;
-    }
-
-    .header-top {
-        font-size: 12px;
-    }
-}
 
 @media(max-width:1160px) {
     .footer-logo{
@@ -127,10 +98,6 @@
         padding-top: 35px;
     }
 
-    .hover-this span {
-        font-size: 50px;
-    }
-
     .footer-background,
     footer::after {
         display: none;
@@ -151,9 +118,6 @@
 }
 
 @media(max-width:768px) {
-    .hover-this span {
-        font-size: 40px;
-    }
 
     footer{
         font-size: 18px;

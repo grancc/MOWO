@@ -34,6 +34,10 @@
     box-shadow: unset !important
 }
 
+html {
+    font-size: 0.9vw;
+}
+
 body {
     color: rgba(255, 255, 255, 1);
     font-family: 'Hauora Regular';
@@ -125,13 +129,14 @@ footer {
     max-width: 1000px;
     margin: 0 auto;
     width: 95%;
+    position: relative;
 }
 
 .header-top {
-    padding-top: 17px;
-    font-size: 24px;
+    padding-top: 1rem;
+    font-size: 1.4rem;
     color: rgba(255, 255, 255, 0.8);
-    padding-bottom: 12px;
+    padding-bottom: 0.7rem;
 }
 
 
@@ -178,14 +183,14 @@ footer {
 
 
 .hover-this span {
-    font-size: 112px;
+    font-size: 7rem;
     font-weight: 800;
     font-family: 'Hauora Bold';
 }
 
 h2 {
     font-weight: 700;
-    font-size: 60px;
+    font-size: 3.8rem;
     line-height: 70px;
     letter-spacing: -1%;
 }
@@ -193,10 +198,10 @@ h2 {
 
 
 .feedback-form-text p {
-    margin-top: 32px;
+    margin-top: 2.2rem;
     font-weight: 500;
-    font-size: 24px;
-    margin-bottom: 60px;
+    font-size: 1.6rem;
+    margin-bottom: 4rem;
     font-family: 'Hauora Regular';
     line-height: 150%;
 }
@@ -330,6 +335,28 @@ h2 {
 
 .modal-body {
     z-index: 1;
+}
+
+@media(min-width:1800px) {
+    .header-top {
+        padding-top: 17px;
+        font-size: 24px;
+        padding-bottom: 12px;
+    }
+
+    h2 {
+        font-size: 60px;
+    }
+
+    .hover-this span {
+        font-size: 112px;
+    }
+
+    .feedback-form-text p {
+        margin-top: 32px;
+        font-size: 24px;
+        margin-bottom: 60px;
+    }
 }
 
 @media(max-width:1670px) {
@@ -470,10 +497,6 @@ h2 {
     .feedback-form-form input,
     .feedback-form-form textarea {
         padding: 16px;
-    }
-
-    .margin-400 {
-        margin-bottom: 100px;
     }
 
     .feedback-form-text p {
