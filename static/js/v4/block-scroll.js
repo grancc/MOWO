@@ -152,7 +152,7 @@ function scroll_block_3() {
         start: "top top+=450",
         end: `+=${yOffset}`,
         scrub: true,
-        markers: true,
+        markers: false,
         invalidateOnRefresh: true,
         onUpdate: (self) => {
             if (self.progress < 1 && self.progress > 0) {
@@ -169,7 +169,7 @@ function scroll_block_3() {
         start: `+=${yOffset} top+=450`,
         end: `+=${yOffset}`,
         scrub: true,
-        markers: true,
+        markers: false,
         invalidateOnRefresh: true,
         onUpdate: (self) => {
             if (self.progress < 1 && self.progress > 0) {
@@ -226,7 +226,6 @@ document.addEventListener('DOMContentLoaded', () => {
         scroll_block_2();
         scroll_block_3();
     }
-
 });
 
 window.addEventListener('resize', () => {

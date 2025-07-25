@@ -13,17 +13,17 @@ class BlogImageModel(models.Model):
     
     #cropping = ImageRatioField('image', free_crop=True, allow_fullsize=True)
 
-    def save(self, *args, **kwargs):
-        name = str(uuid.uuid1())
-        img = Image.open(self.image)
-        img_io = BytesIO()
-        img.save(img_io, format="WebP")
-        img_file = InMemoryUploadedFile(
-            img_io, None, f"{name}.webp", "image/webp", img_io.tell(), None
-        )
-        self.image.save(f"{name}.webp", img_file, save=False)
-
-        super(BlogImageModel, self).save(*args, **kwargs)
+    # def save(self, *args, **kwargs):
+    #     name = str(uuid.uuid1())
+    #     img = Image.open(self.image)
+    #     img_io = BytesIO()
+    #     img.save(img_io, format="WebP")
+    #     img_file = InMemoryUploadedFile(
+    #         img_io, None, f"{name}.webp", "image/webp", img_io.tell(), None
+    #     )
+    #     self.image.save(f"{name}.webp", img_file, save=False)
+    #
+    #     super(BlogImageModel, self).save(*args, **kwargs)
 
     class Meta:
         verbose_name = ("фото")
