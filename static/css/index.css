@@ -194,16 +194,27 @@
     margin-top: 750px;
 }
 
+.empl-name {
+        margin-bottom: 8px;
+    }
+
 @media(min-width:1800px) {
 
     .content__title,
     .number-num,
     .promo-text {
-        font-size: 3.75rem;
+         font-size: 60px;
     }
 
-    .content__text {
-        font-size: 1.5rem;
+    .content__text,
+    .empl-name,
+    .our-command-desc {
+        font-size: 24px;
+    }
+
+    .number-desc,
+    .empl-desc{
+        font-size: 18px;
     }
 
     .numbers-items {
@@ -343,10 +354,6 @@
     .employee-items img {
         width: 100%;
         height: 200px;
-    }
-
-    .empl-name {
-        margin-bottom: 8px;
     }
 
     .after-promo-index-block {

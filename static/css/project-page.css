@@ -70,7 +70,7 @@ h2 {
 }
 
 .swiper {
-    /*margin-left: calc(((100vw - 1700px) / 2) - 8px);*/
+    margin-left: calc(((100vw - 1700px) / 2) - 8px);
 }
 
 .block-text-block h2 {
@@ -82,10 +82,44 @@ h2 {
 }
 
 
+@media (min-width: 1800px) {
+    .swiper-slide {
+        max-height: 800px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    .block-text {
+        font-size: 35px;
+    }
+
+    .year {
+        font-size: 16px;
+    }
+
+    .project-item-title {
+        font-size: 18px;
+    }
+
+    .project-item-value {
+        font-size: 24px;
+    }
+
+    .block-text-block {
+        margin-bottom: 120px;
+    }
+}
+
 @media (max-width: 1800px) {
     .swiper-slide {
-    max-height: 800px;
-}
+        max-height: 800px;
+    }
+
+    .swiper {
+        margin-left: 0;
+    }
 }
 
 @media (max-width: 1536px) {

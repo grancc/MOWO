@@ -92,7 +92,7 @@
                         {% if project.photos.exists%}
                         <tr class="table-portfolio-item">
                             <td>{{project.name}}</td>
-                            <td>{{project.direction}}</td>
+                            <td>{{project.direction|safe}}</td>
                             <td>{{project.location}}</td>
                             <td>{{project.status}}</td>
                             <td>{{project.square |intcomma}} м<sup>2</sup></td>
@@ -101,7 +101,7 @@
                         {%else%}
                         <tr>
                             <td>{{project.name}}</td>
-                            <td>{{project.direction}}</td>
+                            <td>{{project.direction|safe}}</td>
                             <td>{{project.location}}</td>
                             <td>{{project.status}}</td>
                             <td>{{project.square |intcomma}} м<sup>2</sup></td>

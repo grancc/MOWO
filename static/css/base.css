@@ -49,6 +49,10 @@ body {
     cursor: none !important;
 }
 
+p{
+    margin-bottom: 0;
+}
+
 #cursor {
     width: 20px;
     height: 20px;
@@ -357,6 +361,32 @@ h2 {
         font-size: 24px !important;
         margin-bottom: 60px;
     }
+
+    .header-links {
+        font-size: 40px;
+    }
+
+    footer,
+    .feedback-form-form input,
+    .feedback-form-form textarea,
+    .feedback-form-form .btn,
+    .bread a,
+    #successfeedBackModal .btn-secondary,
+    .success-modal-text {
+        font-size: 24px;
+    }
+
+    .feedback-form-form label {
+        font-size: 16px;
+    }
+
+    .footer-bottom {
+        font-size: 18px;
+    }
+
+    .success-modal-header {
+        font-size: 52px;
+    }
 }
 
 @media(max-width:1670px) {
@@ -442,7 +472,7 @@ h2 {
         margin-bottom: 0;
     }
 
-     .hover-this span {
+    .hover-this span {
         font-size: 3rem;
     }
 }
