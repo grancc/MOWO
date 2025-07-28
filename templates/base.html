@@ -17,6 +17,8 @@
 
     <title>{{title}}</title>
 
+    <script src="{%static 'js/header-link-animation.js' %}"></script>
+
     <link rel="apple-touch-icon" href="{% static 'img/icons/favicon.svg' %}">
     <link rel="icon" href="{% static 'img/icons/favicon.ico' %}" type="image/x-icon">
     <link rel="icon" href="/static/img/icons/favicon.png" sizes="256x256" type="image/png">
@@ -24,7 +26,7 @@
     <link rel="icon" href="{% static 'img/icons/favicon.svg' %}" sizes="any" type="image/svg+xml">
 
     <link href="{%static 'vendor/bootstrap.css' %}" rel="stylesheet">
-    <script src="{%static 'vendor/bootstrap.bundle.min.js'%}"></script>
+    <script src="{%static 'vendor/bootstrap.bundle.min.js'%}" async></script>
 
     <link type="text/css" href="{%static 'css/base.css' %}" rel="stylesheet" />
     <link type="text/css" href="{%static 'css/header-footer.css' %}" rel="stylesheet" />
@@ -34,7 +36,6 @@
 
 
     <link rel="shortcut icon" href="data:," />
-
     
     {%block style%}
     {%endblock%}
@@ -104,7 +105,7 @@
 
         <footer class="position-relative">
             <div class="mini-container ">
-                <div class="feedback-form mx-auto mini-container" style="z-index: 5; bottom: 250px;">
+                <div class="feedback-form mx-auto mini-container" style="z-index: 5;">
                     <div class="feedback-form-text">
                         <h2>Превратим идею в архитектуру</h2>
                         <p>Индивидуальный подход к&nbsp;каждому проекту и&nbsp;гарантированное качество исполнения. Заполните форму, и&nbsp;мы&nbsp;подготовим персональное предложение.</p>
@@ -200,7 +201,6 @@
 
 <script defer src="{%static 'js/jquery.js'%}"></script>
 <script defer src="{%static 'js/Imask.js'%}"></script>
-<script defer src="{%static 'js/header-link-animation.js' %}"></script>
 <script defer src="{%static 'js/base.js'%}"></script>
 <script defer src="{%static 'js/feedback.js'%}"></script>
 <!-- Yandex.Metrika counter -->

@@ -1,12 +1,12 @@
 h1 {
 
-    font-size: 60px;
+    font-size: 3.75rem;
     margin-bottom: 55px !important;
     font-weight: 600;
 }
 
 .block-text {
-    font-size: 35px;
+    font-size: 2.1rem;
     margin-bottom: 30px;
 }
 
@@ -24,7 +24,7 @@ h1 {
 }
 
 .year {
-    font-size: 16px;
+    font-size: 1rem;
     color: #262626;
 }
 
@@ -51,32 +51,42 @@ h2 {
 }
 
 .project-item-title {
-    font-size: 18px;
+    font-size: 1.125rem;
     color: #262626;
     margin-bottom: 40px;
 }
 
 
 .project-item-value {
-    font-size: 24px;
+    font-size: 1.5rem;
     color: #262626;
     font-weight: 700;
 }
 
 .swiper-slide {
-    max-height: 800px;
+    max-height: 900px;
     object-fit: cover;
     height: auto;
 }
 
 .swiper {
-    margin-left: calc(((100vw - 1700px) / 2) - 8px);
+    /*margin-left: calc(((100vw - 1700px) / 2) - 8px);*/
 }
 
 .block-text-block h2 {
     margin-bottom: 70px;
 }
 
+.mini-container {
+    position: static;
+}
+
+
+@media (max-width: 1800px) {
+    .swiper-slide {
+    max-height: 800px;
+}
+}
 
 @media (max-width: 1536px) {
     .project-item {

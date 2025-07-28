@@ -14,21 +14,16 @@ function TablePortfolioItemHover(){
     const xMoveCursor = gsap.quickTo(cursor, 'left', { duration: 0.8, ease: 'power3' });
     const yMoveCursor = gsap.quickTo(cursor, 'top', { duration: 0.8, ease: 'power3' });
 
-
     window.addEventListener('mousemove', (e) => {
         if (!active) return;
         const { pageX, pageY } = e;
 
         xMoveContainer(pageX);
         yMoveContainer(pageY);
-
-        // xMoveCursor(pageX);
-        // yMoveCursor(pageY);
     });
 
     //При наведении на портфолио итемы меняем картинку
     projects.forEach((item, index) => {
-
         item.addEventListener('mouseenter', () => {
             toggleModal()
             updateModalSlider(index);
@@ -37,11 +32,8 @@ function TablePortfolioItemHover(){
         item.addEventListener('mouseleave', () => {
             toggleModal()
             updateModalSlider(index);
-
         });
     });
-
-
 
     // Изменение фото
     function updateModalSlider(index) {
@@ -56,11 +48,11 @@ function TablePortfolioItemHover(){
             modalContainer.style.transition = "all 0s ease";
             modalContainer.style.opacity = 1;
             modalContainer.style.transform = "translate(5%, 5%) scale(1)";
-            cursor.classList.add('active-portfolio-table');
+            cursor && cursor.classList.add('active-portfolio-table');
         } else {
             modalContainer.style.opacity = 0;
             modalContainer.style.transform = "scale(0)";
-            cursor.classList.remove('active-portfolio-table');
+            cursor && cursor.classList.remove('active-portfolio-table');
         }
     }
 }
@@ -69,42 +61,56 @@ function TablePortfolioItemHover(){
 function PortfolioItemHover(){
     const projects = document.querySelectorAll('.portfolio-item-wrapper');
     const cursor = document.querySelector('.cursor');
+
     projects.forEach((item, index) => {
+        const prevBtn = item.querySelector('.swiper--prev');
+        const nextBtn = item.querySelector('.swiper--next');
 
-        item.querySelector('.swiper--prev').addEventListener('mouseenter', () => {
-            cursor.classList.remove('active-portfolio-right');
-            cursor.classList.add('active-portfolio-left');
+        if (prevBtn) {
+            prevBtn.addEventListener('mouseenter', () => {
+                if (!cursor) return;
+                cursor.classList.remove('active-portfolio-right');
+                cursor.classList.add('active-portfolio-left');
 
-            if (item.querySelector('.swiper--prev').classList.contains('swiper-button-disabled')){
-                cursor.style.opacity = '0.6'
-            }else{
-                cursor.style.opacity = '1'
-            }
-        });
-        item.querySelector('.swiper--next').addEventListener('mouseenter', () => {
-            cursor.classList.remove('active-portfolio-left');
-            cursor.classList.add('active-portfolio-right');
+                cursor.style.opacity = prevBtn.classList.contains('swiper-button-disabled') ? '0.6' : '1';
+            });
 
-            if (item.querySelector('.swiper--next').classList.contains('swiper-button-disabled')){
-                cursor.style.opacity = '0.6'
-            }else{
-                cursor.style.opacity = '1'
-            }
-        });
+            prevBtn.addEventListener('mouseleave', () => {
+                cursor && cursor.classList.remove('active-portfolio-left');
+            });
+        }
 
-        item.querySelector('.swiper--prev').addEventListener('mouseleave', () => {
-            cursor.classList.remove('active-portfolio-left');
-        });
-        item.querySelector('.swiper--next').addEventListener('mouseleave', () => {
-            cursor.classList.remove('active-portfolio-right');
-        });
+        if (nextBtn) {
+            nextBtn.addEventListener('mouseenter', () => {
+                if (!cursor) return;
+                cursor.classList.remove('active-portfolio-left');
+                cursor.classList.add('active-portfolio-right');
+
+                cursor.style.opacity = nextBtn.classList.contains('swiper-button-disabled') ? '0.6' : '1';
+            });
+
+            nextBtn.addEventListener('mouseleave', () => {
+                cursor && cursor.classList.remove('active-portfolio-right');
+            });
+        }
     });
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    if (window.innerWidth > 990){
-        TablePortfolioItemHover()
-        PortfolioItemHover()
-    }
+// Инициализация после загрузки всех изображений
+function initPortfolio() {
+    const portfolioSection = document.querySelector('#portfolio-page');
     
-});
+    // Показываем контент даже если изображения еще не загрузились
+    if (window.innerWidth > 990) {
+        TablePortfolioItemHover();
+        PortfolioItemHover();
+    }
+
+    // Загружаем изображения в фоне
+    imagesLoaded(portfolioSection, { background: true }, function() {
+        // Можно добавить дополнительные действия после полной загрузки изображений
+        console.log('Все изображения загружены');
+    });
+}
+
+document.addEventListener("DOMContentLoaded", initPortfolio);

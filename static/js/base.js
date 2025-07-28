@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			return;        
 		
 		if (st > lastScrollTop){       
-			$('header .header-top').css('transform', 'translateY(-100px)');
+			$('header .header-top').css('transform', 'translateY(-50px)');
 			$('header .header-top').css('transition', 'transform 0.5s ease-in-out');
 
 			if (innerWidth < 576){
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			else if (innerWidth < 1200){
 				$('header .item-top span').css('transform', 'translateY(-80px)');
 			}else{
-				$('header .item-top span').css('transform', 'translateY(-100px)');
+				$('header .item-top span').css('transform', 'translateY(-50px)');
 			}
 			
             $('header .item-top span').css('transition', 'transform 0.5s ease-in-out');
@@ -44,7 +44,11 @@ document.addEventListener('DOMContentLoaded', () => {
             $('header .item-top span').css('transform', 'unset');   
 			$('header .header-top').css('transform', 'unset');   
 			
-		}     
+		}
+		setTimeout(() => {
+			$('header .header-top').css('transition', '');
+			$('header .item-top span').css('transition', '');
+		}, 500);     
 		lastScrollTop = st;    
 	};	
 

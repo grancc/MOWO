@@ -193,9 +193,45 @@
 <script src="{%static 'js/v4/ScrollTrigger.min.js'%}"></script>
 <script src="{%static 'js/v4/imagesloaded.pkgd.min.js'%}"></script>
 <script src="{%static 'js/v4/lenis.min.js'%}"></script>
+{#    <script src="https://unpkg.com/lenis@1.3.8/dist/lenis.min.js"></script>#}
 <script type="module" src="{%static 'js/v4/index.js'%}"></script>
 <script defer src="{%static 'js/loader.js'%}"></script>
 <script src="{%static 'js/v4/block-scroll.js'%}"></script>
+
+<script>
+    // Initialize Lenis with smooth scrolling options
+    const lenis = new Lenis({
+        {#duration: 0.6,#}
+        {#smoothWheel: true,#}
+        {#wheelMultiplier: 0.8,#}
+        {#touchMultiplier: 1.5,#}
+        {#infinite: false,#}
+        {#orientation: 'vertical',#}
+        {#gestureOrientation: 'vertical',#}
+        {#smoothTouch: false,#}
+        {#lerp: 0.075#}
+    });
+
+    // Synchronize Lenis with GSAP ScrollTrigger
+    lenis.on('scroll', ScrollTrigger.update);
+
+    // Create animation frame function with time throttling
+    let lastTime = 0;
+    function raf(time) {
+        if (time - lastTime > 16) { // ~60fps
+            lenis.raf(time);
+            lastTime = time;
+        }
+        requestAnimationFrame(raf);
+    }
+
+    // Start the animation frame loop
+    requestAnimationFrame(raf);
+
+    // Disable GSAP lag smoothing
+    gsap.ticker.lagSmoothing(0);
+</script>
+
 <script>
     ScrollTrigger.batch(".fadeText", {
         onEnter: (batch) => gsap.to(batch, { 
@@ -235,8 +271,6 @@
 </script>
 
 <script>
-    // AOS.init();
-
     const scrollBlock = document.querySelector('.ma_video');
     
     window.addEventListener('scroll', () => {
@@ -244,11 +278,8 @@
         const maxScroll = document.documentElement.scrollHeight - window.innerHeight - 2000;
         const brightness = 1 - Math.min(scrollPosition / maxScroll, 1);
 
-        // Изменение фона блока в зависимости от прокрутки
         scrollBlock.style = `filter: brightness(${brightness});`;
     });
-
 </script>
-
 
 {%endblock%}
