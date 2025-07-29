@@ -105,31 +105,10 @@ h3 {
     position: static;
 }
 
-
-@media(min-width:2400px) {
-    .office-back {
-        /*top: -40%;*/
-    }
+.feedback-form-text h2{
+    margin-bottom: 0;
 }
 
-@media(min-width:3700px) {
-    .office-back {
-        top: -60%;
-    }
-}
-
-
-@media(min-width:4300px) {
-    .office-back {
-        top: -70%;
-    }
-}
-
-@media(min-width:5700px) {
-    .office-back {
-        top: -85%;
-    }
-}
 
 @media (max-width: 1500px) {
     .office-back {
@@ -144,10 +123,6 @@ h3 {
 }
 
 @media(max-width:1200px) {
-    #office-title h2 {
-        /*font-size: 3rem;*/
-    }
-
     .office-back {
         height: 1100px;
     }
@@ -159,10 +134,6 @@ h3 {
     .manifest {
         margin-top: 200px;
         margin-bottom: 80px;
-    }
-
-    .office-back {
-        /*top: -5%;*/
     }
 }
 
@@ -179,7 +150,7 @@ h3 {
 @media(min-width:1800px) {
     #office-title p,
     .peolple-name {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .vacancies-items a{
@@ -189,9 +160,6 @@ h3 {
 
 
 @media(max-width:990px) {
-    .office-back {
-        /*height: 800px;*/
-    }
 
     #office-title h2 {
         font-size: 2rem;
@@ -331,10 +299,6 @@ h3 {
         margin-top: 150px;
         margin-bottom: 40px;
     }
-
-    /* .office-back {
-        top: -40%;
-    } */
 }
 
 @media(max-width:420px) {

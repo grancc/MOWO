@@ -105,12 +105,6 @@ function initPortfolio() {
         TablePortfolioItemHover();
         PortfolioItemHover();
     }
-
-    // Загружаем изображения в фоне
-    imagesLoaded(portfolioSection, { background: true }, function() {
-        // Можно добавить дополнительные действия после полной загрузки изображений
-        console.log('Все изображения загружены');
-    });
 }
 
 document.addEventListener("DOMContentLoaded", initPortfolio);

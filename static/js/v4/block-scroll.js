@@ -1,58 +1,44 @@
+let spaceBetweenSides = 30
+
+
 // блок с цифрами
 function scroll_block_1() {
-    container = document.getElementById('numbers-block');
+    const container = document.getElementById('numbers-block');
     const fcTtl = container.querySelector('.fc_ttl');
     const pinSpacer = container.querySelector('.block-scroll');
-    let yOffset = pinSpacer.offsetHeight - 380;
-    const rect = fcTtl.getBoundingClientRect();
+    const pinSpacerChild = pinSpacer.querySelector('.numbers-items')
+    let yOffset = pinSpacerChild.offsetHeight + spaceBetweenSides;
+    
 
-
-    if (window.innerWidth < 1200) {
-        yOffset = pinSpacer.offsetHeight - 250
-    }
-
-    // Анимация для блока fc_ttl
     ScrollTrigger.create({
         trigger: container,
-        start: `top top+=350`,
-        end: `+=${yOffset}`,
+        start: `top center`,
+        end: `bottom-=${yOffset} center`,
         scrub: true,
-        invalidateOnRefresh: true,
         onUpdate: (self) => {
-            if (self.progress < 1 && self.progress > 0) {
-                fcTtl.style.position = "sticky";
-                fcTtl.style.top = "300px";
-                fcTtl.style.zIndex = "999";
-                fcTtl.style.bottom = "";
-                pinSpacer.style.paddingTop = '70%'
-            }
+            fcTtl.style.position = "sticky";
+            fcTtl.style.top = `calc(50% - ${fcTtl.offsetHeight}px)`;
+            fcTtl.style.zIndex = "999";
+            fcTtl.style.bottom = "";
+            pinSpacer.style.paddingTop = '70%'
         }
     });
     ScrollTrigger.create({
         trigger: container,
-        start: `+=${yOffset} top+=350`,
+        start: `bottom-=${yOffset} center`,
+        end: `bottom top`,
         scrub: true,
-
-        invalidateOnRefresh: true,
+        markers: true,
         onUpdate: (self) => {
-            if (self.progress < 1 && self.progress > 0) {
-                fcTtl.style.position = "absolute";
-                fcTtl.style.top = "";
-                if (window.innerWidth < 1200 && window.innerWidth > 1100) {
-                    fcTtl.style.bottom = "275px";
-                    pinSpacer.style.paddingTop = `calc(70% + 180px)`
-                } else if (window.innerWidth < 1100) {
-                    fcTtl.style.bottom = "260px";
-                    pinSpacer.style.paddingTop = `calc(70% + 160px)`
-                } else {
-                    fcTtl.style.bottom = "350px";
-                    pinSpacer.style.paddingTop = `calc(70% + 200px)`
-                }
+            yOffset = pinSpacerChild.offsetHeight + spaceBetweenSides;
+            fcTtl.style.position = "absolute";
+            fcTtl.style.top = "";
+            fcTtl.style.bottom = `${yOffset}px`;
+            pinSpacer.style.paddingTop = `calc(70% + ${fcTtl.offsetHeight}px)`
 
-
-            }
         }
     });
+
 
     const containers = document.querySelectorAll('.fadeTextBlock');
     containers.forEach(container => {
@@ -83,56 +69,46 @@ function scroll_block_1() {
 
 // первая ОС
 function scroll_block_2() {
-    container = document.getElementById('os-1');
-    const fcTtl = container.querySelector('.fc_ttl');
-    const pinSpacer = container.querySelector('.block-scroll');
-    const yOffset = pinSpacer.offsetHeight - 400;
-    const rect = fcTtl.getBoundingClientRect();
+    container2 = document.getElementById('os-1');
+    fcTtl2 = container2.querySelector('.fc_ttl');
+    pinSpacer2 = container2.querySelector('.block-scroll');
+    const pinSpacerChild2 = pinSpacer2.querySelector('.feedback-form')
+    yOffset2 = pinSpacerChild2.offsetHeight + spaceBetweenSides;
+    
+    yOffsetForStart = yOffset2+70
+    
 
-    // Анимация для блока fc_ttl
     ScrollTrigger.create({
-        trigger: container,
-        start: "top top+=450",
-        end: `+=${yOffset + 150}`,
+        trigger: container2,
+        start: `top center`,
+        end: `bottom-=${yOffsetForStart} center`,
         scrub: true,
         invalidateOnRefresh: true,
         onUpdate: (self) => {
-            if (self.progress < 1 && self.progress > 0) {
-                fcTtl.style.position = "sticky";
-                fcTtl.style.top = "300px";
-                fcTtl.style.width = `${rect.width}px`;
-                fcTtl.style.zIndex = "999";
-                fcTtl.style.bottom = "";
-                pinSpacer.style.paddingTop = '70%'
-            }
+            fcTtl2.style.position = "sticky";
+            fcTtl2.style.top = `calc(50% - ${fcTtl2.offsetHeight}px)`;
+            fcTtl2.style.zIndex = "999";
+            fcTtl2.style.bottom = "";
+            pinSpacer2.style.paddingTop = '70%'
         }
     });
     ScrollTrigger.create({
-        trigger: container,
-        start: `+=${yOffset + 150} top+=450`,
+        trigger: container2,
+        start: `bottom-=${yOffsetForStart} center`,
+        end: `bottom top`,
         scrub: true,
+        markers: true,
         invalidateOnRefresh: true,
         onUpdate: (self) => {
-            if (self.progress < 1 && self.progress > 0) {
-                fcTtl.style.position = "absolute";
-                fcTtl.style.top = "";
-                if (window.innerWidth > 1800) {
-                    fcTtl.style.bottom = "420px";
-                    pinSpacer.style.paddingTop = `calc(70% + 190px)`
-                }
-                else if (window.innerWidth < 1200 && window.innerWidth > 1100) {
-                    fcTtl.style.bottom = "390px";
-                    pinSpacer.style.paddingTop = `calc(70% + 190px)`
-                } else if (window.innerWidth < 1100) {
-                    fcTtl.style.bottom = "375px";
-                    pinSpacer.style.paddingTop = `calc(70% + 180px)`
-                } else {
-                    fcTtl.style.bottom = "400px";
-                    pinSpacer.style.paddingTop = `calc(70% + 180px)`
-                }
-
-
-            }
+            yOffset2 = pinSpacerChild2.offsetHeight + spaceBetweenSides;
+            console.log(yOffset2)
+            // if (window.innerWidth > 1500) {
+            //     yOffset2 = yOffset2-20
+            // }
+            fcTtl2.style.position = "absolute";
+            fcTtl2.style.top = "";
+            fcTtl2.style.bottom = `${yOffset2}px`;
+            pinSpacer2.style.paddingTop = `calc(70% + ${fcTtl2.offsetHeight}px)`
 
         }
     });
@@ -140,66 +116,51 @@ function scroll_block_2() {
 
 // наша команда
 function scroll_block_3() {
-    container = document.getElementById('our-command');
-    const fcTtl = container.querySelector('.fc_ttl');
-    const pinSpacer = container.querySelector('.block-scroll');
-    let yOffset = pinSpacer.offsetHeight - 400;
-
+    container2 = document.getElementById('our-command');
+    const fcTtl2 = container2.querySelector('.fc_ttl');
+    const pinSpacer2 = container2.querySelector('.block-scroll');
+    const pinSpacerChild2 = pinSpacer2.querySelector('.employee-items')
+    yOffset2 = pinSpacerChild2.offsetHeight + spaceBetweenSides;
+    yOffsetForStart = yOffset2+70
 
     // Анимация для блока fc_ttl
-    ScrollTrigger.create({
-        trigger: container,
-        start: "top top+=450",
-        end: `+=${yOffset}`,
+   ScrollTrigger.create({
+        trigger: container2,
+        start: `top center`,
+        end: `bottom-=${yOffsetForStart} center`,
         scrub: true,
-        markers: false,
         invalidateOnRefresh: true,
         onUpdate: (self) => {
-            if (self.progress < 1 && self.progress > 0) {
-                fcTtl.style.position = "sticky";
-                fcTtl.style.top = "300px";
-                fcTtl.style.zIndex = "999";
-                fcTtl.style.bottom = "";
-                pinSpacer.style.paddingTop = '70%'
-            }
+            fcTtl2.style.position = "sticky";
+            fcTtl2.style.top = `calc(50% - ${fcTtl2.offsetHeight}px)`;
+            fcTtl2.style.zIndex = "999";
+            fcTtl2.style.bottom = "";
+            pinSpacer2.style.paddingTop = '70%'
         }
     });
     ScrollTrigger.create({
-        trigger: container,
-        start: `+=${yOffset} top+=450`,
-        end: `+=${yOffset}`,
+        trigger: container2,
+        start: `bottom-=${yOffsetForStart} center`,
+        end: `bottom top`,
         scrub: true,
-        markers: false,
+        markers: true,
         invalidateOnRefresh: true,
         onUpdate: (self) => {
-            if (self.progress < 1 && self.progress > 0) {
-                fcTtl.style.position = "absolute";
-                fcTtl.style.top = "";
-                if (window.innerWidth > 1500 ) {
-                    fcTtl.style.bottom = "880px";
-                    pinSpacer.style.paddingTop = `calc(70% + 300px)`
-                }
-                else if (window.innerWidth < 1500 && window.innerWidth > 1400) {
-                    fcTtl.style.top = "650px";
-                    pinSpacer.style.paddingTop = `calc(70% + 250px)`
-                }
-                else if (window.innerWidth < 1400 && window.innerWidth > 1200) {
-                    fcTtl.style.bottom = "850px";
-                    pinSpacer.style.paddingTop = `calc(70% + 300px)`
-                }
-                else {
-                    fcTtl.style.bottom = "780px";
-                    pinSpacer.style.paddingTop = `calc(70% + 300px)`
-                }
+            yOffset2 = pinSpacerChild2.offsetHeight + spaceBetweenSides;
+            // if (window.innerWidth > 1500) {
+            //     yOffset2 = yOffset2-20
+            // }
+            fcTtl2.style.position = "absolute";
+            fcTtl2.style.top = "";
+            fcTtl2.style.bottom = `${yOffset2}px`;
+            pinSpacer2.style.paddingTop = `calc(70% + ${fcTtl2.offsetHeight}px)`
 
-
-            }
         }
     });
-    const fade = container.querySelector('.mini-container');
+    const fade = container2.querySelector('.mini-container');
     ScrollTrigger.create({
         trigger: fade,
-        start: () => `+=${pinSpacer.offsetHeight} top+=350`,
+        start: () => `+=${pinSpacer2.offsetHeight} top+=350`,
         end: "bottom top",
         scrub: true,
         invalidateOnRefresh: true,
@@ -228,6 +189,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-window.addEventListener('resize', () => {
-    ScrollTrigger.refresh();
-});

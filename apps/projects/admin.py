@@ -8,7 +8,7 @@ from .models import *
 
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('name', 'main')
 
 
 @admin.register(ImageModel)

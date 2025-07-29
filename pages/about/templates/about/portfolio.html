@@ -32,7 +32,7 @@
                         <div class="swiper swiper-photos">
                             <div class="swiper-wrapper">
                                 {%for img in project.photos.all %}
-                                    <img src="{{img.image.url}}" alt="" class="swiper-slide">
+                                    <img src="{{img.image.url}}" alt="" class="swiper-slide" loading="lazy">
                                 {%endfor%}
                             </div>
                         </div>

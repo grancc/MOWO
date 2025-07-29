@@ -47,8 +47,9 @@
                     <h2 >mowo&nbsp;&mdash; мультидисциплинарное бюро с&nbsp;экспертностью в&nbsp;жилой и&nbsp;коммерческой недвижимости</h2>
                 </div>
                 
-                <div class="d-grid numbers-items block-scroll">
-                    <div class="numbers-item">
+                <div class="block-scroll">
+                    <div class="d-grid numbers-items">
+                         <div class="numbers-item">
                         <div class="number-num">
                             <span data-val="10">
                                 10
@@ -88,6 +89,8 @@
                         </div>
                         <p class="number-desc mb-0">построенной недвижимости</p>
                     </div>
+                    </div>
+                   
                 </div>
             </div>
         </div>
@@ -114,7 +117,7 @@
                         <p>Индивидуальный подход к&nbsp;каждому проекту и&nbsp;гарантированное качество исполнения. Заполните форму, и&nbsp;мы&nbsp;подготовим персональное предложение.</p>
                     </div>
                     <div class="feedback-form-form block-scroll">
-                        <form class="w-100 feedback-form" id="feedback-form">
+                        <form class="w-100 feedback-form mb-0" id="feedback-form">
                             {% csrf_token %}
                             <div class="d-flex gap-3 flex-md-row flex-column mb-3">
                                 {{feedback.name}}
@@ -150,14 +153,17 @@
                     <p class="our-command-desc">Каждый проект&nbsp;&mdash; это&nbsp;результат совместного творчества архитекторов, урбанистов, дизайнеров и&nbsp;инженеров. Именно такой командный подход позволяет нам создавать по-настоящему выдающиеся решения, где&nbsp;функциональность встречается с&nbsp;искусством.</p>
                 </div>
                 
-                    <div class="employee-items block-scroll">
-                        {%for empl in employees%}
-                        <div class="employee-slide">
-                            <img src="{{empl.image.url}}" alt="">
-                            <p class="empl-name">{{empl.name}}</p>
-                            <p class="empl-desc">{{empl.position}}</p>
+                    <div class=" block-scroll">
+                        <div class="employee-items">
+                            {%for empl in employees%}
+                            <div class="employee-slide">
+                                <img src="{{empl.image.url}}" alt="">
+                                <p class="empl-name">{{empl.name}}</p>
+                                <p class="empl-desc">{{empl.position}}</p>
+                            </div>
+                            {%endfor%}
                         </div>
-                        {%endfor%}
+                        
                     </div>
             </div>
         </div>
@@ -179,7 +185,7 @@
             {%endfor%}
         </div>
     </div>  
-    
+    <div class="margin-400"></div>
     <div class="preloader">
          <div class="wave"></div>
     </div>  
