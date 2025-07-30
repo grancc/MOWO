@@ -46,7 +46,7 @@ h1 {
     display: none;
 }
 
-@media(min-width:1800px) {
+@media(min-width:1500px) {
     h1 {
         font-size: 48px;
         margin: 80px 0;

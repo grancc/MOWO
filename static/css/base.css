@@ -347,7 +347,7 @@ footer .feedback-form-text p {
     margin-bottom: 60px;
 }
 
-@media(min-width:1800px) {
+@media(min-width:1500px) {
     .custom-container {
         max-width: 1500px;
     }

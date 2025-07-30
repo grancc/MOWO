@@ -201,7 +201,7 @@ table {
     opacity: 1;
 }
 
-@media(min-width:1800px) {
+@media(min-width:1500px) {
 
     .portfolio-item-desc-left,
     .portfolio-item-desc-right,
