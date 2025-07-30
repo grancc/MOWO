@@ -4,6 +4,8 @@ from io import BytesIO
 
 from django.db import models
 from django.core.files.uploadedfile import InMemoryUploadedFile
+from django.db.models.signals import pre_delete
+from django.dispatch.dispatcher import receiver
 
 from apps.about_app.models import Employees
 
@@ -12,24 +14,17 @@ class ImageModel(models.Model):
     image = models.ImageField(upload_to="images/%Y/%m/%d/", verbose_name="изображение",
                             help_text="все форматы(кроме svg) конвертируются в webp",)
 
-    # def save(self, *args, **kwargs):
-    #     name = str(uuid.uuid1())
-    #     img = Image.open(self.image)
-    #     img_io = BytesIO()
-    #     img.save(img_io, format="WebP")
-    #     img_file = InMemoryUploadedFile(
-    #         img_io, None, f"{name}.webp", "image/webp", img_io.tell(), None
-    #     )
-    #     self.image.save(f"{name}.webp", img_file, save=False)
-
-    #     super(ImageModel, self).save(*args, **kwargs)
-
     class Meta:
         verbose_name = ("фото")
         verbose_name_plural = ("фото")
 
     def __str__(self):
         return f"{self.image}"
+
+@receiver(pre_delete, sender=ImageModel)
+def image_model_delete(sender, instance, **kwargs):
+    if instance.image.name:
+        instance.image.delete(False)
 
 class Project(models.Model):
     name = models.CharField(max_length=255, verbose_name='наименование')
@@ -63,7 +58,6 @@ class ProjectBlocks(models.Model):
 
 class ProjectPeople(models.Model):
     position = models.CharField(max_length=255, verbose_name='Позиция')
-    #empl = models.ForeignKey(Employees, verbose_name="участник", blank=True, on_delete=models.CASCADE)
     empl = models.CharField('имя', max_length=255)
     class Meta:
         verbose_name = "участник"

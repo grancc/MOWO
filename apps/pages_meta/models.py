@@ -4,6 +4,8 @@ from io import BytesIO
 
 from django.core.files.uploadedfile import InMemoryUploadedFile
 from django.db import models
+from django.db.models.signals import pre_delete
+from django.dispatch.dispatcher import receiver
 
 
 class PagesMeta(models.Model):
@@ -34,17 +36,10 @@ class Indexblocks(models.Model):
     def __str__(self):
         return self.title
     
-    # def save(self, *args, **kwargs):
-    #     name = str(uuid.uuid1())
-    #     img = Image.open(self.image)
-    #     img_io = BytesIO()
-    #     img.save(img_io, format="WebP")
-    #     img_file = InMemoryUploadedFile(
-    #         img_io, None, f"{name}.webp", "image/webp", img_io.tell(), None
-    #     )
-    #     self.image.save(f"{name}.webp", img_file, save=False)
-    #
-    #     super(Indexblocks, self).save(*args, **kwargs)
+@receiver(pre_delete, sender=Indexblocks)
+def image_model_delete(sender, instance, **kwargs):
+    if instance.image.name:
+        instance.image.delete(False)
 
 
 class VectorBlocks(Indexblocks):
