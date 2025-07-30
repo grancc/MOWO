@@ -422,10 +422,6 @@ footer .feedback-form-text p {
 
 @media(max-width:990px) {
 
-    html {
-        font-size: 16px;
-    }
-
     .feedback-form-form .btn,
     .feedback-form-form input,
     .feedback-form-form textarea {
@@ -481,15 +477,11 @@ footer .feedback-form-text p {
     }
 
     .hover-this span {
-        font-size: 3rem;
+        font-size: 5.5rem;
     }
 }
 
 @media(max-width:768px) {
-
-    .hover-this span {
-        font-size: 2rem;
-    }
 
     .feedback-form-form .btn,
     .feedback-form-form input,

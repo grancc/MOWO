@@ -45,7 +45,7 @@ h3 {
 #office-title p {
     margin-bottom: 32px;
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     line-height: 150%;
 }
 
@@ -63,12 +63,12 @@ h3 {
 .peolple-name {
     margin-top: 16px;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 .peolple-desc {
     margin-top: 8px;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 400;
 }
 
@@ -105,7 +105,7 @@ h3 {
     position: static;
 }
 
-.feedback-form-text h2{
+.feedback-form-text h2 {
     margin-bottom: 0;
 }
 
@@ -118,13 +118,13 @@ h3 {
 
 @media(max-width:1400px) {
     .office-back {
-        height: 100%;
+        height: 1800px;
     }
 }
 
 @media(max-width:1200px) {
     .office-back {
-        height: 1100px;
+        height: 1400px;
     }
 
     #office-title {
@@ -143,29 +143,31 @@ h3 {
     }
 
     .office-back {
-        height: 1000px;
+       height: 1150px;
     }
 }
 
+@media(max-width:990px) {
+    .office-back {
+       height: 1050px;
+    }
+}
+
+
 @media(min-width:1800px) {
+
     #office-title p,
     .peolple-name {
         font-size: 20px;
     }
 
-    .vacancies-items a{
+    .vacancies-items a {
         font-size: 20px;
     }
 }
 
 
 @media(max-width:990px) {
-
-    #office-title h2 {
-        font-size: 2rem;
-        ;
-        line-height: 50px;
-    }
 
     #office-vacancies {
         margin-top: 100px;
@@ -180,10 +182,6 @@ h3 {
 
     #office-title {
         margin-top: 120px !important;
-    }
-
-    #office-title p {
-        font-size: 1.35rem;
     }
 
     .big-text {
@@ -203,16 +201,14 @@ h3 {
         font-size: 1.25rem;
     }
 
-    h2 {
-        font-size: 2.5rem;
-        line-height: 100%;
+    .peolple-desc {
+        font-size: 18px;
     }
 }
 
 @media(max-width:768px) {
     #office-title h2 {
         font-size: 28px;
-        line-height: 1;
     }
 
     h3 {
@@ -245,6 +241,13 @@ h3 {
         font-size: 35px;
     }
 
+}
+
+
+@media(max-width:650px) {
+    .office-back {
+       height: 1150px;
+    }
 }
 
 @media(max-width:576px) {
@@ -302,9 +305,7 @@ h3 {
 }
 
 @media(max-width:420px) {
-
-
     .office-back {
-        height: 1000px
+        height: 80vh;
     }
 }
