@@ -39,7 +39,7 @@
 .portfolio-item-desc-left {
     font-family: 'Hauora Regular';
     margin-right: 20px;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 500;
     align-items: end;
     width: 312px;
@@ -47,7 +47,7 @@
 
 .portfolio-item-desc-right {
     margin-left: 20px;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-family: 'Hauora Regular';
     font-weight: 500;
 }
@@ -202,11 +202,9 @@ table {
 }
 
 @media(min-width:1800px) {
-    .portfolio-item-desc-right {
-        font-size: 24px;
-    }
 
     .portfolio-item-desc-left,
+    .portfolio-item-desc-right,
     .table {
         font-size: 20px;
     }
@@ -250,7 +248,7 @@ table {
     .portfolio-item {
         height: unset;
         margin-left: 0;
-        margin-bottom: 100px;
+        margin-bottom: 20px;
     }
 
     .portfolio-item-wrapper {
@@ -274,7 +272,7 @@ table {
 
     .portfolio-item-desc-right,
     .portfolio-item-desc-left {
-        font-size: 1.25rem;
+        font-size: 1.8rem;
     }
 
     #portfolio-page h2 {
