@@ -68,7 +68,7 @@ h3 {
 
 .peolple-desc {
     margin-top: 8px;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 400;
 }
 
@@ -157,7 +157,9 @@ h3 {
 @media(min-width:1500px) {
 
     #office-title p,
-    .peolple-name {
+    .peolple-name,
+    .peolple-desc,
+    .vacancies-items a {
         font-size: 20px;
     }
 
@@ -199,10 +201,6 @@ h3 {
 
     .vacancies-items a {
         font-size: 1.25rem;
-    }
-
-    .peolple-desc {
-        font-size: 18px;
     }
 }
 
