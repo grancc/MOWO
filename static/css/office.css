@@ -18,7 +18,7 @@ h3 {
     position: absolute;
     top: 0;
     width: 100vw;
-    height: 2500px;
+    height: 2300px;
     object-fit: cover;
     z-index: -1;
 }
