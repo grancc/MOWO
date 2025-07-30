@@ -11,7 +11,7 @@
 {%block content%} 
 <section id="project-page" class="first-page-block">
     <h1 class="custom-container">{{project.description|safe}}</h1>
-    <img src="{{project.project.photos.first.image.url}}" alt="{{project.project.name}}" class="main-img">
+    <img src="{{project.project.photos.first.image.url}}" alt="{{project.project.name}}" class="main-img" loading="lazy">
     <div class="custom-container">
         <p class="year">{{project.project.year}}</p>
         <h2>{{project.project.name|safe}}</h2>
@@ -64,7 +64,7 @@
         <div class="block-text">
             {{block.text|safe}}
         </div>
-        <img src="{{block.photo.image.url}}" alt="">
+        <img src="{{block.photo.image.url}}" alt="" loading="lazy">
     </div>
     {%endfor%}
     </div>
@@ -74,7 +74,7 @@
         <div class="img-swiper swiper">
             <div class="swiper-wrapper">
              {%for img in project.slider_one.all %}
-                    <img src="{{img.image.url}}" alt="" class="swiper-slide">
+                    <img src="{{img.image.url}}" alt="" class="swiper-slide" loading="lazy">
                {%endfor%}
             </div>
         </div>
@@ -86,7 +86,7 @@
         <div class="img-swiper-ch swiper">
             <div class="swiper-wrapper">
              {%for img in project.slider_two.all %}
-                    <img src="{{img.image.url}}" alt="" class="swiper-slide">
+                    <img src="{{img.image.url}}" alt="" class="swiper-slide" loading="lazy">
                {%endfor%}
             </div>
         </div>
