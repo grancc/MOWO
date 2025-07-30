@@ -143,13 +143,13 @@ h3 {
     }
 
     .office-back {
-       height: 1150px;
+        height: 1150px;
     }
 }
 
 @media(max-width:990px) {
     .office-back {
-       height: 1050px;
+        height: 1050px;
     }
 }
 
@@ -246,13 +246,13 @@ h3 {
 
 @media(max-width:650px) {
     .office-back {
-       height: 1150px;
+        height: 1150px;
     }
 }
 
 @media(max-width:576px) {
     .office-back {
-        height: 900px
+        height: 930px;
     }
 
     #office-title h2 {
@@ -304,8 +304,8 @@ h3 {
     }
 }
 
-@media(max-width:420px) {
+@media(max-width:360px) {
     .office-back {
-        height: 80vh;
+        height: 1150px;
     }
 }

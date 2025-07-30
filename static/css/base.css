@@ -277,6 +277,7 @@ h2 {
 
 .bread ul {
     padding-left: 0;
+    margin-bottom: 0;
 }
 
 .bread a {
@@ -361,6 +362,10 @@ footer .feedback-form-text p {
         font-size: 48px !important;
     }
 
+    .bread a {
+        font-size: 24px;
+    }
+
     .hover-this span {
         font-size: 85px !important;
     }
@@ -395,6 +400,10 @@ footer .feedback-form-text p {
     .success-modal-header {
         font-size: 52px;
     }
+
+    .bread a {
+        font-size: 24px;
+    }
 }
 
 @media(max-width:1670px) {
@@ -426,6 +435,10 @@ footer .feedback-form-text p {
     .feedback-form-form input,
     .feedback-form-form textarea {
         font-size: 1.25rem;
+    }
+
+    .bread a {
+        font-size: 18px;
     }
 
     .feedback-form-form input,
@@ -479,9 +492,15 @@ footer .feedback-form-text p {
     .hover-this span {
         font-size: 5.5rem;
     }
+
+
 }
 
 @media(max-width:768px) {
+
+    .bread a {
+        font-size: 16px;
+    }
 
     .feedback-form-form .btn,
     .feedback-form-form input,
@@ -527,6 +546,10 @@ footer .feedback-form-text p {
 }
 
 @media(max-width:576px) {
+
+    .bread a {
+        font-size: 14px;
+    }
 
     .feedback-form-form .btn,
     .feedback-form-form input,

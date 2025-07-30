@@ -1,17 +1,16 @@
 h1 {
     font-family: 'Hauora Bold';
     font-weight: 700;
-    font-size: 3.75rem;
     line-height: 70px;
     letter-spacing: -1%;
     padding-bottom: 40px;
     border-bottom: 1px solid #0D1014;
-    margin: 80px 0;
+    margin: 4.5rem 0;
 }
 
 .first-page-block {
-    margin-top: 418px !important;
-    margin-bottom: 200px;
+    margin-top: 30rem !important;
+    margin-bottom: 13rem;
 }
 
 .vacancie-content {
@@ -47,22 +46,47 @@ h1 {
     display: none;
 }
 
-@media(max-width:990px) {
+@media(min-width:1800px) {
     h1 {
-        font-size: 2.5rem;
-        margin-bottom: 60px;
-        margin-top: 24px;
-        padding-bottom: 30px;
+        font-size: 48px;
+        margin: 80px 0;
     }
 
     .vacancie-content p,
     .vacancie-content {
-        font-size: 1.25rem;
+        font-size: 20px;
     }
 
     .vacancie-content h4 {
         margin-top: 60px;
-        font-size: 1.25rem;
+        font-size: 24px;
+    }
+
+    .vacancie-content ul {
+        margin-top: 20px;
+    }
+
+    .first-page-block {
+        margin-top: 318px !important;
+        margin-bottom: 200px;
+    }
+}
+
+@media(max-width:990px) {
+
+    h1 {
+        margin: 40px 0;
+        padding-bottom: 15px;
+    }
+
+    .vacancie-content p,
+    .vacancie-content {
+        font-size: 16px;
+    }
+
+    .vacancie-content h4 {
+        margin-top: 60px;
+        font-size: 20px;
     }
 
     .vacancie-content ul {
@@ -72,6 +96,11 @@ h1 {
     .first-page-block {
         margin-top: 175px !important;
         margin-bottom: 100px;
+    }
+
+    ol,
+    ul {
+        padding-left: 40px;
     }
 }
 
