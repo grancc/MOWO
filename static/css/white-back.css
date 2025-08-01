@@ -1,4 +1,4 @@
-#cursor{
+#cursor {
     background-color: rgb(0, 0, 0);
 }
 
@@ -15,7 +15,7 @@ footer .position-absolute {
 }
 
 footer {
-    margin-top: 140px;
+    margin-top: 9rem;
 }
 
 .feedback-form-form input,
@@ -24,7 +24,7 @@ footer {
     color: #0D1014;
 }
 
-.form-check-input:checked[type=checkbox]{
+.form-check-input:checked[type=checkbox] {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%230D1014' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e") !important;
 }
 
@@ -79,12 +79,18 @@ a {
     color: #0D1014CC;
 }
 
+@media(min-width:1800px) {
+    footer {
+        margin-top: 140px;
+    }
+}
+
 @media(max-width:990px) {
     footer {
         margin-top: 120px;
     }
 
-    footer .position-absolute{
+    footer .position-absolute {
         margin-bottom: 0;
     }
 }

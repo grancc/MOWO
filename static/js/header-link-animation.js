@@ -33,8 +33,12 @@ function initCursor() {
     window.addEventListener('mousemove', editCursor);
 }
 
-// Запускаем инициализацию сразу
-initCursor();
 
-// А также после полной загрузки DOM на случай, если DOM еще не загрузился
-document.addEventListener('DOMContentLoaded', initCursor);
+if (window.innerWidth > 990) {
+    // Запускаем инициализацию сразу
+    initCursor();
+
+    // А также после полной загрузки DOM на случай, если DOM еще не загрузился
+    document.addEventListener('DOMContentLoaded', initCursor);
+}
+
