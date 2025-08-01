@@ -185,7 +185,7 @@
 }
 
 .numbers-item {
-    padding-left: 24px;
+    padding-left: 1.25rem;
     border-left: 1px solid rgba(255, 255, 255, 1);
 }
 
@@ -213,6 +213,10 @@
 
     .numbers-items {
         gap: 60px 200px;
+    }
+
+    .numbers-item{
+        padding-left: 24px;
     }
 
     .promo-text p {
@@ -309,7 +313,7 @@
         font-size: 18px;
     }
 
-    .empl-desc{
+    .empl-desc {
         font-size: 14px;
     }
 
@@ -348,6 +352,7 @@
 
     .numbers-items {
         gap: 60px 10px;
+        padding-left: 20px;
     }
 }
 

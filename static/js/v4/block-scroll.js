@@ -74,10 +74,13 @@ function scroll_block_2() {
     pinSpacer2 = container2.querySelector('.block-scroll');
     const pinSpacerChild2 = pinSpacer2.querySelector('.feedback-form')
     yOffset2 = pinSpacerChild2.offsetHeight + spaceBetweenSides;
-    
-    yOffsetForStart = yOffset2+70
-    
 
+    yOffsetForStart = yOffset2
+    if (window.innerWidth > 1800){
+        yOffsetForStart = yOffset2+70
+    }
+    
+    
     ScrollTrigger.create({
         trigger: container2,
         start: `top center`,
@@ -121,7 +124,10 @@ function scroll_block_3() {
     const pinSpacer2 = container2.querySelector('.block-scroll');
     const pinSpacerChild2 = pinSpacer2.querySelector('.employee-items')
     yOffset2 = pinSpacerChild2.offsetHeight + spaceBetweenSides;
-    yOffsetForStart = yOffset2+70
+    yOffsetForStart = yOffset2
+    if (window.innerWidth > 1800){
+        yOffsetForStart = yOffset2+70
+    }
 
     // Анимация для блока fc_ttl
    ScrollTrigger.create({
