@@ -42,7 +42,6 @@ function scroll_block_1() {
 
     const containers = document.querySelectorAll('.fadeTextBlock');
     containers.forEach(container => {
-        const fcTtl = container.querySelector('.fc_ttl');
         // Анимация для fadeText
         ScrollTrigger.batch(".fadeTextBlock", {
             onEnter: (batch) => gsap.to(batch, {
@@ -57,7 +56,7 @@ function scroll_block_1() {
                 stagger: 0.1,
                 duration: 0.2,
             }),
-            start: () => `+=${fcTtl.offsetHeight + 400}`,
+            start: `bottom-=${yOffset} top+=250`,
             end: "bottom top",
             scrub: true,
             invalidateOnRefresh: true,
@@ -115,6 +114,29 @@ function scroll_block_2() {
 
         }
     });
+
+    fadeblock = container2.querySelector('.feedback-form')
+    ScrollTrigger.batch(fadeblock, {
+            onEnter: (batch) => gsap.to(batch, {
+                opacity: 0,
+                filter: "blur(10px)",
+                stagger: 0.1,
+                duration: 0.7,
+            }),
+            onLeaveBack: (batch) => gsap.to(batch, {
+                opacity: 1,
+                filter: "blur(0px)",
+                stagger: 0.1,
+                duration: 0.2,
+            }),
+            start: `bottom-=${yOffset2} top+=250`,
+            end: "bottom top",
+            scrub: true,
+            markers: true,
+            invalidateOnRefresh: true,
+            batchMax: 10,
+            batchMin: 1,
+        });
 }
 
 // наша команда
@@ -153,9 +175,6 @@ function scroll_block_3() {
         invalidateOnRefresh: true,
         onUpdate: (self) => {
             yOffset2 = pinSpacerChild2.offsetHeight + spaceBetweenSides;
-            // if (window.innerWidth > 1500) {
-            //     yOffset2 = yOffset2-20
-            // }
             fcTtl2.style.position = "absolute";
             fcTtl2.style.top = "";
             fcTtl2.style.bottom = `${yOffset2}px`;
@@ -164,11 +183,11 @@ function scroll_block_3() {
         }
     });
     const fade = container2.querySelector('.mini-container');
-    ScrollTrigger.create({
-        trigger: fade,
-        start: () => `+=${pinSpacer2.offsetHeight} top+=350`,
+    ScrollTrigger.batch(fade, {
+        start: () => `bottom-=200 top+=250`,
         end: "bottom top",
         scrub: true,
+        markers: true,
         invalidateOnRefresh: true,
         onEnter: (batch) => gsap.to(batch, {
             opacity: 0,
