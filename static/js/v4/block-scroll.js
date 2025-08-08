@@ -56,7 +56,7 @@ function scroll_block_1() {
                 stagger: 0.1,
                 duration: 0.2,
             }),
-            start: `bottom-=${yOffset} top+=250`,
+            start: `bottom-=${yOffset} top+=280`,
             end: "bottom top",
             scrub: true,
             invalidateOnRefresh: true,
@@ -129,7 +129,7 @@ function scroll_block_2() {
                 stagger: 0.1,
                 duration: 0.2,
             }),
-            start: `bottom-=${yOffset2} top+=250`,
+            start: `bottom-=${yOffset2} top+=280`,
             end: "bottom top",
             scrub: true,
             markers: true,
@@ -184,7 +184,7 @@ function scroll_block_3() {
     });
     const fade = container2.querySelector('.mini-container');
     ScrollTrigger.batch(fade, {
-        start: () => `bottom-=200 top+=250`,
+        start: () => `bottom-=200 top+=280`,
         end: "bottom top",
         scrub: true,
         markers: true,
