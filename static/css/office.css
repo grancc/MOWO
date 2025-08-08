@@ -16,7 +16,7 @@ h3 {
     position: absolute;
     top: 0;
     width: 100vw;
-    height: 100rem;
+    height: 90rem;
     object-fit: cover;
     z-index: -1;
 }
@@ -118,11 +118,17 @@ h3 {
 }
 
 
+@media(min-width:1200px) {
+
+    .office-back {
+        height: 110rem;
+    }
+}
 
 @media(min-width:1800px) {
 
     .office-back {
-        height: 1620px;
+        height: 2000px;
     }
 
     .people-item img {
@@ -147,6 +153,20 @@ h3 {
     .peolple-desc,
     .vacancies-items a {
         font-size: 24px;
+    }
+}
+
+@media(min-width:2700px) {
+    .office-back {
+        top: -1000px;
+        height: 100%;
+    }
+}
+
+@media(min-width:3300px) {
+
+    .office-back {
+        
     }
 }
 
@@ -233,7 +253,7 @@ h3 {
 
 @media(max-width:576px) {
     .office-back {
-        height: 930px;
+        height: 850px;
     }
 
     #office-title h2 {
