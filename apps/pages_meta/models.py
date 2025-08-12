@@ -58,3 +58,17 @@ class TehnologyBlocks(Indexblocks):
     class Meta:
         verbose_name = "блок"
         verbose_name_plural = "Блок с нашими технологиями"
+
+
+class LoaderWord(models.Model):
+    text = models.CharField(max_length=255, verbose_name="слово для прелоадера")
+    position = models.PositiveIntegerField(default=0, verbose_name="порядок")
+    is_active = models.BooleanField(default=True, verbose_name="активно")
+
+    class Meta:
+        ordering = ["position", "id"]
+        verbose_name = "слово прелоадера"
+        verbose_name_plural = "слова прелоадера"
+
+    def __str__(self) -> str:
+        return self.text

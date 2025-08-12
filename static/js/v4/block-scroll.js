@@ -182,9 +182,9 @@ function scroll_block_3() {
 
         }
     });
-    const fade = container2.querySelector('.mini-container');
+    const fade = container2.querySelector('.fc_ttl');
     ScrollTrigger.batch(fade, {
-        start: () => `bottom-=200 top+=280`,
+        start: () => `bottom-=200 top+=80`,
         end: "bottom top",
         scrub: true,
         markers: true,

@@ -37,8 +37,8 @@ class VacanciesView(DetailView):
     def get_context_data(self, **kwargs) -> dict[str, Any]:
         context = super().get_context_data(**kwargs)
 
-        context["title"] = f'MOWO Вакансия {context['vacancie'].name}'
-        context["description"] = f'MOWO Вакансия {context['vacancie'].name}'
+        # context["title"] = f'MOWO Вакансия {context['vacancie'].name}'
+        # context["description"] = f'MOWO Вакансия {context['vacancie'].name}'
         
         return context
     

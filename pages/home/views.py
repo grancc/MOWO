@@ -5,7 +5,7 @@ from django.views.generic import TemplateView
 from django.views import View
 
 from apps.about_app.models import Employees
-from apps.pages_meta.models import PagesMeta, VectorBlocks, ProjectsBlocks, TehnologyBlocks
+from apps.pages_meta.models import PagesMeta, VectorBlocks, ProjectsBlocks, TehnologyBlocks, LoaderWord
 
 from .forms import FeedbackForm
 from business.send_mail import send_mail
@@ -23,6 +23,9 @@ class HomeView(TemplateView):
         context["vector_blocks"] = VectorBlocks.objects.all()
         context["projects_blocks"] = ProjectsBlocks.objects.all()
         context["technology_blocks"] = TehnologyBlocks.objects.all()
+        context["loader_words"] = list(
+            LoaderWord.objects.filter(is_active=True).order_by("position", "id").values_list("text", flat=True)
+        )
 
         page_obj = PagesMeta.objects.get(name='Главная')
         context["title"] = page_obj.title

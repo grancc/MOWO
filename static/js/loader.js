@@ -1,7 +1,10 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   if (window.innerWidth > 990) {
-    const words = ["Архитектура и инженерия", "Исследование территории", "BIM", "GIS Analysis", "Algoritmic design", "AI design", "MOWO"];
+    // const words = ["Архитектура и инженерия", "Исследование территории", "BIM", "GIS Analysis", "Algoritmic design", "AI design", "MOWO"];
+    const wordsFromDjango = Array.isArray(window.LOADER_WORDS) ? window.LOADER_WORDS.filter(Boolean) : [];
+    const wordsDefault = ["Архитектура и инженерия", "Исследование территории", "BIM", "GIS Analysis", "Algoritmic design", "AI design", "MOWO"];
+    const words = wordsFromDjango.length ? wordsFromDjango : wordsDefault;
     let index = 0;
 
     const container = document.querySelector('.preloader');

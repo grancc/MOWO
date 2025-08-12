@@ -113,7 +113,7 @@
             <div class="mini-container">
                 <div class="feedback-form">
                     <div class="feedback-form-text fc_ttl">
-                        <h2>Превратим идею в архитектуру</h2>
+                        <h2>Превратим идею в&nbsp;архитектуру</h2>
                         <p>Индивидуальный подход к&nbsp;каждому проекту и&nbsp;гарантированное качество исполнения. Заполните форму, и&nbsp;мы&nbsp;подготовим персональное предложение.</p>
                     </div>
                     <div class="feedback-form-form block-scroll">
@@ -201,6 +201,17 @@
 <script src="{%static 'js/v4/lenis.min.js'%}"></script>
 {#    <script src="https://unpkg.com/lenis@1.3.8/dist/lenis.min.js"></script>#}
 <script type="module" src="{%static 'js/v4/index.js'%}"></script>
+<script>
+    window.LOADER_WORDS = [
+        {% if loader_words %}
+            {% for w in loader_words %}
+                "{{ w|escapejs }}"{% if not forloop.last %},{% endif %}
+            {% endfor %}
+        {% else %}
+            "Архитектура и инженерия", "Исследование территории", "BIM", "GIS Analysis", "Algoritmic design", "AI design", "MOWO"
+        {% endif %}
+    ];
+</script>
 <script defer src="{%static 'js/loader.js'%}"></script>
 <script src="{%static 'js/v4/block-scroll.js'%}"></script>
 
