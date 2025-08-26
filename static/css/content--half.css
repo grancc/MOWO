@@ -7,12 +7,12 @@
 }
 
 .content--sticky {
-    width: 100%;
-    position: relative;
-    /* top: 0; */
-    /* --offset: 0; */
-    /* top: 0; */
-    height: 100%;
+	width: 100vw;
+	position: sticky;
+	top: 0;
+	--offset: 0px;
+	top: 0;
+	height: 100vh;
 }
 
 .content--half {
