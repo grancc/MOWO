@@ -19,7 +19,7 @@
     </div>
 
     <div data-aos="fade-up" data-aos-duration="1000">
-        <div class="position-relative" style="height: 100vh;">
+        <div class="position-relative">
             <div class="promo-text fadeText">
                 <p class="mb-0">
                     Создаём архитектуру, которая соединяет искусство, маркетинг, экономику и&nbsp;инженерию для&nbsp;максимальной эффективности застройки
@@ -208,6 +208,8 @@
             fullPageBlocks.forEach(element => {
                 element.style.height = `${window.innerHeight}px`
             });
+
+            document.querySelector('.promo-tex').style.height = `${window.innerHeight}px`
         }
     })
 </script>
