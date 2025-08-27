@@ -12,6 +12,6 @@ urlpatterns = [
     path('office', OfficeView.as_view(), name="office"),
     path('vacancies/<str:slug>/', VacanciesView.as_view(), name="vacancies-page"),
     path('blog', BlogView.as_view(), name="blog"),
-    path('blog/articles/<int:pk>', ArticleView.as_view(), name="article"),
+    path('blog/articles/<str:slug>', ArticleView.as_view(), name="article"),
     path("feedback/", FeedBackView.as_view(), name="send_feed_back"),
 ]
