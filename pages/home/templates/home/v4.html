@@ -19,8 +19,8 @@
     </div>
 
     <div data-aos="fade-up" data-aos-duration="1000">
-        <div class="position-relative">
-            <div class="promo-text fadeText">
+        <div class="position-relative" style="height: 100vh;">
+            <div class="promo-text fadeText" >
                 <p class="mb-0">
                     Создаём архитектуру, которая соединяет искусство, маркетинг, экономику и&nbsp;инженерию для&nbsp;максимальной эффективности застройки
                 </p>
@@ -209,7 +209,7 @@
                 element.style.height = `${window.innerHeight}px`
             });
 
-            document.querySelector('.promo-text').style.height = `${window.innerHeight}px`
+            document.querySelector('.promo-text').parentElement.style.height = `${window.innerHeight}px`
         }
     })
 </script>
